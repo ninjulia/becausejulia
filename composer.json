@@ -6,10 +6,5 @@
         "description": {
             "type": "string",
             "description": "Portfolio PHP source code"
-        },
-    	"config": {
-       		"platform": {
-           	"php": "7.4.0"
-       		}
-    	}
+        }
 }
