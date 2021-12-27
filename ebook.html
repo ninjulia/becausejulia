@@ -1,13 +1,22 @@
-<?php
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-$pageTitle="eBook | Concept | Layout";
-
-function customPageHeader(){?>
-  <!--Arbitrary HTML Tags-->
-<?php }
-
-include_once('files/header.php');
-?>
+    <title>eBook | Concept | Layout | Julia Czarnecki</title>
+    <link rel="stylesheet" href="/css/styles-min.css">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    
+    <script src="/components/header.js" type="text/javascript" ></script>
+    <script src="/components/svg.js" type="text/javascript" ></script>
+    <script src="/components/footer.js" type="text/javascript" ></script>
+    
+  </head>
+  <body>
+    
+    <header-component></header-component>
 
 <!-- begin page content --> 
     <section class="jumbotron portfolio-header ebook text-center">
@@ -39,6 +48,15 @@ include_once('files/header.php');
     </section>
 </main>
 
-<?php
-include_once('files/footer.php');
-?>
+<!-- end page content -->
+
+<footer-component></footer-component>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="/js/date.js" type="text/javascript"></script>
+
+</body>
+</html>

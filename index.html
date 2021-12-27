@@ -1,14 +1,31 @@
-<?php include_once('files/header.php'); ?>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
- <!-- begin page content -->
-
+    <title>Julia Czarnecki | Design | Code | Digital</title>
+    <link rel="stylesheet" href="/css/styles-min.css">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <!--<base href="localhost/">-->
+    <script src="/components/header.js" type="text/javascript" ></script>
+    <script src="/components/svg.js" type="text/javascript" ></script>
+    <script src="/components/design.js" type="text/javascript" ></script>
+    <script src="/components/code.js" type="text/javascript" ></script>
+    <script src="/components/latest.js" type="text/javascript" ></script>
+    <script src="/components/footer.js" type="text/javascript" ></script>
+    
+  </head>
+  <body>
+    
+    <header-component></header-component>
     <main role="main">
-    <!-- Design Section -->
-    <?php include_once('files/intro_design.php'); ?>
-    <?php include_once('files/code_section.php'); ?>
+    <design-component></design-component>
+    <code-component></code-component>
 
     <!-- About Section -->
-        <section>
+        <section id="about">
             <div class="container">
                 <h1><a class="anchor text-primary" name="about">About Julia</a></h1>
                 <div class="row">
@@ -51,10 +68,19 @@
                 </div>
             </div>
         </section>
-        <?php include_once('files/latest.php'); ?>
+        <latest-component></latest-component>
       </main>
 <!-- end page content -->
 
-<?php
-include_once('files/footer.php');
-?>
+<footer-component></footer-component>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src='https://absorbed-andesaurus.glitch.me/jribbble.min.js'></script>
+    <script src="/js/custom.js" type="text/javascript"></script>
+    <script src="/js/date.js" type="text/javascript"></script>
+
+</body>
+</html>
