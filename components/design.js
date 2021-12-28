@@ -19,7 +19,7 @@ class Design extends HTMLElement {
           <a class="anchor" name="design" id="design"></a>
           <div class="row justify-content-center">
             <div class="col-md-4">
-              <a href="/ebook.php" target="_blank">
+              <a href="/ebook.html" target="_blank">
               <figure class="figure hvr-bounce-in">
                 <img src="../img/ebook-thumb.jpg" class="figure-img img-fluid shadow rounded" alt="eBook">
                 <figcaption class="figure-caption rounded-bottom">
@@ -30,7 +30,7 @@ class Design extends HTMLElement {
             </a>
             </div>
             <div class="col-md-4">
-              <a href="/web-management.php" target="_blank">
+              <a href="/web-management.html" target="_blank">
               <figure class="figure hvr-bounce-in">
                 <img src="../img/wm-thumb.jpg" class="figure-img img-fluid shadow rounded" alt="website">
                 <figcaption class="figure-caption rounded-bottom">
@@ -41,7 +41,7 @@ class Design extends HTMLElement {
             </a>
             </div>
             <div class="col-md-4">
-              <a href="/elearning.php" target="_blank">
+              <a href="/elearning.html" target="_blank">
               <figure class="figure hvr-bounce-in">
                 <img src="../img/elearn-thumb.jpg" class="figure-img img-fluid shadow rounded" alt="email">
                 <figcaption class="figure-caption rounded-bottom">
@@ -53,7 +53,7 @@ class Design extends HTMLElement {
             </div>
       
             <div class="col-md-4">
-              <a href="/recipe.php" target="_blank">
+              <a href="/recipe.html" target="_blank">
               <figure class="figure hvr-bounce-in">
                 <img src="../img/recipe-thumb.png" class="figure-img img-fluid shadow rounded" alt="recipe book">
                 <figcaption class="figure-caption rounded-bottom">
@@ -64,7 +64,7 @@ class Design extends HTMLElement {
             </a>
             </div>
             <div class="col-md-4">
-              <a href="/banners.php" target="_blank">
+              <a href="/banners.html" target="_blank">
               <figure class="figure hvr-bounce-in">
                 <img src="../img/banners-thumb.jpg" class="figure-img img-fluid shadow rounded" alt="digital banners on display in a computer monitor">
                 <figcaption class="figure-caption rounded-bottom">
