@@ -1,13 +1,14 @@
 # Code Repository for personal portfolio website
 > Julia Czarnecki | Design | Code | Digital
 
-Code Repository for portfolio website [becausejulia.com](https://www.becausejulia.com). Project files uploaded here for your code review and Netlify.com web hosting. Converted to static site via Buddy.works.
+Code Repository for portfolio website [becausejulia.com](https://www.becausejulia.com). Project files uploaded here for your code review and Netlify.com web hosting.
 
 ## Project Dependencies
 > I am standing on the shoulders of giants
 
 * [Bootstrap v4.4.1] (https://getbootstrap.com/)
 * [jribbble](https://github.com/tylergaw/jribbble)
+* [Hover.css](https://ianlunn.github.io/Hover/)
 
 ## Design Resources
 
@@ -19,23 +20,27 @@ Code Repository for portfolio website [becausejulia.com](https://www.becausejuli
 > MVP for Netlify release completed 12/21
 
 * Latest Work - show only 1 up @ small screens, adjust link alignment
-* I work on Section - js scroller featuring text for project types, resting on websites.
-* favicon - is.ugly
+* I work on Section - js scroller featuring text for project types, resting on websites
+* favicon - add support for multi-format
 * Footer - convert icons to change bg color on :hover
 * About - include icons/statement for known technologies && software
-* /Writing - convert to blog (try out jekyll) 
+* /Writing - convert to blog (try out jekyll or HUGO) 
 * /Instagram - convert to quick edit and add icons for current sales
+* /Design - adjust z-index of :active :hover states to avoid overlap
+* /Code - adjust button contrast 
+
 
 ## Tech and Tooling
 
-* HTML, CSS (SaSS), JS, PHP
+* HTML, CSS (SaSS), JS, ~~PHP~~
 * Docker
 * Git 
 
 ## Links
 
 - Gitrepo: https://ninjulia.com/becausejulia/
-- Project Hosting: https://hopeful-kilby-bb0e86.netlify.app/
+- Live Site: https://www.becausejulia.com/
+- Hosting via Netlify: [![Netlify Status](https://api.netlify.com/api/v1/badges/38436d76-e0a4-4743-8172-da45f07cc387/deploy-status)](https://app.netlify.com/sites/hopeful-kilby-bb0e86/deploys)
 
 ### Licensing
 
