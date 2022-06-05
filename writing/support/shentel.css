@@ -59,24 +59,3 @@ ul,
 ol {
  color:#444
 }
-
-.videoFrame {
- position:relative;
- padding:20px 0 40px
-}
-.videoFrame img.videoFrameBackground {
- width:100%;
- position:absolute;
- bottom:20px;
- left:0;
- z-index:100
-}
-.videoFrame .videoContainer {
- position:relative;
- z-index:200
-}
-.videoFrame .videoContainer iframe {
- display:block;
- margin:0 auto;
- box-shadow:rgba(25,25,25,0.6) 3px 3px 4px 0
-}

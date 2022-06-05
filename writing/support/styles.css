@@ -1,23 +1,66 @@
 /* writing section styles */
 :root{
-  --lavender:#8589A4;
-  --pink:#AF4659;
-  --darkp:#1E141F;
-  --green:#568f5a;
-  --yellow:#d47f22;
+  --lavender:#440154;
+  --pink:#752453;
+  --yellow:#daf108;
   --pomegranate:#f44336;
+
+  --main: #482475;
+  --blue: #355f8d;
+  --green: #21908d;
 }
 
 .lavender{background-color:var(--lavender); border-color:var(--lavender);color:#fff;}
 .pink{background-color:var(--pink); border-color:var(--pink); color:#fff;}
-.darkp{background-color:var(--darkp); border-color:var(--darkp); color:#fff;}
+.blue{background-color:var(--blue); border-color:var(--blue); color:#fff;}
 .green{background-color:var(--green); border-color:var(--green); color:#fff;}
 .yellow{background-color:var(--yellow); border-color:var(--yellow);}
 .pomegranate{background-color:var(--pomegranate); border-color:var(--pomegranate); color:#fff;}
 
 .yellow-text{color:var(--yellow)}
 
-
 .card-header {font-style:italic;font-size:0.75em;}
 
-.writing-container{max-width:600px; margin:0 auto;}
+.writing-container{max-width:600px; margin:0 auto; background-color:#ffffff;}
+
+.breadcrumb{margin-top:6rem;}
+
+.grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  justify-items: stretch;
+}
+.grid .col{display:flex; flex-direction: column;}
+.grid .col .card{flex-grow: 2;}
+
+
+.videoFrame {
+  position:relative;
+  padding:20px 0 40px;
+  background: url(https://www.becausejulia.com/writing/support/vid_background_swoosh.png) no-repeat 0 0;
+  display:flex;
+  justify-content: center; 
+  align-items: center;
+ }
+ 
+ .videoFrame .videoContainer iframe {
+  display:block;
+  margin:0 auto;
+  max-width:100%;
+  height:auto;
+  box-shadow:rgba(25,25,25,0.6) 3px 3px 4px 0
+ }
+ 
+ .product {
+   margin: 30px 0px;
+   border-bottom: 1px solid #999999;
+ }
+ 
+ .feature {
+   border-radius: 10px;
+   background: #00446a;
+   color: #ffffff;
+   padding: 5px;
+   margin-bottom: 20px;
+ }

@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Julia Czarnecki | Writing | Design | Code</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.becausejulia.com/css/styles-min.css">
+  <link rel="stylesheet" href="support/styles.css">
+
+  <!-- Favicon -->
+  <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+
+<body>
+  <!-- embed svg -->
+  <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <symbol id="icon-embed2" viewBox="0 0 40 32">
+        <title>embed2</title>
+        <path d="M26 23l3 3 10-10-10-10-3 3 7 7z"></path>
+        <path d="M14 9l-3-3-10 10 10 10 3-3-7-7z"></path>
+        <path d="M21.916 4.704l2.171 0.592-6 22.001-2.171-0.592 6-22.001z"></path>
+      </symbol>
+      <symbol id="icon-facebook2" viewBox="0 0 32 32">
+        <title>facebook icon</title>
+        <path
+          d="M29 0h-26c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h13v-14h-4v-4h4v-2c0-3.306 2.694-6 6-6h4v4h-4c-1.1 0-2 0.9-2 2v2h6l-1 4h-5v14h9c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3z">
+        </path>
+      </symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 32 32">
+        <title>linkedin icon</title>
+        <path
+          d="M29 0h-26c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3zM12 26h-4v-14h4v14zM10 10c-1.106 0-2-0.894-2-2s0.894-2 2-2c1.106 0 2 0.894 2 2s-0.894 2-2 2zM26 26h-4v-8c0-1.106-0.894-2-2-2s-2 0.894-2 2v8h-4v-14h4v2.481c0.825-1.131 2.087-2.481 3.5-2.481 2.488 0 4.5 2.238 4.5 5v9z">
+        </path>
+      </symbol>
+      <symbol id="icon-cart" viewBox="0 0 32 32">
+        <title>shopping cart</title>
+        <path d="M12 29c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+        <path d="M32 29c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+        <path
+          d="M32 16v-12h-24c0-1.105-0.895-2-2-2h-6v2h4l1.502 12.877c-0.915 0.733-1.502 1.859-1.502 3.123 0 2.209 1.791 4 4 4h24v-2h-24c-1.105 0-2-0.895-2-2 0-0.007 0-0.014 0-0.020l26-3.98z">
+        </path>
+      </symbol>
+      <symbol id="icon-instagram" viewBox="0 0 32 32">
+        <title>instagram icon</title>
+        <path
+          d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z">
+        </path>
+        <path
+          d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z">
+        </path>
+        <path
+          d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z">
+        </path>
+      </symbol>
+      <symbol id="icon-dribbble" viewBox="0 0 32 32">
+        <title>dribbble icon</title>
+        <path
+          d="M16 32c-8.825 0-16-7.175-16-16s7.175-16 16-16c8.825 0 16 7.175 16 16s-7.175 16-16 16v0zM29.494 18.188c-0.469-0.15-4.231-1.269-8.512-0.581 1.788 4.912 2.512 8.912 2.656 9.744 3.063-2.075 5.25-5.356 5.856-9.163v0zM21.337 28.6c-0.206-1.2-0.994-5.375-2.913-10.363-0.031 0.012-0.063 0.019-0.087 0.031-7.713 2.688-10.481 8.031-10.725 8.531 2.319 1.806 5.231 2.887 8.387 2.887 1.894 0 3.7-0.387 5.338-1.087v0zM5.844 25.156c0.313-0.531 4.063-6.738 11.106-9.019 0.175-0.056 0.356-0.113 0.538-0.162-0.344-0.775-0.719-1.556-1.106-2.319-6.819 2.044-13.444 1.956-14.044 1.95-0.006 0.137-0.006 0.275-0.006 0.419 0 3.506 1.331 6.712 3.512 9.131v0zM2.625 13.219c0.612 0.006 6.244 0.031 12.637-1.662-2.262-4.025-4.706-7.412-5.069-7.906-3.825 1.806-6.688 5.331-7.569 9.569v0zM12.8 2.731c0.375 0.506 2.863 3.888 5.1 8 4.863-1.819 6.919-4.588 7.163-4.938-2.413-2.144-5.587-3.444-9.063-3.444-1.1 0.006-2.175 0.138-3.2 0.381v0zM26.581 7.381c-0.288 0.388-2.581 3.325-7.631 5.388 0.319 0.65 0.625 1.313 0.906 1.981 0.1 0.238 0.2 0.469 0.294 0.706 4.55-0.569 9.069 0.344 9.519 0.438-0.031-3.225-1.188-6.188-3.087-8.512v0z">
+        </path>
+      </symbol>
+      <symbol id="icon-github" viewBox="0 0 32 32">
+        <title>github icon</title>
+        <path
+          d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z">
+        </path>
+      </symbol>
+    </defs>
+  </svg>
+  <header>
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-darkest">
+      <div class="container">
+        <a class="navbar-brand" href="https://www.becausejulia.com/writing/"><svg class="icon icon-embed2">
+            <use xlink:href="#icon-embed2"></use>
+          </svg>&nbsp;&nbsp;&nbsp;Julia Czarnecki</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Writing Samples
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="https://www.becausejulia.com/writing/email.html">Internal Documentation
+                  Example</a>
+                <a class="dropdown-item" href="https://www.becausejulia.com/writing/GDPR.html">Technical Write Up</a>
+                <a class="dropdown-item" href="https://www.becausejulia.com/writing/HDTV.html">HDTV for the holidays</a>
+                <a class="dropdown-item" href="https://www.becausejulia.com/writing/product.html">Product Overview</a>
+                <a class="dropdown-item" href="https://www.becausejulia.com/writing/explore.html">Shentel Welcome</a>
+                <a class="dropdown-item" href="https://www.becausejulia.com/writing/FAQ.html">FAQ</a>
+                <a class="dropdown-item" href="https://www.becausejulia.com/writing/script.html">Scriptwriting</a>
+                <a class="dropdown-item" href="https://www.becausejulia.com/writing/map.html">Email Notification
+                  Example</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- begin page content -->
+
+  <!--<section class="first intro bg-dark" style="margin-top:3.25rem;">-->
+  <section class="first intro main-gradient text-light">
+    <div class="container marketing text-center">
+      <h4><a class="anchor" name="writing" id="writing">Technical Writing | Web Copywriting | Documentation</a></h4>
+      <p>I have over six years of experience crafting solutions for highly technical industries - including
+        Software-as-a-Service. I love turning technical concepts into concise communications that help customers
+        thrive.</p>
+    </div>
+  </section>
+  <main role="main">
+    <!-- writing samples -->
+    <section>
+      <div class="container grid">
+
+        <!--<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">-->
+          <!-- start card -->
+          <div class="col mb-4">
+            <div class="card-header green">Documentation | How to Guide</div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Crafting Emails with Accessability in Mind</h5>
+                <p class="card-text">Anyone who signed up for our email list should be able to engage with our messaging
+                  in the method...</p>
+                <a href="https://www.becausejulia.com/writing/email.html" class="btn green">Read More</a>
+              </div>
+            </div>
+          </div>
+          <!-- end card-->
+          <!-- start card -->
+          <div class="col mb-4">
+            <div class="card-header yellow">Technical Write Up | Blog Writing</div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Keeping Emails Compliant with CAN-SPAM, GDPR, and CCPA Regulations</h5>
+                <p class="card-text">At first glance, the current state of email regulations looks like a worrisome
+                  alphabet soup...</p>
+                <a href="https://www.becausejulia.com/writing/GDPR.html" class="btn yellow">View Guide</a>
+              </div>
+            </div>
+          </div>
+          <!-- end card-->
+          <!-- start card -->
+          <div class="col mb-4">
+            <div class="card-header bg-primary text-light">Technical Buying Guide | Blog Writing</div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Tips for buying an HDTV for the holidays</h5>
+                <p class="card-text">The holiday season is unofficially HDTV discount season. Whether it's time to
+                  upgrade your current...</p>
+                <a href="https://www.becausejulia.com/writing/HDTV.html" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <!-- end card-->
+          <!-- start card -->
+          <div class="col mb-4">
+            <div class="card-header pink">Product Overview | Blog Writing</div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Shentel Maestro Whole Home DVR Media Center &amp; More!</h5>
+                <p class="card-text">Maestro is a whole home gateway which provides DVR and search features for your TV,
+                  internet...</p>
+                <a href="https://www.becausejulia.com/writing/product.html" class="btn pink">View Overview</a>
+              </div>
+            </div>
+          </div>
+          <!-- end card-->
+          <!-- start card -->
+          <div class="col mb-4">
+            <div class="card-header blue">Web Copywriting | Blog Writing</div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Welcome to Shentel<br>&nbsp;</h5>
+                <p class="card-text">We're Shentel.&nbsp; We may be new to you, but we've been in business since 1902.
+                  Back then, we...</p>
+                <a href="https://www.becausejulia.com/writing/explore.html" class="btn blue">Read On</a>
+              </div>
+            </div>
+          </div>
+          <!-- end card-->
+          <!-- start card -->
+          <div class="col mb-4">
+            <div class="card-header pomegranate">FAQs | Documentation</div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Maestro FAQs<br>&nbsp;</h5>
+                <p class="card-text">Using the Skip button on your remote, Maestro you can skip forward 30 seconds, 3
+                  minutes, 5 minutes...</p>
+                <a href="https://www.becausejulia.com/writing/FAQ.html" class="btn pomegranate">View All</a>
+              </div>
+            </div>
+          </div>
+          <!-- end card-->
+          <!-- start card -->
+          <div class="col mb-4">
+            <div class="card-header lavender">Scriptwriting | Video Advertising</div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" style="padding-bottom:0.5em;">Rocket Science - Shentel</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/w4Ns3CeHSy4"
+                    allowfullscreen="" frameborder="0"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end card-->
+          <!-- start card -->
+          <div class="col mb-4">
+            <div class="card-header yellow">Email | How to Guide</div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Email Notification - Mapping a Network Drive</h5>
+                <img src="https://www.becausejulia.com/writing/support/map_email.PNG" class="img-fluid" />
+                <a href="https://www.becausejulia.com/writing/map.html" class="btn yellow">View Full Email</a>
+              </div>
+            </div>
+          </div>
+          <!-- end card-->
+        <!--</div>-->
+
+      </div>
+    </section>
+    <!-- end writing samples -->
+    <section class="bg-light">
+      <div class="container marketing">
+        <h1 class="text-primary"><a class="anchor" name="about">About Julia</a></h1>
+        <div class="row">
+          <div class="col-md-8">
+            <h2 class="text-primary">6 Years Experience within the IT Space</h2>
+            <p>I love simplifying the highly technical and crafting solutions to empower clients to grow their
+              businesses. I'm particularly proud of the work I accomplished bridging SMEs, Customer Support, and
+              Marketing departments to craft materials for both internal and external applications.</p>
+
+            <h2 class="text-primary">Bringing a Design Sensibility</h2>
+            <p>I'm no stranger to Photoshop, Illustrator and the rest of the Adobe Cloud Suite to develop documentation
+              solutions and edit technical illustrations. In my previous roles, I was also responsible for making sure
+              external documents adhered to brand standards in addition to checking for technical accuracy.</p>
+
+            <h2 class="text-primary">But more about me.</h2>
+            <p>In my spare time, I love being taken for walks by my dog, exploring new cities, and keeping up with new
+              trends and technologies. I am always looking to expand my horizons by taking on new projects and meeting
+              new people.</p>
+          </div>
+
+          <div class="col-md-4">
+            <h3 class="text-primary">Skillset</h3>
+            <ul class="list-ul">
+              <li>Blog Post Writing</li>
+              <li>Editing &amp; Proofreading</li>
+              <li>How to Guides</li>
+              <li>Microsoft Style Guide Formatting</li>
+              <li>Project Management</li>
+              <li>Research</li>
+              <li>SOPs</li>
+              <li>Scriptwriting </li>
+              <li>Technical Writing</li>
+            </ul>
+
+            <h3 class="text-primary">Bonus Skills</h3>
+            <ul class="list-ul">
+              <li>Branding</li>
+              <li>Code Optimization</li>
+              <li>Design</li>
+              <li>Email Design &amp; Coding</li>
+              <li>HTML/CSS (LESS &amp; SASS)</li>
+              <li>Illustration</li>
+              <li>Infographics</li>
+              <li>Presentations</li>
+              <li>Voice-Over Work</li>
+            </ul>
+
+            <h3 class="text-primary">Technology &amp; Certifications</h3>
+            <ul class="list-ul">
+              <li>Adobe Creative Cloud<br><span style="font-style:italic; font-size:0.75em">(Photoshop, Illustrator,
+                  InDesign)</span></li>
+              <li>Experience with Bootstrap Framework</li>
+              <li>Experience with WordPress CMS</li>
+              <li>Eloqua Email Marketing</li>
+              <li>Google &amp; Microsoft Suite<br><span style="font-style:italic; font-size:0.75em">(Word, Excel,
+                  Outlook, PowerPoint)</span></li>
+              <li>Project Management Software<br><span style="font-style:italic; font-size:0.75em">(InMotion, Jira,
+                  Trello)</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- end page content -->
+
+  <!-- begin footer -->
+  <footer>
+    <div class="container">
+      <div class="nest">
+        <h1><a class="anchor" name="contact">Find Me On</a></h1>
+        <div class="row">
+          <div class="col-md-4">
+            <p>
+              <a href="https://www.becausejulia.com" target="_blank" class="text-light" name="portfolio">
+                <svg class="icon icon-embed2">
+                  <use xlink:href="#icon-embed2"></use>
+                </svg>
+                Design Portfolio
+              </a>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p>Social Media
+              <a href="https://www.github.com/ninjulia" target="_blank" class="text-light" name="github"
+                rel="noreferrer"><svg class="icon icon-github">
+                  <use xlink:href="#icon-github"></use>
+                </svg></a>
+              <a href="https://www.linkedin.com/in/julia-c-b7a79522" target="_blank" class="text-light" name="linkedin"
+                rel="noreferrer"><svg class="icon icon-linkedin">
+                  <use xlink:href="#icon-linkedin"></use>
+                </svg></a>
+              <a href="https://dribbble.com/becausejulia" target="_blank" class="text-light" name="dribbble"
+                rel="noreferrer"><svg class="icon icon-dribbble">
+                  <use xlink:href="#icon-dribbble"></use>
+                </svg></a>
+              <a href="https://www.instagram.com/the_julia_set/" target="_blank" class="text-light" name="instagram"
+                rel="noreferrer"><svg class="icon icon-instagram">
+                  <use xlink:href="#icon-instagram"></use>
+                </svg></a>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p>
+              <a href="https://thejuliaset.threadless.com" target="_blank" class="text-light" name="threadless"
+                rel="noreferrer">
+                <svg class="icon icon-cart">
+                  <use xlink:href="#icon-cart"></use>
+                </svg>
+                Threadless
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <p>Designed and coded by Julia Czarnecki with some help from Bootstrap. © 2013 - <span id="year">2022</span></p>
+      <p style="font-size:0.8rem">SVG icons by <a href="https://icomoon.io/app" target="_blank" class="text-light"
+          name="icomoon" rel="noreferrer">icomoon.</a> Mockup imagery provided by <a href="https://www.freepik.com"
+          class="text-light" name="freepik" rel="noreferrer">freepik.</a></p>
+      <p style="font-size:0.8rem">Any data you provide will only be used to reply to you. It will not be stored or
+        shared.</p>
+    </div>
+  </footer>
+  <!-- end footer -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://www.becausejulia.com/js/date.js"></script>
+</body>
+
+</html>
