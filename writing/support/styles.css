@@ -1,21 +1,16 @@
 /* writing section styles */
 :root{
-  --lavender:#440154;
-  --pink:#752453;
-  --yellow:#daf108;
   --pomegranate:#f44336;
-
-  --main: #482475;
-  --blue: #355f8d;
-  --green: #21908d;
 }
 
-.lavender{background-color:var(--lavender); border-color:var(--lavender);color:#fff;}
+
 .pink{background-color:var(--pink); border-color:var(--pink); color:#fff;}
-.blue{background-color:var(--blue); border-color:var(--blue); color:#fff;}
-.green{background-color:var(--green); border-color:var(--green); color:#fff;}
-.yellow{background-color:var(--yellow); border-color:var(--yellow);}
 .pomegranate{background-color:var(--pomegranate); border-color:var(--pomegranate); color:#fff;}
+.orange{background-color:var(--orange); border-color:var(--orange); color:#fff;}
+.yellow{background-color:var(--yellow); border-color:var(--yellow);}
+.green{background-color:var(--green); border-color:var(--green); color:#fff;}
+.blue{background-color:var(--blue); border-color:var(--blue); color:#fff;}
+.purple{background-color:var(--purple); border-color:var(--purple);color:#fff;}
 
 .yellow-text{color:var(--yellow)}
 
@@ -74,3 +69,6 @@
    padding: 5px;
    margin-bottom: 20px;
  }
+
+ .footnotes{font-size:0.6rem}
+ .footnotes a{display: block;}
