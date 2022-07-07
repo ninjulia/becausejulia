@@ -19,7 +19,7 @@ class Footer extends HTMLElement {
             </p>
           </div>
           <p>Designed and coded by Julia Czarnecki with some help from Bootstrap. &copy; 2013 - <span id="year"></span></p>
-	        <p style="font-size:0.8rem">SVG icons by <a href="https://icomoon.io/app" target="_blank" class="text-light" name="icomoon" rel="noreferrer">icomoon.</a> Mockup imagery provided by <a href="https://www.freepik.com" class="text-light" name="freepik" rel="noreferrer">freepik.</a></p>
+	        <p style="font-size:0.8rem">SVG icons by <a href="https://icomoon.io/app" target="_blank" class="text-light" name="icomoon" rel="noreferrer">icomoon.</a> Mockup imagery provided by <a href="https://www.freepik.com" class="text-light" name="freepik" rel="noreferrer" target="_blank">freepik.</a> Fonts are self-hosted, files supplied by <a href="https://fonts.google.com" class="text-light" name="google fonts" rel="noreferrer" target="_blank">Google Fonts</a> and used under the <a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL" name="Open Font License" rel="noreferrer" target="_blank" class="text-light">Open Font License</a>.</p>
           <p style="font-size:0.8rem">Any data you provide will only be used to reply to you. It will not be stored or shared.</p>
       </div>
     </footer>

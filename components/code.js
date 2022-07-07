@@ -9,7 +9,7 @@ class Code extends HTMLElement {
       <!-- Code Section -->
       <section class="bg-info text-white">
               <div class="container marketing">
-                  <h1><a class="anchor" name="code">Code Samples</a></h1>
+                  <h1 class="mb-4"><a class="anchor" name="code">Code Samples</a></h1>
                   <!-- Three columns of text -->
                   <div class="row">
                     <div class="col-lg-4">
@@ -41,7 +41,7 @@ class Code extends HTMLElement {
                   </div><!-- /.row -->
       
                   <!-- secondary code row -->
-                  <div class="row">
+                  <div class="row mb-5">
                   <div class="col-md-4 code-second">
                       <a href="https://github.com/ninjulia/email_carousel" target="_blank">
                         <div class="py-3 code-content">
