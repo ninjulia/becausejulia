@@ -1,0 +1,61 @@
+//
+// Intro and Design Display
+//
+
+.main-gradient {
+	@extend .bg-brand-gradient;
+	//margin-top: ($spacer * 3.25); // allows for header nav
+	padding: 2em 0 0 0;
+}
+
+/* Intro Text */
+.intro {
+	padding: 2em;
+}
+
+.intro p {
+	max-width: 33rem;
+	margin: 0 auto;
+}
+
+.figure {
+	position: relative;
+}
+
+.figure img {
+	display: block;
+	margin-bottom: 0;
+}
+
+.figure-caption {
+	background: $info-transparent;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: $spacer;
+}
+
+.fig-headline,
+.code-secondary-headline {
+	font-family: "Playfair Display", serif !important;
+	font-size: $font-size-base;
+	font-weight: bold;
+	display: block;
+	clear: both;
+}
+
+.fig-detail,
+.code-secondary-text {
+	font-size: ($font-size-base * 0.8);
+}
+
+.intro-content {
+	position: relative;
+	text-align: center;
+	margin-top: ($spacer * 2);
+}
+
+.intro-content h1 {
+	color: $lightest;
+}

@@ -1,0 +1,114 @@
+/*  Color system updates  */
+
+$lightest: #f9f9f9;
+$darkest: #191a23;
+$white: $lightest;
+$black: $darkest;
+
+$gray-100: darken($white, 10%);
+$gray-200: darken($white, 20%);
+$gray-300: darken($white, 30%);
+$gray-400: darken($white, 40%);
+$gray-500: darken($white, 50%);
+$gray-600: lighten($black, 40%);
+$gray-700: lighten($black, 30%);
+$gray-800: lighten($black, 20%);
+$gray-900: lighten($black, 10%);
+
+$grays: (
+	100: $gray-100,
+	200: $gray-200,
+	300: $gray-300,
+	400: $gray-400,
+	500: $gray-500,
+	600: $gray-600,
+	700: $gray-700,
+	800: $gray-800,
+	900: $gray-900,
+);
+
+// Bootstrap Color System -- separate from Brand
+$primary: #482475;
+
+$colors: (
+	"purple": $primary,
+	"black": $black,
+	"white": $white,
+	"light": $gray-300,
+	"deep-purple": #440154,
+	"deep-blue": #414487,
+	"mid-blue": #355f8d,
+	'cerulean': #2a788e,
+	'teal': #21908d,
+	"green": #22a884,
+	"light-green": #42be71,
+	"lime": #7ad151,
+);
+
+@each $color, $value in $colors {
+	.bg-#{$color} {
+		background-color: #{$value};
+	}
+}
+
+@each $color, $value in $colors {
+	.text-#{$color} {
+		color: #{$value};
+	}
+}
+
+//Theme Color System -- Brand
+$secondary: #bc9ee1;
+$success: #42be71;
+$info: #191a23;
+$warning: #f7d91b;
+//$danger: #da4453;
+$danger: #b20019;
+
+$brand-gradient: linear-gradient(
+	to bottom right,
+	#440154,
+	#482475,
+	#414487,
+	#355f8d,
+	#2a788e,
+	#21908d,
+	#22a884,
+	#42be71,
+	#7ad151
+);
+
+.bg-brand-gradient {
+	background: #482475;
+	background-image: $brand-gradient;
+}
+
+$pop: lighten($primary, 45%);
+
+//for use on header / footer bars
+$navbar-dark-color: rgba($white, 1);
+$navbar-dark-hover-color: rgba($white, 1);
+
+$navbar-dark-disabled-color: rgba($white, 0.5);
+
+$navbar-dark-toggler-border-color: rgba($white, 0.5);
+
+.bg-darkest {
+	background-color: $gray-900;
+
+	.dropdown-menu {
+		background-color: $gray-800;
+	}
+
+	.dropdown-item {
+		color: $navbar-dark-color;
+	}
+
+	.dropdown-item:focus,
+	.dropdown-item:hover {
+		background-color: $gray-600;
+		color: $navbar-dark-color;
+	}
+}
+
+$info-transparent: transparentize($info, 0.25);
