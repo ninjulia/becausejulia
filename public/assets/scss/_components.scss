@@ -1,0 +1,140 @@
+//
+// set spinner to slightly taller than text
+//
+$spinner-width-sm: $font-size-root * 1.5;
+$spinner-height-sm: $spinner-width-sm;
+
+//
+// style text as links
+//
+.link-effect {
+	text-decoration: underline;
+}
+
+//
+// Default Spacing Overrides
+//
+section, .design {
+	padding: ($spacer * 2);
+}
+
+p:last-of-type,
+.list-ul li:last-of-type,
+input[type="submit"] {
+	padding-bottom: ($spacer * 2);
+}
+
+// allows for header nav on jump links
+.anchor {
+	text-decoration: none;
+	font-weight: bold;
+	&:before {
+		content: "";
+		display: block;
+		position: relative;
+		height: ($spacer * 5);
+		margin-top: -($spacer * 5);
+	}
+}
+
+// style svgicons
+.icon {
+	display: inline-block;
+	width: ($font-size-root * 1.5);
+	height: ($font-size-root * 1.5);
+	stroke-width: 0;
+	stroke: currentColor;
+	fill: currentColor;
+}
+
+//
+// Style Unordered Lists with on Brand bullets
+//
+.list-ul {
+	padding: 0;
+	list-style: none;
+	margin-left: $spacer;
+}
+
+.list-ul li::before {
+	content: "\2022";
+	color: $primary;
+	font-weight: bold;
+	display: inline-block;
+	width: 0.5rem;
+	margin-left: -0.5rem;
+}
+
+//
+// Style Overrides for Modules / Components
+//
+html {
+	scroll-behavior: smooth;
+}
+
+.bg-dark,
+.bg-darkest {
+	color: $lightest !important;
+}
+
+.primary-headings {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: $primary !important;
+		font-weight: 700 !important;
+	}
+}
+
+.nav-item {
+	padding: 0 ($spacer * 2);
+}
+
+.navbar-brand {
+	display: flex !important;
+	align-items: center;
+
+	svg {
+		width: ($navbar-brand-font-size * 1.2);
+		height: ($navbar-brand-font-size * 1.2);
+		stroke-width: ($navbar-brand-font-size * 0.1);
+	}
+}
+
+
+//
+//  Footer
+//
+footer {
+	background-color: $gray-900 !important;
+	color: $gray-100;
+	padding: ($spacer * 2);
+	margin-bottom: 0;
+
+	p {
+		font-size: 0.8rem;
+
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+	}
+
+	a {
+		text-decoration: none;
+
+		.icon {
+			width: $h4-font-size;
+			height: $h4-font-size;
+			margin-bottom: 0;
+			margin-right: ($spacer * 2);
+		}
+
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+}
