@@ -6,18 +6,25 @@ layout: base.njk
 ---
 
 <section class="main-gradient">
-	<div class="container intro intro-content text-light">
-		<h1 class="display-1">I work on websites.</h1>
-		<p class="text-left lead px-3">
-			I'm a digital designer and a front end developer.
-		</p>
-		<p class="text-left px-3">
-			I love turning marketing goals into unique experiences that engage and delight across a variety of digital
-			platforms.
-		</p>
+	<!-- intro -->
+	<div class="container intro intro-content text-white">
+		<div class="row">
+			<div class="col-12">
+				<h1 class="display-1 text-center">I work on websites.</h1>
+				<p class="text-center lead mb-3">
+					I'm a digital designer and a front end developer.
+				</p>
+				<p class="text-center">
+					I love turning marketing goals into unique experiences that engage and delight across a variety of
+					digital
+					platforms.
+				</p>
+			</div>
+		</div>
 	</div>
+	<!-- /intro -->
 
-	<!-- Design Section-->
+	<!-- designs-->
 	<div class="container design">
 		<a class="anchor" name="design" id="design"></a>
 		<div class="row justify-content-center">
@@ -97,62 +104,61 @@ layout: base.njk
 			</svg>
 		</div>
 	</div>
+	<!-- /designs -->
 </section>
-<!-- End Design Section -->
 
 
-<!-- Code Section -->
+<!-- code section -->
 <section class="bg-info text-white">
-	<div class="container marketing">
+	<a class="anchor" name="code" id="code"></a>
+	<div class="container">
 		<div class="row">
 			<div class="col-12 mb-5">
 				<h2 class="display-5">
-					<a class="anchor text-decoration-none text-white" name="code">Code Samples</a>
+					Code Highlights
 				</h2>
 			</div>
 		</div>
 
 		<!-- first code row -->
-		<div class="row">
+		<div class="row code">
 			<div class="col-lg-4">
 				<div class="img-samples code-samples text-dark bg-white mb-3">
-					<svg class="icon icon-drawer hvr-bounce-in text-deep-blue">
-						<use xlink:href="#icon-drawer"></use>
-					</svg>
+					<i class="bi-envelope-paper icon hvr-bounce-in text-deep-blue fs-2"></i>
 				</div>
 				<h3>Newsletter</h3>
 				<p>Email Code | Responsive Layout</p>
 				<p>
-					<a class="btn btn-primary" href="https://github.com/ninjulia/email_newsletter" role="button">View
-						Project &raquo;</a>
+					<a class="btn btn-primary" href="https://github.com/ninjulia/email_newsletter" role="button">
+						View Project &raquo;
+					</a>
 				</p>
 			</div>
 
 			<div class="col-lg-4">
 				<div class="img-samples code-samples text-dark bg-white mb-3">
-					<svg class="icon icon-envelop hvr-bounce-in text-mid-blue">
-						<use xlink:href="#icon-envelop"></use>
-					</svg>
+					<i class="bi-file-earmark-play icon hvr-bounce-in text-mid-blue fs-2"></i>
 				</div>
-				<h2>Email with Video</h2>
+				<h3>Email with Video</h3>
 				<p>Email Code | Progressive Enhancements</p>
 				<p>
-					<a class="btn btn-primary" href="https://github.com/ninjulia/email_html5video" role="button">Get the
-						Details &raquo;</a>
+					<a class="btn btn-primary" href="https://github.com/ninjulia/email_html5video" role="button">
+						Get the Details &raquo;
+					</a>
 				</p>
 			</div>
 
 			<div class="col-lg-4">
 				<div class="img-samples code-samples text-dark bg-white mb-3">
-					<svg class="icon icon-cogs hvr-bounce-in text-cerulean">
-						<use xlink:href="#icon-cogs"></use>
-					</svg>
+					<i class="bi-hourglass-split icon hvr-bounce-in text-cerulean fs-2"></i>
 				</div>
-				<h2>Download Visualizer</h2>
+				<h3>Download Visualizer</h3>
 				<p>Front End Web | JQuery</p>
 				<p>
 					<a class="btn btn-primary" href="https://github.com/ninjulia/JavaScript_SpeedVisualizer"
-						role="button">See it in Action &raquo;</a>
+						role="button">
+						See it in Action &raquo;
+					</a>
 				</p>
 			</div>
 		</div>
@@ -164,9 +170,7 @@ layout: base.njk
 				<a href="https://github.com/ninjulia/email_carousel" target="_blank">
 					<div class="py-3 code-content">
 						<div class="text-primary bg-white img-samples code-samples icon-wrapper">
-							<svg class="icon icon-envelop text-teal">
-								<use xlink:href="#icon-envelop"></use>
-							</svg>
+							<i class="bi-images fs-4 text-teal"></i>
 						</div>
 						<div class="px-3 code-text">
 							<p class="code-secondary-text">
@@ -183,9 +187,7 @@ layout: base.njk
 				<a href="https://github.com/ninjulia/email_scratchoff" target="_blank">
 					<div class="py-3 code-content">
 						<div class="text-primary bg-white img-samples code-samples icon-wrapper">
-							<svg class="icon icon-envelop text-green">
-								<use xlink:href="#icon-envelop"></use>
-							</svg>
+							<i class="bi-ticket-perforated-fill fs-4 text-green"></i>
 						</div>
 						<div class="px-3 code-text">
 							<p class="code-secondary-text">
@@ -202,9 +204,7 @@ layout: base.njk
 				<a class="m-0 p-0 page-link" href="https://github.com/ninjulia" target="_blank">
 					<div class="py-3 code-content">
 						<div class="text-primary bg-white img-samples code-samples icon-wrapper">
-							<svg class="icon icon-github text-light-green">
-								<use xlink:href="#icon-github"></use>
-							</svg>
+							<i class="bi-github fs-4 text-light-green"></i>
 						</div>
 						<div class="px-3 code-text">
 							<p class="code-secondary-text p-0">
@@ -216,43 +216,50 @@ layout: base.njk
 					</div>
 				</a>
 			</div>
-			<!-- end secondary code section -->
+			<!-- /secondary code section -->
 		</div>
 	</div>
 </section>
-<!-- End Code Section -->
+<!-- /code section -->
 
-<!-- About Section -->
-<section id="about" class="mt-4">
+<!-- about section -->
+<section>
+	<a class="anchor" name="about" id="about"></a>
 	<div class="container">
-		<h2 class="display-5">
-			<a class="anchor text-primary text-decoration-none" name="about">About Julia</a>
-		</h2>
 		<div class="row">
-			<div class="col-md-8">
-				<h2 class="text-primary">I hate endings.</h2>
+			<div class="col-12">
+				<h2 class="display-5 text-primary">
+					About Julia
+				</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-7">
+				<h3 class="text-primary">I hate endings.</h3>
 				<p>
 					Web projects really never end. Each project requires research, design, coding and then more
 					research, more design — well, you get the point. There's always something to improve and always
 					something new to learn. That's what I love about working with the web.
 				</p>
-				<h2 class="text-primary">I wear many hats.</h2>
+				<h3 class="text-primary">I wear many hats.</h3>
 				<p>
-					Working in small groups (both in agencies and as part of an in-house creative team) has sharpened my
+					Working in small groups (both in agencies and as part of an in-house creative team) has
+					sharpened my
 					multi-tasking skills. I've taken on roles usually divided between different departments in other
 					companies. I've tackled video production, thrown down on copy writing, and after the project has
 					shipped, I'm behind the scenes checking to see how the users are reacting to the designs.
 				</p>
-				<h2 class="text-primary">But more about me.</h2>
+				<h3 class="text-primary">But more about me.</h3>
 				<p>
-					In my spare time I love being taken for walks by my dog, exploring new cities and keeping up with
+					In my spare time I love being taken for walks by my dog, exploring new cities and keeping up
+					with
 					web design trends and technologies. I am always looking to expand my horizons by taking on new
 					projects and meeting new people. So reach out and
 					<a href="#contact">drop me a line</a>.
 				</p>
 			</div>
-			<div class="col-md-4">
-				<h3 class="text-primary">Technology &amp; Certifications</h3>
+			<div class="col-md-4 offset-md-1">
+				<h4 class="text-primary">Technology &amp; Certifications</h4>
 				<ul class="list-ul">
 					<li>Adobe Creative Cloud</li>
 					<li>Experience with HTML5, CSS3 &amp; Responsive Design</li>
@@ -261,7 +268,7 @@ layout: base.njk
 					<li>SiteCore Certified Marketer</li>
 					<li>Eloqua Email Marketing</li>
 				</ul>
-				<h3 class="text-primary">Skill set</h3>
+				<h4 class="text-primary">Skill Set</h4>
 				<ul class="list-ul">
 					<li>Branding &amp; Logo Design</li>
 					<li>Corporate Design</li>
@@ -278,45 +285,66 @@ layout: base.njk
 		</div>
 	</div>
 </section>
-<!-- end about section -->
+<!-- /about section -->
 
-<!-- Latest Work Section-->
-<section id="latest" class="mt-4 bg-primary">
+<!-- latest work section -->
+<section class="bg-primary">
+	<a class="anchor" name="latest" id="latest"></a>
 	<div class="container">
-		<h2 class="fs-4">
-			<a class="anchor text-white text-decoration-none" name="latest">Latest Work</a>
-		</h2>
-
-		<div class="col-lg-12">
-			<!-- Hard coded bootstrap carousel -->
-
-			<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img src="https://cdn.dribbble.com/users/4638003/screenshots/19491857/abstractbackground_dribbble_1x.png"
-							class="d-block w-100" alt="...">
-					</div>
-					<div class="carousel-item">
-						<img src="https://cdn.dribbble.com/users/4638003/screenshots/19491838/3dkeyboard_dribbble_1x.jpg"
-							class="d-block w-100" alt="...">
-					</div>
-					<div class="carousel-item">
-						<img src="https://cdn.dribbble.com/users/4638003/screenshots/19491830/3ddonut_dribbble_1x.jpg"
-							class="d-block w-100" alt="...">
-					</div>
-				</div>
-				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-					data-bs-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Previous</span>
-				</button>
-				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-					data-bs-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Next</span>
-				</button>
+		<div class="row">
+			<div class="col-12">
+				<h2 class="display-6 text-white mb-4">
+					Latest Work
+				</h2>
 			</div>
-			<!--<div class="col-lg-12">
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<!-- Hard coded bootstrap carousel -->
+
+				<div id="carouselExampleControls" class="carousel slide w-100" data-bs-ride="carousel" data-wrap="true"
+					data-interval="false">
+					<div class="carousel-inner" role="list-box">
+						<div class="row">
+							<div class="col-12 col-md-6 col-lg-3 carousel-item active" role="option">
+								<img src="https://cdn.dribbble.com/users/4638003/screenshots/19491857/abstractbackground_dribbble_1x.png"
+									class="" alt="...">
+							</div>
+							<div class="col-12 col-md-6 col-lg-3 carousel-item active" role="option">
+								<img src="https://cdn.dribbble.com/users/4638003/screenshots/19491838/3dkeyboard_dribbble_1x.jpg"
+									class="" alt="...">
+							</div>
+							<div class="col-12 col-md-6 col-lg-3 carousel-item active" role="option">
+								<img src="https://cdn.dribbble.com/users/4638003/screenshots/19491830/3ddonut_dribbble_1x.jpg"
+									class="" alt="...">
+							</div>
+						</div>
+
+						<!--<div class="carousel-item active" role="option">
+							<img src="https://cdn.dribbble.com/users/4638003/screenshots/19491857/abstractbackground_dribbble_1x.png"
+								class="d-block w-100" alt="...">
+						</div>
+						<div class="carousel-item" role="option">
+							<img src="https://cdn.dribbble.com/users/4638003/screenshots/19491838/3dkeyboard_dribbble_1x.jpg"
+								class="d-block w-100" alt="...">
+						</div>
+						<div class="carousel-item" role="option">
+							<img src="https://cdn.dribbble.com/users/4638003/screenshots/19491830/3ddonut_dribbble_1x.jpg"
+								class="d-block w-100" alt="...">
+						</div>-->
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+						data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+						data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+				<!--<div class="col-lg-12">
 		<div id="myCarousel" class="carousel slide" data-wrap="true" data-interval="false">
 			<div class="carousel-inner" role="listbox">
 				<div class="carousel-item active" role="option">
@@ -339,17 +367,25 @@ layout: base.njk
 		</div>
 		<div class="py-3 col-md-11" id="view_more"></div>
 	</div>-->
+			</div>
 		</div>
 	</div>
 </section>
-<!-- /latest work-->
+<!-- /latest work -->
 
 <!-- contact-->
-<section id="contact" class="bg-info">
+<section class="bg-info">
+	<a class="anchor" name="contact" id="contact"></a>
 	<div class="container">
-		<h2 class="fs-4"><a class="anchor text-white text-decoration-none" name="contact">Let's Connect!</a></h2>
-		<p class="text-white mb-0">Message me on <a href="https://dribbble.com/becausejulia" target="_blank"
-				class="text-white" name="dribbble" rel="noreferrer" title="dribbble">Dribbble</a>.</p>
-	</div>
+		<div class="row">
+			<div class="col-12">
+				<h2 class="display-6 text-white mb-4">
+					Contact Julia
+				</h2>
+				<p class="text-white mb-0">Message me on <a href="https://dribbble.com/becausejulia" target="_blank"
+						class="text-white" name="dribbble" rel="noreferrer" title="dribbble">Dribbble</a>.</p>
+			</div>
+		</div>
 
+	</div>
 </section>

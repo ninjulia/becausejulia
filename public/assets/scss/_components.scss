@@ -1,8 +1,9 @@
 //
-// set spinner to slightly taller than text
+// Style Overrides for Modules / Components
 //
-$spinner-width-sm: $font-size-root * 1.5;
-$spinner-height-sm: $spinner-width-sm;
+html {
+	scroll-behavior: smooth;
+}
 
 //
 // style text as links
@@ -24,19 +25,6 @@ input[type="submit"] {
 	padding-bottom: ($spacer * 2);
 }
 
-// allows for header nav on jump links
-.anchor {
-	text-decoration: none;
-	font-weight: bold;
-	&:before {
-		content: "";
-		display: block;
-		position: relative;
-		height: ($spacer * 5);
-		margin-top: -($spacer * 5);
-	}
-}
-
 // style svgicons
 .icon {
 	display: inline-block;
@@ -54,87 +42,21 @@ input[type="submit"] {
 	padding: 0;
 	list-style: none;
 	margin-left: $spacer;
-}
 
-.list-ul li::before {
-	content: "\2022";
-	color: $primary;
-	font-weight: bold;
-	display: inline-block;
-	width: 0.5rem;
-	margin-left: -0.5rem;
-}
-
-//
-// Style Overrides for Modules / Components
-//
-html {
-	scroll-behavior: smooth;
-}
-
-.bg-dark,
-.bg-darkest {
-	color: $lightest !important;
-}
-
-.primary-headings {
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		color: $primary !important;
-		font-weight: 700 !important;
+	li:before {
+		content: "\2022";
+		color: $primary;
+		font-weight: bold;
+		display: inline-block;
+		width: .75rem;
+		height:.01rem;
+		margin-left: -.75rem;
+		@extend .fs-6;
 	}
 }
 
-.nav-item {
-	padding: 0 ($spacer * 2);
-}
-
-.navbar-brand {
-	display: flex !important;
-	align-items: center;
-
-	svg {
-		width: ($navbar-brand-font-size * 1.2);
-		height: ($navbar-brand-font-size * 1.2);
-		stroke-width: ($navbar-brand-font-size * 0.1);
-	}
-}
-
-
 //
-//  Footer
+// set spinner to slightly taller than text
 //
-footer {
-	background-color: $gray-900 !important;
-	color: $gray-100;
-	padding: ($spacer * 2);
-	margin-bottom: 0;
-
-	p {
-		font-size: 0.8rem;
-
-		&:last-child {
-			margin-bottom: 0;
-			padding-bottom: 0;
-		}
-	}
-
-	a {
-		text-decoration: none;
-
-		.icon {
-			width: $h4-font-size;
-			height: $h4-font-size;
-			margin-bottom: 0;
-			margin-right: ($spacer * 2);
-		}
-
-		&:hover {
-			opacity: 0.5;
-		}
-	}
-}
+$spinner-width-sm: $font-size-root * 1.5;
+$spinner-height-sm: $spinner-width-sm;

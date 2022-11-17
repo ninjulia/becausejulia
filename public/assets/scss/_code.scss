@@ -2,18 +2,16 @@
 // Code Section
 //
 
-.marketing .col-lg-4 {
+.code .col-lg-4 {
     margin-bottom: ($spacer *1.5);
     text-align: center;
-  }
-  
-  .marketing h2 {
-    font-weight: 400;
-  }
-  
-  .marketing .col-lg-4 p {
-    margin-right: ($spacer *0.75);
-    margin-left: ($spacer *0.75);
+
+    h3 {font-weight: 400; }
+
+    p {
+      margin-right: ($spacer *0.75);
+      margin-left: ($spacer *0.75);
+    }
   }
   
   .img-samples {
@@ -34,6 +32,15 @@
       width: 100%;
       height: auto;
     }
+
+    i:before {
+      @extend .mx-auto;
+      @extend .p-0;
+      @extend .text-center;
+      @extend .hvr-bounce-in; 
+    }
+
+    i.fs-2:before{font-size:($spacer * 5);}
   }
   
   .code-second {
@@ -46,6 +53,8 @@
       padding-left: ($spacer * 2);
       padding-right: ($spacer * 2);
     }
+
+    i.fs-4:before{font-size:($spacer * 2.5);}
 
     a {
       text-decoration: none;
@@ -69,7 +78,6 @@
         flex: 0 0 5rem;
         height: 5rem;
         padding: 1.5rem;
-        color: $pop;
     
         @media (min-width: 768px) and (max-width:1023px) {
           flex: none;

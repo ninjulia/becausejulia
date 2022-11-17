@@ -1,9 +1,14 @@
-/*  Color system updates  */
+//
+//Color system updates
+//
 
+// Bootstrap Color System -- separate from Brand
+$primary: #482475;
 $lightest: #f9f9f9;
 $darkest: #191a23;
 $white: $lightest;
 $black: $darkest;
+
 
 $gray-100: darken($white, 10%);
 $gray-200: darken($white, 20%);
@@ -14,6 +19,16 @@ $gray-600: lighten($black, 40%);
 $gray-700: lighten($black, 30%);
 $gray-800: lighten($black, 20%);
 $gray-900: lighten($black, 10%);
+/*
+$gray-100: lighten($primary, 90%);
+$gray-200: lighten($primary, 80%);
+$gray-300: lighten($primary, 70%);
+$gray-400: lighten($primary, 60%);
+$gray-500: darken($primary, 50%);
+$gray-600: darken($primary, 60%);
+$gray-700: darken($primary, 70%);
+$gray-800: darken($primary, 80%);
+$gray-900: darken($primary, 90%);*/
 
 $grays: (
 	100: $gray-100,
@@ -26,9 +41,6 @@ $grays: (
 	800: $gray-800,
 	900: $gray-900,
 );
-
-// Bootstrap Color System -- separate from Brand
-$primary: #482475;
 
 $custom-colors: (
 	"purple": $primary,
@@ -100,3 +112,8 @@ $navbar-dark-toggler-border-color: rgba($white, 0.5);
 }
 
 $info-transparent: transparentize($info, 0.25);
+
+.bg-dark,
+.bg-darkest {
+	color: $lightest !important;
+}

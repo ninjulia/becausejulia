@@ -1,0 +1,23 @@
+//
+// Header and NavBar Styling
+//
+
+//set header height and main margin the same
+header { height: ($spacer * 4); }
+main { margin-top: ($spacer * 4); }
+
+.nav-item {padding: 0 ($spacer * 2);}
+
+
+// allows for header nav on jump links
+.anchor {
+	text-decoration: none;
+	//font-weight: bold;
+	&:before {
+		content: "";
+		display: block;
+		position: relative;
+		height: ($spacer * 7);
+		margin-top: -($spacer * 7);
+	}
+}

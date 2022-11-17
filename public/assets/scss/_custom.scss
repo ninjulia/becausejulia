@@ -50,6 +50,9 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 // 8. Add additional custom code here
 //import custom componet styling
 @import "components";
+@import "myButtons";
+@import "header";
+@import "footer";
 
 //import hover effects
 @import "hover";
@@ -58,7 +61,10 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "intro";
 @import "code";
 @import "carousel";
-@import "portfolio";
 
 //page specific styling
+@import "portfolio";
 @import "linktree";
+
+//testing only
+@import "testing";

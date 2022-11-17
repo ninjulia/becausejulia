@@ -1,0 +1,20 @@
+//
+//Color Body for testing
+//
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { body{background-color: pink;} }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { body{background-color: orange;} }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { body{background-color: blue;} }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { body{background-color: green;} }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { body{background-color: yellow;} }
+
+//outline elements
+.outline {outline:2px solid red;}
