@@ -4,7 +4,7 @@
 
 //set header height and main margin the same
 header { height: ($spacer * 4); }
-main { margin-top: ($spacer * 4); }
+main, .portfolio-header { margin-top: ($spacer * 4); }
 
 .nav-item {padding: 0 ($spacer * 2);}
 

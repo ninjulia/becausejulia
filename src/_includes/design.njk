@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{{ title }} | Julia Czarnecki</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link href="../assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+
+<body class="vh-100">
+    <!-- header -->
+    {% include "header.njk" %}
+    <!-- /header -->
+
+    <section style="background: url({{ bannerImage }}) no-repeat center center"
+        class="d-flex justify-content-center align-items-center portfolio-header text-center text-white bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="display-2">{{ headline }}</h1>
+                    <p class="pb-0 mb-0">{{ title }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main role="main">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <ol class="breadcrumb mt-3">
+                <li><a href="/">Home &rsaquo;&nbsp;</a></li>
+                <li><a href="/#design"> Design &rsaquo;&nbsp;</a></li>
+                <li class="active">{{ headline }}</li>
+            </ol>
+        </div>
+        <section class="portfolio_start">
+            <div class="container text-left">
+                <h2 class="display-1">Concept</h2>
+                <p class="lead">{{ lead }}</p>
+            </div>
+        </section>
+        <!-- begin page content -->
+        {{ content | safe }}
+
+        <!-- end page content -->
+        <!-- footer -->
+        {% include "footer.njk" %}
+        <!-- /footer -->
