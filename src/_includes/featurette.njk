@@ -1,0 +1,15 @@
+<section class="featurette {{ colors[loop.index0] }} ">
+    <div class="container">
+        <div class="row d-flex flex-md-row align-items-center justify-content-between">
+            <div class="col-text col-md-6">
+                <h3>{{ featurettes[loop.index0].headline }}<br /><span class="text-muted fs-4">{{
+                        featurettes[loop.index0].subhead }}</span></h3>
+                <p>{{ featurettes[loop.index0].description }}</p>
+            </div>
+            <div class="col-img col-md-5">
+                <img src="{{ featurettes[loop.index0].image }}" alt="{{ featurettes[loop.index0].alt }}"
+                    class="img-fluid rounded-3" />
+            </div>
+        </div>
+    </div>
+</section>

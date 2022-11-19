@@ -8,6 +8,9 @@ main, .portfolio-header { margin-top: ($spacer * 4); }
 
 .nav-item {padding: 0 ($spacer * 2);}
 
+a[aria-current="page"]{
+	@extend .text-muted;
+}
 
 // allows for header nav on jump links
 .anchor {

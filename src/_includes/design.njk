@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>{{ title }} | Julia Czarnecki</title>
+    <title>{{ headline }} | Julia Czarnecki</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../../assets/css/style.css" />
     <link href="../assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -29,61 +29,40 @@
         </div>
     </section>
     <main role="main">
+        <!-- breadcrumb -->
         <div class="container">
-            <!-- Breadcrumb -->
             <ol class="breadcrumb mt-3">
-                <li><a href="/">Home &rsaquo;</a>&nbsp;&nbsp;</li>
-                <li><a href="/#design"> Design &rsaquo;</a>&nbsp;&nbsp;</li>
+                <li><a href="/">Home &rsaquo;&rsaquo;</a>&nbsp;&nbsp;</li>
+                <li><a href="/#design">Design &rsaquo;&rsaquo;</a>&nbsp;&nbsp;</li>
                 <li class="active">{{ headline }}</li>
             </ol>
         </div>
+        <!-- /breadcrumb -->
         <section class="portfolio_start">
             <div class="container text-left">
                 <h2 class="display-4">Concept</h2>
-                <p class="lead">
-                    {{ content | safe }}
-                </p>
+                {{content | safe}}
             </div>
         </section>
-        <!-- FEATURETTES -->
-        {% if featuretteHeadline1 %}
-        <section class="bg-dark featurette">
-            <div class="container">
-                <div class="row d-flex flex-md-row align-items-center justify-content-between">
-                    <div class="col-text col-md-6">
-                        <h3>{{ featuretteHeadline1 }}<br /><span class="text-muted">{{
-                                featuretteSubhead1 }}</span></h3>
-                        <p>{{ featuretteContent1 }}</p>
-                    </div>
-                    <div class="col-img col-md-5">
-                        <img src="{{ featuretteImg1 }}" alt="{{ featuretteImgAlt1 }}" class="img-fluid rounded-lg" />
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="bg-info featurette">
-            <div class="container">
-                <div class="row d-flex flex-md-row align-items-center justify-content-between">
-                    <div class="col-text col-md-6">
-                        <h3>{{ featuretteHeadline2 }}<br /><span class="text-muted">{{
-                                featuretteSubhead2 }}</span></h3>
-                        <p>{{ featuretteContent2 }}</p>
-                    </div>
-                    <div class="col-img col-md-5">
-                        <img src="{{ featuretteImg2 }}" alt="{{ featuretteImgAlt2 }}" class="img-fluid rounded-lg" />
-                    </div>
-                </div>
-            </div>
-        </section>
-        {% endif %}
-        <!-- /END THE FEATURETTES -->
-        {% if footer %}
+
+        <!-- featurettes -->
+        {% set colors = ['text-bg-info', 'text-bg-light', 'text-bg-deeper-purple' ] %}
+        {% for feature in featurettes %}
+
+        {% include "featurette.njk" %}
+
+        {% endfor %}
+        <!-- /featurettes -->
+        <!-- hero -->
+        {% if hero %}
         <section class="container-fluid m-0 p-0">
-            <img class="img-fluid" src="{{ footer }}" alt="{{ footerAlt }}">
+            <img class="img-fluid" src="{{ hero }}" alt="{{ heroAlt }}">
         </section>
         {% endif %}
+        <!-- hero -->
+        <!-- end page content -->
     </main>
-    <!-- end page content -->
+
     <!-- footer -->
     {% include "footer.njk" %}
     <!-- /footer -->

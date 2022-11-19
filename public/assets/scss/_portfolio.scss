@@ -34,8 +34,11 @@
     padding-left: 0 !important;
   }
 
-//swap appearance of text & image on every other featurette
+  //apply .lead styling to all p tags
+  .portfolio_start p {@extend .lead;}
+
 .featurette{
+  //swap order of text & image on every other featurette
   &:nth-of-type(even){
     .col-text{
       @extend .order-md-1;
@@ -44,7 +47,6 @@
       @extend .order-md-2;
     }
   }
-
 
   &:nth-of-type(odd){
     .col-text{

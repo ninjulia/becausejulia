@@ -28,71 +28,13 @@ layout: base.njk
 		<a class="anchor" name="design" id="design"></a>
 		<div class="row justify-content-center">
 
-			<div class="col-md-4 mb-5">
-				<a href="/ebook.html" target="_blank">
-					<figure class="figure hvr-bounce-in">
-						<img src="./assets/img/ebook-thumb.jpg" class="figure-img img-fluid shadow rounded"
-							alt="eBook" />
-						<figcaption class="figure-caption rounded-bottom">
-							<span class="fig-headline text-white">eBook Layout</span>
-							<span class="fig-detail text-white">Creative Concepting | Layout &amp; Design</span>
-						</figcaption>
-					</figure>
-				</a>
-			</div>
-			<div class="col-md-4 mb-5">
-				<a href="/web-management.html" target="_blank">
-					<figure class="figure hvr-bounce-in">
-						<img src="./assets/img/wm-thumb.jpg" class="figure-img img-fluid shadow rounded"
-							alt="website" />
-						<figcaption class="figure-caption rounded-bottom">
-							<span class="fig-headline text-white">Website Redesign</span>
-							<span class="fig-detail text-white">Content Strategy | Digital Marketing</span>
-						</figcaption>
-					</figure>
-				</a>
-			</div>
-			<div class="col-md-4 mb-5">
-				<a href="/elearning.html" target="_blank">
-					<figure class="figure hvr-bounce-in">
-						<img src="./assets/img/elearn-thumb.jpg" class="figure-img img-fluid shadow rounded"
-							alt="email" />
-						<figcaption class="figure-caption rounded-bottom">
-							<span class="fig-headline text-white">elearning Course</span>
-							<span class="fig-detail text-white">Web Design | Email Marketing</span>
-						</figcaption>
-					</figure>
-				</a>
-			</div>
-
-			<div class="col-md-4 mb-5">
-				<a href="/recipe.html" target="_blank">
-					<figure class="figure hvr-bounce-in">
-						<img src="./assets/img/recipe-thumb.png" class="figure-img img-fluid shadow rounded"
-							alt="recipe book" />
-						<figcaption class="figure-caption rounded-bottom">
-							<span class="fig-headline text-white">Recipe Book</span>
-							<span class="fig-detail text-white">Editorial Direction | Book Layout</span>
-						</figcaption>
-					</figure>
-				</a>
-			</div>
-
-			<div class="col-md-4 mb-5">
-				<a href="/banners.html" target="_blank">
-					<figure class="figure hvr-bounce-in">
-						<img src="./assets/img/banners-thumb.jpg" class="figure-img img-fluid shadow rounded"
-							alt="digital banners on display in a computer monitor" />
-						<figcaption class="figure-caption rounded-bottom">
-							<span class="fig-headline text-white">Digital Advertising</span>
-							<span class="fig-detail text-white">Creative Concepting | Web &amp; Social Media</span>
-						</figcaption>
-					</figure>
-				</a>
-			</div>
+			{% for design in collections.design %}
+			{% include "thumbnails.njk"%}
+			{% endfor %}
 
 		</div>
 	</div>
+	<!-- /designs -->
 
 	<div class="row p-0 m-0">
 		<div class="col-12 p-0 m-0">
@@ -103,7 +45,7 @@ layout: base.njk
 			</svg>
 		</div>
 	</div>
-	<!-- /designs -->
+
 </section>
 
 
