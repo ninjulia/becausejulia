@@ -17,10 +17,72 @@
     <!-- header -->
     {% include "header.njk" %}
     <!-- /header -->
-
-    <!-- begin page content -->
-    {{ content | safe }}
-
+    <section style="background: url('{{ banner }}') no-repeat center center"
+        class="d-flex justify-content-center align-items-center portfolio-header text-center text-white bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="display-2">{{ headline }}</h1>
+                    <p class="pb-0 mb-0">{{ title }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main role="main">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <ol class="breadcrumb mt-3">
+                <li><a href="/">Home &rsaquo;</a>&nbsp;&nbsp;</li>
+                <li><a href="/#design"> Design &rsaquo;</a>&nbsp;&nbsp;</li>
+                <li class="active">{{ headline }}</li>
+            </ol>
+        </div>
+        <section class="portfolio_start">
+            <div class="container text-left">
+                <h2 class="display-4">Concept</h2>
+                <p class="lead">
+                    {{ content | safe }}
+                </p>
+            </div>
+        </section>
+        <!-- FEATURETTES -->
+        {% if featuretteHeadline1 %}
+        <section class="bg-dark featurette">
+            <div class="container">
+                <div class="row d-flex flex-md-row align-items-center justify-content-between">
+                    <div class="col-text col-md-6">
+                        <h3>{{ featuretteHeadline1 }}<br /><span class="text-muted">{{
+                                featuretteSubhead1 }}</span></h3>
+                        <p>{{ featuretteContent1 }}</p>
+                    </div>
+                    <div class="col-img col-md-5">
+                        <img src="{{ featuretteImg1 }}" alt="{{ featuretteImgAlt1 }}" class="img-fluid rounded-lg" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-info featurette">
+            <div class="container">
+                <div class="row d-flex flex-md-row align-items-center justify-content-between">
+                    <div class="col-text col-md-6">
+                        <h3>{{ featuretteHeadline2 }}<br /><span class="text-muted">{{
+                                featuretteSubhead2 }}</span></h3>
+                        <p>{{ featuretteContent2 }}</p>
+                    </div>
+                    <div class="col-img col-md-5">
+                        <img src="{{ featuretteImg2 }}" alt="{{ featuretteImgAlt2 }}" class="img-fluid rounded-lg" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+        <!-- /END THE FEATURETTES -->
+        {% if footer %}
+        <section class="container-fluid m-0 p-0">
+            <img class="img-fluid" src="{{ footer }}" alt="{{ footerAlt }}">
+        </section>
+        {% endif %}
+    </main>
     <!-- end page content -->
     <!-- footer -->
     {% include "footer.njk" %}
