@@ -1,0 +1,59 @@
+//
+// Portfolio Page Styles
+//
+.portfolio-header {
+	height: 300px;
+
+	//adjust contrast on header
+	position: relative;
+
+	&:before {
+		content: " ";
+		display: block;
+		position: absolute;
+		height: 300px;
+		left: 0;
+		width: 100%;
+		background: rgba($info, 60%);
+		z-index: 1;
+	}
+
+	.container {
+		z-index: 2;
+	}
+
+	h1,
+	p {
+		text-shadow: 0rem 0rem 2rem rgba($info, 0.75);
+	}
+}
+
+.breadcrumb {
+	margin-bottom: 0;
+}
+
+//apply .lead styling to all p tags
+.portfolio_start p {
+	@extend .lead;
+}
+
+.featurette {
+	//swap order of text & image on every other featurette
+	&:nth-of-type(even) {
+		.col-text {
+			@extend .order-md-1;
+		}
+		.col-img {
+			@extend .order-md-2;
+		}
+	}
+
+	&:nth-of-type(odd) {
+		.col-text {
+			@extend .order-md-2;
+		}
+		.col-img {
+			@extend .order-md-1;
+		}
+	}
+}

@@ -229,59 +229,7 @@ layout: base.njk
 <!-- /about section -->
 
 <!-- latest work section -->
-<section class="bg-primary rollup">
-	<!-- headline -->
-	<a class="anchor" name="latest" id="latest"></a>
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="display-6 text-white mb-4">
-					Latest Work
-				</h2>
-			</div>
-		</div>
-	</div>
-	<!-- /headline -->
-	<!-- content -->
-	<div class="container-fluid">
-		<div class="row bg-dark carousel-holder">
-			<!--carousel -->
-			<div id="myCarousel" class="carousel">
-				<div class="carousel-inner">
-					<!-- carousel items -->
-					<div class="carousel-item active">
-						<img src="https://cdn.dribbble.com/users/4638003/screenshots/19491857/abstractbackground_dribbble_1x.png"
-							alt="..." class="img-fluid">
-					</div>
-					<div class="carousel-item">
-						<img src="https://cdn.dribbble.com/users/4638003/screenshots/19491838/3dkeyboard_dribbble_1x.jpg"
-							alt="..." class="img-fluid">
-					</div>
-					<div class="carousel-item">
-						<img src="https://cdn.dribbble.com/users/4638003/screenshots/19491830/3ddonut_dribbble_1x.jpg"
-							alt="..." class="img-fluid">
-					</div>
-					<div class="carousel-item">
-						<img src="https://cdn.dribbble.com/users/4638003/screenshots/19343621/fluidabstractwave-dribbble_1x.png"
-							alt="..." class="img-fluid">
-					</div>
-					<!-- /carousel items -->
-				</div>
-
-				<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Previous</span>
-				</button>
-				<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Next</span>
-				</button>
-			</div>
-			<!-- /carousel -->
-		</div>
-	</div>
-	<!-- /content -->
-</section>
+{% include "grid.njk" %}
 <!-- /latest work -->
 
 <!-- contact-->
