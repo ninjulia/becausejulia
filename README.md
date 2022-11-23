@@ -16,6 +16,12 @@ Code Repository for portfolio website [becausejulia.com](https://www.becausejuli
 * Icons: [icomoon.io](https://icomoon.io/)
 * Mockup Imagery: [freepic.com](https://www.freepik.com/)
 
+## Code Resources
+
+* [Bootstrap](https://getbootstrap.com/)
+* [11ty](https://www.11ty.dev/)
+* [Jribbble: A JavaScript library for the Dribbble API](https://github.com/tylergaw/jribbble)
+
 ## Project Roadmap
 > MVP for Netlify release completed 12/21
 
@@ -24,16 +30,16 @@ Code Repository for portfolio website [becausejulia.com](https://www.becausejuli
 * favicon - add support for multi-format
 * Footer - convert icons to change bg color on :hover
 * About - include icons/statement for known technologies && software
-* /Writing - convert to blog (try out jekyll or HUGO) 
+* /Writing - convert to blog ~~(try out jekyll or HUGO)~~  
 * /Instagram - convert to quick edit and add icons for current sales
-* /Design - adjust z-index of :active :hover states to avoid overlap
+* ~~/Design - adjust z-index of :active :hover states to avoid overlap~~
 * /Code - adjust button contrast 
 
 
 ## Tech and Tooling
 
-* HTML, CSS (SaSS), JS, ~~PHP~~
-* Docker
+* HTML, CSS (SCSS), JS, Njk
+* 11ty
 * Git 
 
 ## Links

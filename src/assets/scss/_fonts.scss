@@ -7,9 +7,9 @@
 //Regular
 @font-face {
 	font-family: "Playfair Display";
-	src: url("/src/assets/fonts/playfair-display-v29-latin/playfair-display-v29-latin-regular.woff2")
+	src: url("../fonts/playfair-display-v29-latin/playfair-display-v29-latin-regular.woff2")
 			format("woff2"),
-		url("/src/assets/fonts/playfair-display-v29-latin/playfair-display-v29-latin-regular.woff")
+		url("../fonts/playfair-display-v29-latin/playfair-display-v29-latin-regular.woff")
 			format("woff");
 	font-weight: normal;
 	font-style: normal;
@@ -18,9 +18,9 @@
 //Bold
 @font-face {
 	font-family: "Playfair Display";
-	src: url("/src/assets/fonts/playfair-display-v29-latin/playfair-display-v29-latin-700.woff2")
+	src: url("../fonts/playfair-display-v29-latin/playfair-display-v29-latin-700.woff2")
 			format("woff2"),
-		url("/src/assets/fonts/playfair-display-v29-latin/playfair-display-v29-latin-700.woff")
+		url("../fonts/playfair-display-v29-latin/playfair-display-v29-latin-700.woff")
 			format("woff");
 	font-weight: 700;
 	font-style: normal;
@@ -37,9 +37,9 @@ $display-font-weight: null;
 //Regular
 @font-face {
 	font-family: Monterrat;
-	src: url("/src/assets/fonts/montserrat-v24-latin/montserrat-v24-latin-regular.woff2")
+	src: url("../fonts/montserrat-v24-latin/montserrat-v24-latin-regular.woff2")
 			format("woff2"),
-		url("/src/assets/fonts/montserrat-v24-latin/montserrat-v24-latin-regular.woff")
+		url("../fonts/montserrat-v24-latin/montserrat-v24-latin-regular.woff")
 			format("woff");
 	font-weight: normal;
 	font-style: normal;

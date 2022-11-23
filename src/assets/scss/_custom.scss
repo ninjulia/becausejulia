@@ -60,11 +60,11 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 //import section styling
 @import "intro";
 @import "code";
-@import "carousel";
+@import "displayGrid";
 
 //page specific styling
 @import "portfolio";
 @import "linktree";
 
 //testing only
-//@import "testing";
+@import "testing";
