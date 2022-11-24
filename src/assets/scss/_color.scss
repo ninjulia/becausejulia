@@ -41,7 +41,6 @@ $gray-700: darken($secondary, 70%);
 $gray-800: darken($secondary, 80%);
 $gray-900: darken($secondary, 90%);*/
 
-
 $grays: (
 	100: $gray-100,
 	200: $gray-200,
@@ -62,8 +61,8 @@ $custom-colors: (
 	"deep-purple": #440154,
 	"deep-blue": #414487,
 	"mid-blue": #355f8d,
-	'cerulean': #2a788e,
-	'teal': #2DC8C2,
+	"cerulean": #2a788e,
+	"teal": #2dc8c2,
 	"green": #22a884,
 	"light-green": #42be71,
 	"lime": #7ad151,
@@ -75,22 +74,9 @@ $custom-colors: (
 $success: #42be71;
 $info: #191a23;
 $warning: #f7d91b;
-//$danger: #da4453;
-$danger: #b20019;
+$danger: #f44336;
 
-
-$brand-gradient: linear-gradient(
-	to bottom right,
-	#440154,
-	#482475,
-	#414487,
-	#355f8d,
-	#2a788e,
-	#21908d,
-	#22a884,
-	#42be71,
-	#7ad151
-);
+$brand-gradient: linear-gradient(to bottom right, #440154, #482475, #414487, #355f8d, #2a788e, #21908d, #22a884, #42be71, #7ad151);
 
 .bg-brand-gradient {
 	background: #482475;
@@ -133,5 +119,5 @@ $info-transparent: transparentize($info, 0.25);
 }
 
 .bg-info {
-	color:$gray-400;
+	color: $gray-400;
 }

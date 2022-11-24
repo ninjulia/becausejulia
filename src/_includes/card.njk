@@ -1,0 +1,9 @@
+<div class="card">
+    <div class="card-header text-bg-{{ colors[loop.index0] }}">{{ samples.data.tags[1] }} | {{ samples.data.tags[2] }}
+    </div>
+    <div class="card-body">
+        <h2 class="fs-5 card-title">{{ samples.data.headline }}</h2>
+        <p class="card-text">{{ samples.data.intro }}</p>
+        <a href="#" class="btn btn-{{ colors[loop.index0] }}">{{ samples.data.button }}</a>
+    </div>
+</div>

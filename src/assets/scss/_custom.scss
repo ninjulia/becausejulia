@@ -61,6 +61,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "intro";
 @import "code";
 @import "displayGrid";
+@import "writing";
 
 //page specific styling
 @import "design";

@@ -1,0 +1,109 @@
+/* writing section styles */
+.writing-showcase {
+	display: grid;
+	grid-auto-rows: auto;
+	grid-template-columns: 1fr;
+	justify-content: space-around;
+
+	gap: ($spacer * 2);
+
+	@include media-breakpoint-up(sm) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include media-breakpoint-up(md) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@include media-breakpoint-up(xxl) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.card {
+		padding: 0;
+		background-color: $lightest;
+		grid-column: span 1;
+
+		.card-header {
+			width: 100%;
+			font-style: italic;
+			font-size: 0.75em;
+		}
+		.card-body {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			.card-text {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				max-height: 4ch;
+			}
+			.btn {
+				align-self: flex-end;
+			}
+		}
+	}
+}
+
+.writing-container {
+	.img-fluid {
+		max-width: 500px;
+	}
+}
+
+.shentel {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.videoFrame {
+	position: relative;
+	padding: 20px 0 40px;
+	background: url(../../assets/img/writing/vid_background_swoosh.png) no-repeat center center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.videoFrame .videoContainer iframe {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	height: auto;
+	box-shadow: rgba(25, 25, 25, 0.6) 3px 3px 4px 0;
+}
+
+th,
+td {
+	padding: 0.25rem 0.5rem;
+	text-align: center;
+}
+
+td h1,
+td h2,
+td h3 {
+	margin: 0;
+	padding: 0;
+}
+.example {
+	text-decoration: underline;
+}
+
+.product {
+	margin: 30px 0px;
+	border-bottom: 1px solid #999999;
+	.feature {
+		border-radius: 10px;
+		background: #00446a;
+		color: #ffffff;
+		padding: 5px;
+		margin-bottom: 20px;
+	}
+}
+
+.footnotes {
+	font-size: 0.6rem;
+	a {
+		display: block;
+	}
+}

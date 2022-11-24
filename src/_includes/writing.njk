@@ -1,0 +1,23 @@
+---
+layout: base.njk
+---
+
+<main role="main" class="">
+    <!-- breadcrumb -->
+    <div class="container writing">
+        <ol class="breadcrumb mt-5">
+            <li><a href="/">Home &rsaquo;&rsaquo;</a>&nbsp;&nbsp;</li>
+            <li><a href="/writing/#samples/">Writing &rsaquo;&rsaquo;</a>&nbsp;&nbsp;</li>
+            <li class="active">{{ title }}</li>
+        </ol>
+    </div>
+    <!-- /breadcrumb -->
+
+    <section>
+        <div class="container">
+            <div class="row writing-container p-4 border rounded text-bg-light">
+                {{content | safe}}
+            </div>
+        </div>
+    </section>
+</main>

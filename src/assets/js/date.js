@@ -1,4 +1,8 @@
 //////////////////////////////////Get Year for copyright date
-const copyrightDate = new Date();
-let copyrightYear = copyrightDate.getFullYear();
-document.getElementById("year").innerHTML = copyrightYear;
+const getDate = new Date();
+let currentYear = getDate.getFullYear();
+document.getElementById("year").innerHTML = currentYear;
+
+//////////////////////////////////Get years in tech
+let startYear = 2014;
+console.log(currentYear - startYear);

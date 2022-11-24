@@ -15,7 +15,9 @@ html {
 //
 // Default Spacing Overrides
 //
-section, .design{
+section,
+.design,
+.writing .breadcrumb {
 	padding: ($spacer * 2);
 }
 
@@ -48,9 +50,9 @@ input[type="submit"] {
 		color: $primary;
 		font-weight: bold;
 		display: inline-block;
-		width: .75rem;
-		height:.01rem;
-		margin-left: -.75rem;
+		width: 0.75rem;
+		height: 0.01rem;
+		margin-left: -0.75rem;
 		@extend .fs-6;
 	}
 }
