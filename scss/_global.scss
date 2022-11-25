@@ -1,9 +1,14 @@
 //
 // Style Overrides for Modules / Components
 //
-html {
-	scroll-behavior: smooth;
+
+//Optional Bootstrap preferences
+$enable-reduced-motion: true;
+@media prefers-reduced-motion {
+	//either hook into bootstrap transitions or remove .hvr.style
 }
+
+$enable-negative-margins: true;
 
 //
 // style text as links
