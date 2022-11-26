@@ -1,5 +1,3 @@
-<!-- set current url -->
-{% set currentUrl = page.url %}
 <header class="w-100 fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark bg-darkest d-lg-flex justify-content-baseline" role="navigation">
         <div class="container">
@@ -14,34 +12,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/#design" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Design
-                        </a>
-                        <ul class="dropdown-menu">
-                            {% for design in collections.design %}
-                            <li>
-                                <a class="dropdown-item" {% if currentUrl===design.url %}aria-current="page" {% endif %}
-                                    href="{{ design.url}}">
-                                    {{ design.data.headline }}
-                                </a>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/#code">Code</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/#latest">Latest</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/#contact">Contact</a>
-                    </li>
+                    {% set currentUrl = page.url %}
+                    {% set typeTest = r/writing*/%}
+                    {% if typeTest.test(currentUrl)%}
+                    {% include "writingNav.njk" %}
+                    {% else %}
+                    {% include "designNav.njk" %}
+                    {% endif %}
                 </ul>
             </div>
         </div>

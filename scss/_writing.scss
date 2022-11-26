@@ -33,10 +33,11 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
+
 			.card-text {
+				white-space: nowrap;
 				overflow: hidden;
 				text-overflow: ellipsis;
-				max-height: 4ch;
 			}
 			.btn {
 				align-self: flex-end;
