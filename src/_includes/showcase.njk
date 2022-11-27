@@ -1,0 +1,11 @@
+<!-- showcase -->
+<section class="latest-work bg-primary">
+    <div id="latest-grid" class="grid text-bg-info">
+        {% for selected in collections.showcase %}
+        <div class="grid-item">
+            <img src="{{selected}}" class="img-fluid rounded-1" alt="">
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<!-- /showcase -->
