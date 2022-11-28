@@ -1,5 +1,5 @@
 ---
-title: Creative Concepting | Layout and Design
+title: Layout and Design
 headline: eBook
 thumbnail: ../assets/img/design/ebook-thumb.jpg
 banner: ../../assets/img/design/ebook-hero.jpg

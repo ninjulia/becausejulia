@@ -22,7 +22,7 @@ layout: base.njk
 
 	<!-- designs-->
 	<div class="container p-8">
-		<a class="anchor" name="design" id="design"></a>
+		<a class="anchor" name="design" id="design" tabindex="0" aria-label="design"></a>
 		<div class="row justify-content-center">
 
 			{% for design in collections.design %}
@@ -34,8 +34,8 @@ layout: base.njk
 	<!-- /designs -->
 
 	<div class="row p-0 m-0">
-		<div class="col-12 p-0 m-0">
-			<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1440 320">
+		<div class="col-12 position-relative bottom-0 w-100 p-0">
+			<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1440 320" role="presentation">
 				<path fill="#191a23" fill-opacity="1"
 					d="M0,32L40,42.7C80,53,160,75,240,90.7C320,107,400,117,480,133.3C560,149,640,171,720,202.7C800,235,880,277,960,250.7C1040,224,1120,128,1200,80C1280,32,1360,32,1400,32L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
 				</path>
@@ -47,12 +47,12 @@ layout: base.njk
 
 
 <!-- code section -->
-<section class="bg-info text-white">
-	<a class="anchor" name="code" id="code"></a>
+<section class="bg-info text-white py-8">
+	<a class="anchor" name="code" id="code" aria-labelledby="title2"></a>
 	<div class="container p-8">
 		<div class="row">
 			<div class="col-12 mb-9">
-				<h2 class="display-5">
+				<h2 class="display-5" id="title2" tabindex="0">
 					Code Highlights
 				</h2>
 			</div>
@@ -168,11 +168,11 @@ layout: base.njk
 
 <!-- about section -->
 <section>
-	<a class="anchor" name="about" id="about"></a>
+	<a class="anchor" name="about" id="about" aria-labelledby="title3"></a>
 	<div class="container p-8">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="display-5 text-primary">
+				<h2 class="display-5 text-primary" id="title3" tabindex="0">
 					About Julia
 				</h2>
 			</div>
@@ -237,11 +237,11 @@ layout: base.njk
 
 <!-- contact-->
 <section class="bg-info">
-	<a class="anchor" name="contact" id="contact"></a>
+	<a class="anchor" name="contact" id="contact" aria-labelledby="title5"></a>
 	<div class="container p-8">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="display-6 text-white mb-4">
+				<h2 class="display-6 text-white mb-4" id="title5" tabindex="0">
 					Contact Julia
 				</h2>
 				<p class="text-white mb-0">Looking for help with a project? Message me on <a

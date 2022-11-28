@@ -1,5 +1,5 @@
 ---
-title: Creative Concepting | Web & Social Media
+title: Web and Social Media
 headline: Digital Advertising
 thumbnail: ../assets/img/design/display-thumb.jpg
 banner: ../../assets/img/design/display-hero.jpg

@@ -20,13 +20,7 @@ $enable-negative-margins: true;
 //
 // Default Spacing Overrides
 //
-/*
-section,
-.design,
-.writing .breadcrumb {
-	padding: ($spacer * 2);
-}
-*/
+
 p:last-of-type,
 .list-ul li:last-of-type,
 input[type="submit"] {
@@ -66,9 +60,3 @@ input[type="submit"] {
 .text-bg-primary .list-ul li:before {
 	color: $white !important;
 }
-
-//
-// set spinner to slightly taller than text
-//
-$spinner-width-sm: $font-size-root * 1.5;
-$spinner-height-sm: $spinner-width-sm;

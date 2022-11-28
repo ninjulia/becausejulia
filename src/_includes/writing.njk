@@ -2,22 +2,21 @@
 layout: base.njk
 ---
 
-<main role="main" class="">
-    <!-- breadcrumb -->
-    <div class="container writing">
-        <ol class="breadcrumb mt-8">
-            <li><a href="/">Home &rsaquo;&rsaquo;</a>&nbsp;&nbsp;</li>
-            <li><a href="/writing/#samples/">Writing &rsaquo;&rsaquo;</a>&nbsp;&nbsp;</li>
-            <li class="active">{{ title }}</li>
-        </ol>
-    </div>
-    <!-- /breadcrumb -->
 
-    <section>
-        <div class="container">
-            <div class="row writing-container p-4 border rounded text-bg-light">
-                {{content | safe}}
-            </div>
+<!-- breadcrumb -->
+<div class="container p-8">
+    <ol class="breadcrumb">
+        <li><a href="/">Home &rsaquo;&rsaquo;</a>&nbsp;&nbsp;</li>
+        <li><a href="/writing/#samples/">Writing &rsaquo;&rsaquo;</a>&nbsp;&nbsp;</li>
+        <li class="active">{{ title }}</li>
+    </ol>
+</div>
+<!-- /breadcrumb -->
+
+<section>
+    <div class="container p-8">
+        <div class="row writing-container p-4 border rounded text-bg-light" tabindex="0">
+            {{content | safe}}
         </div>
-    </section>
-</main>
+    </div>
+</section>

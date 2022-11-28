@@ -3,24 +3,30 @@
 //
 
 //set header height and main margin the same
-header { height: ($spacer * 4); }
-main, .portfolio-header { margin-top: ($spacer * 4); }
+header {
+	height: ($spacer * 4);
+}
+main,
+.portfolio-header {
+	margin-top: ($spacer * 4);
+}
 
-.nav-item {padding: 0 ($spacer * 2);}
+.nav-item {
+	padding: 0 ($spacer * 2);
+}
 
-a[aria-current="page"]{
+a[aria-current="page"] {
 	@extend .text-muted;
 }
 
 // allows for header nav on jump links
 .anchor {
 	text-decoration: none;
-	//font-weight: bold;
 	&:before {
 		content: "";
 		display: block;
 		position: relative;
-		height: ($spacer * 7);
-		margin-top: -($spacer * 7);
+		height: ($spacer * 5);
+		margin-top: -($spacer * 5);
 	}
 }

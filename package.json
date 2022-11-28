@@ -24,13 +24,16 @@
 	"homepage": "https://github.com/ninjulia/becausejulia#readme",
 	"devDependencies": {
 		"@11ty/eleventy": "^1.0.2",
+		"@fullhuman/postcss-purgecss": "^5.0.0",
 		"bootstrap": "^5.2.3",
 		"fast-glob": "^3.2.12",
 		"npm-run-all": "^4.1.5",
+		"postcss": "^8.4.19",
 		"sass": "^1.56.1"
 	},
 	"dependencies": {
 		"autoprefixer": "^10.4.13",
+		"clean-css": "^5.3.1",
 		"postcss-cli": "^10.0.0"
 	}
 }
