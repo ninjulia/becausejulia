@@ -25,6 +25,6 @@ jribbble.shots(function (shotsArray) {
 //view more shots
 //
 jribbble.user(function (userObj) {
-	const gridSubText = `<p class="text-end text-white mb-0 pb-0">View more posts from <a href="${userObj.html_url}" target="_blank" class="text-white">${userObj.login} on dribbble.</a></p>`;
+	const gridSubText = `<p class="text-white mb-0 pb-0">View more posts from <a href="${userObj.html_url}" target="_blank" class="text-white">${userObj.login} on dribbble.</a></p>`;
 	document.getElementById("viewMore").innerHTML = gridSubText;
 });

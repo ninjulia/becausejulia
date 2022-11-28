@@ -28,6 +28,16 @@
 	}
 }
 
+//set height on header for large screens
+@include media-breakpoint-up(lg) {
+	.portfolio-header {
+		height: 600px;
+		&:before {
+			height: 600px;
+		}
+	}
+}
+
 .breadcrumb {
 	margin-bottom: 0;
 }

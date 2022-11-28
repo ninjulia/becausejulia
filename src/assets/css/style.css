@@ -10232,12 +10232,13 @@ progress {
   text-decoration: underline;
 }
 
+/*
 section,
 .design,
 .writing .breadcrumb {
-  padding: 2rem;
+	padding: ($spacer * 2);
 }
-
+*/
 p:last-of-type,
 .list-ul li:last-of-type,
 input[type=submit] {
@@ -10266,6 +10267,10 @@ input[type=submit] {
   width: 0.75rem;
   height: 0.01rem;
   margin-left: -0.75rem;
+}
+
+.text-bg-primary .list-ul li:before {
+  color: #f9f9f9 !important;
 }
 
 .btn-brand-gradient {
@@ -10503,7 +10508,6 @@ footer a i {
 }
 .latest-work .headline,
 .latest-work .view-link {
-  padding: 1rem 2rem;
   width: 100%;
   max-height: fit-content;
   background-color: rgba(25, 26, 35, 0.75);
@@ -10874,6 +10878,14 @@ td .h3 {
   text-shadow: 0rem 0rem 2rem rgba(25, 26, 35, 0.75);
 }
 
+@media (min-width: 992px) {
+  .portfolio-header {
+    height: 600px;
+  }
+  .portfolio-header:before {
+    height: 600px;
+  }
+}
 .breadcrumb {
   margin-bottom: 0;
 }
@@ -10895,6 +10907,35 @@ td .h3 {
   padding-bottom: 0.5rem;
   margin-bottom: 0;
   text-decoration: none !important;
+}
+
+@media (min-width: 576px) {
+  body {
+    background-color: pink;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    background-color: orange;
+  }
+}
+@media (min-width: 992px) {
+  body {
+    background-color: blue;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    background-color: green;
+  }
+}
+@media (min-width: 1400px) {
+  body {
+    background-color: yellow;
+  }
+}
+.container {
+  outline: 2px solid navajowhite;
 }
 
 /*# sourceMappingURL=style.css.map */

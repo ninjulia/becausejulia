@@ -20,12 +20,13 @@ $enable-negative-margins: true;
 //
 // Default Spacing Overrides
 //
+/*
 section,
 .design,
 .writing .breadcrumb {
 	padding: ($spacer * 2);
 }
-
+*/
 p:last-of-type,
 .list-ul li:last-of-type,
 input[type="submit"] {
@@ -60,6 +61,10 @@ input[type="submit"] {
 		margin-left: -0.75rem;
 		@extend .fs-6;
 	}
+}
+
+.text-bg-primary .list-ul li:before {
+	color: $white !important;
 }
 
 //

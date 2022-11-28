@@ -4,5 +4,7 @@ let currentYear = getDate.getFullYear();
 document.getElementById("year").innerHTML = currentYear;
 
 //////////////////////////////////Get years in tech
-let startYear = 2014;
-console.log(currentYear - startYear);
+const yearsExp = document.getElementById("myExp");
+if (yearsExp) {
+	yearsExp.innerHTML = currentYear - 2014;
+}

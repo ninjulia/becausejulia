@@ -38,7 +38,7 @@
             </ol>
         </div>
         <!-- /breadcrumb -->
-        <section class="portfolio_start">
+        <section class="portfolio_start p-8">
             <div class="container text-start">
                 <h2 class="display-4">Concept</h2>
                 {{content | safe}}
@@ -59,8 +59,7 @@
             <div id="latest-grid" class="grid text-bg-info">
                 {% for selected in collections.showcase | filterImg(page.url) %}
                 <div class="grid-item">
-                    <!--<img src="{{selected}}" class="img-fluid rounded-1" alt="">-->
-                    <p>{{selected}}</p>
+                    <img src="{{selected}}" class="img-fluid rounded-1" alt="">
                 </div>
                 {% endfor %}
             </div>
