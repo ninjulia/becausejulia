@@ -1,0 +1,53 @@
+//Bootstrap icon defs pulled from https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css
+
+@font-face {
+	font-display: block;
+	font-family: "bootstrap-icons";
+	src: url("./fonts/bootstrap-icons.woff2?24e3eb84d0bcaf83d77f904c78ac1f47") format("woff2"), url("./fonts/bootstrap-icons.woff?24e3eb84d0bcaf83d77f904c78ac1f47") format("woff");
+}
+
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+	display: inline-block;
+	font-family: bootstrap-icons !important;
+	font-style: normal;
+	font-weight: normal !important;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	vertical-align: -0.125em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.bi-basket3-fill::before {
+	content: "\f183";
+}
+.bi-code-slash::before {
+	content: "\f2c6";
+}
+.bi-dribbble::before {
+	content: "\f65f";
+}
+.bi-envelope-paper::before {
+	content: "\f73d";
+}
+.bi-file-earmark-play::before {
+	content: "\f37b";
+}
+.bi-github::before {
+	content: "\f3ed";
+}
+.bi-hourglass-split::before {
+	content: "\f41f";
+}
+.bi-images::before {
+	content: "\f42b";
+}
+.bi-instagram::before {
+	content: "\f437";
+}
+.bi-ticket-perforated-fill::before {
+	content: "\f6c9";
+}

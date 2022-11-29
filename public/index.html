@@ -13,7 +13,6 @@
     <title>Julia Czarnecki | Design | Code | Digital</title>
     
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../../assets/css/style.css" />
     <link href="../assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
@@ -29,7 +28,9 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-darkest d-lg-flex justify-content-baseline" role="navigation">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center text-white"  href="/"  target="_self" tabindex="0">
-                <i class="bi-code-slash text-white fs-1"></i>
+                <svg class="bi" width="32" height="32" fill="currentColor" role="img" aria-label="code">
+                    <use xlink:href="../../assets/img/bootstrap-icons.svg#code-slash" />
+                </svg>
                 &nbsp;&nbsp;&nbsp;Julia Czarnecki
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -125,15 +126,15 @@
 
 	<!-- designs-->
 	<div class="container p-8">
-		<a class="anchor" name="design" id="design" tabindex="0" aria-label="design"></a>
+		<a class="anchor" name="design" id="design"></a>
 		<div class="row justify-content-center">
 
 			
 			<div class="col-md-5 col-lg-4 mb-9 hvr-bounce-in">
     <a href="/design/display/" target="_blank" name="Digital Advertising" aria-label="Digital Advertising">
         <figure class="position-relative">
-            <img src="../assets/img/design/display-thumb.jpg" class="img-fluid shadow rounded w-100 mb-0"
-                alt="Digital Advertising" />
+            <img src="../assets/img/design/display-thumb.webp" class="img-fluid shadow rounded w-100 mb-0" width="500" height="500"
+                alt="Digital Advertising" loading="lazy" />
             <figcaption
                 class="text-white bg-info-transparent position-absolute w-100 bottom-0 end-0 start-0 p-4 rounded-bottom">
                 <span class="fig-headline text-white">Digital Advertising</span>
@@ -146,8 +147,8 @@
 			<div class="col-md-5 col-lg-4 mb-9 hvr-bounce-in">
     <a href="/design/ebook/" target="_blank" name="eBook" aria-label="eBook">
         <figure class="position-relative">
-            <img src="../assets/img/design/ebook-thumb.jpg" class="img-fluid shadow rounded w-100 mb-0"
-                alt="eBook" />
+            <img src="../assets/img/design/ebook-thumb.webp" class="img-fluid shadow rounded w-100 mb-0" width="500" height="500"
+                alt="eBook" loading="lazy" />
             <figcaption
                 class="text-white bg-info-transparent position-absolute w-100 bottom-0 end-0 start-0 p-4 rounded-bottom">
                 <span class="fig-headline text-white">eBook</span>
@@ -160,8 +161,8 @@
 			<div class="col-md-5 col-lg-4 mb-9 hvr-bounce-in">
     <a href="/design/elearn/" target="_blank" name="eLearning Course" aria-label="eLearning Course">
         <figure class="position-relative">
-            <img src="../assets/img/design/elearn-thumb.jpg" class="img-fluid shadow rounded w-100 mb-0"
-                alt="eLearning Course" />
+            <img src="../assets/img/design/elearn-thumb.webp" class="img-fluid shadow rounded w-100 mb-0" width="500" height="500"
+                alt="eLearning Course" loading="lazy" />
             <figcaption
                 class="text-white bg-info-transparent position-absolute w-100 bottom-0 end-0 start-0 p-4 rounded-bottom">
                 <span class="fig-headline text-white">eLearning Course</span>
@@ -174,8 +175,8 @@
 			<div class="col-md-5 col-lg-4 mb-9 hvr-bounce-in">
     <a href="/design/recipe/" target="_blank" name="Recipe Book" aria-label="Recipe Book">
         <figure class="position-relative">
-            <img src="../assets/img/design/recipe-thumb.jpg" class="img-fluid shadow rounded w-100 mb-0"
-                alt="Recipe Book" />
+            <img src="../assets/img/design/recipe-thumb.webp" class="img-fluid shadow rounded w-100 mb-0" width="500" height="500"
+                alt="Recipe Book" loading="lazy" />
             <figcaption
                 class="text-white bg-info-transparent position-absolute w-100 bottom-0 end-0 start-0 p-4 rounded-bottom">
                 <span class="fig-headline text-white">Recipe Book</span>
@@ -188,8 +189,8 @@
 			<div class="col-md-5 col-lg-4 mb-9 hvr-bounce-in">
     <a href="/design/web/" target="_blank" name="Website Redesign" aria-label="Website Redesign">
         <figure class="position-relative">
-            <img src="../assets/img/design/web-thumb.jpg" class="img-fluid shadow rounded w-100 mb-0"
-                alt="Website Redesign" />
+            <img src="../assets/img/design/web-thumb.webp" class="img-fluid shadow rounded w-100 mb-0" width="500" height="500"
+                alt="Website Redesign" loading="lazy" />
             <figcaption
                 class="text-white bg-info-transparent position-absolute w-100 bottom-0 end-0 start-0 p-4 rounded-bottom">
                 <span class="fig-headline text-white">Website Redesign</span>
@@ -219,11 +220,11 @@
 
 <!-- code section -->
 <section class="bg-info text-white py-8">
-	<a class="anchor" name="code" id="code" aria-labelledby="title2"></a>
+	<a class="anchor" name="code" id="code"></a>
 	<div class="container p-8">
 		<div class="row">
 			<div class="col-12 mb-9">
-				<h2 class="display-5" id="title2" tabindex="0">
+				<h2 class="display-5" id="title2">
 					Code Highlights
 				</h2>
 			</div>
@@ -234,7 +235,10 @@
 			<div class="col-lg-4 mb-5 text-center">
 				<div
 					class="rounded-circle code-samples mb-2 mx-auto d-flex align-items-center justify-content-center text-dark bg-white mb-4">
-					<i class="bi-envelope-paper w-100 h-auto hvr-bounce-in text-deep-blue fs-2"></i>
+					<svg class="bi w-100 h-auto hvr-bounce-in text-purple fs-2" width="32" height="32"
+						fill="currentColor" role="image" aria-label="envelope">
+						<use xlink:href="../../assets/img/bootstrap-icons.svg#envelope-paper" />
+					</svg>
 				</div>
 				<h3 class="display-6">Newsletter</h3>
 				<p class="mx-3">Email Code | Responsive Layout</p>
@@ -248,7 +252,10 @@
 			<div class="col-lg-4 mb-5 text-center">
 				<div
 					class="rounded-circle code-samples mb-2 mx-auto d-flex align-items-center justify-content-center text-dark bg-white mb-4">
-					<i class="bi-file-earmark-play w-100 h-auto hvr-bounce-in text-mid-blue fs-2"></i>
+					<svg class="bi w-100 h-auto hvr-bounce-in text-deep-blue fs-2" width="32" height="32"
+						fill="currentColor" role="image" aria-label="video">
+						<use xlink:href="../../assets/img/bootstrap-icons.svg#file-earmark-play" />
+					</svg>
 				</div>
 				<h3 class="display-6">Email with Video</h3>
 				<p class="mx-3">Email Code | Progressive Enhancements</p>
@@ -262,7 +269,10 @@
 			<div class="col-lg-4 mb-5 text-center">
 				<div
 					class="rounded-circle code-samples mb-2 mx-auto d-flex align-items-center justify-content-center text-dark bg-white mb-4">
-					<i class="bi-hourglass-split w-100 h-auto hvr-bounce-in text-cerulean fs-2"></i>
+					<svg class="bi w-100 h-auto hvr-bounce-in text-mid-blue fs-2" width="32" height="32"
+						fill="currentColor" role="image" aria-label="envelope">
+						<use xlink:href="../../assets/img/bootstrap-icons.svg#hourglass-split" />
+					</svg>
 				</div>
 				<h3 class="display-6">Download Visualizer</h3>
 				<p class="mx-3">Front End Web | JQuery</p>
@@ -283,7 +293,10 @@
 					<div class="py-4 code-content">
 						<div
 							class="text-primary bg-white rounded-circle code-samples mb-2 mx-auto d-flex align-items-center justify-content-center icon-wrapper">
-							<i class="bi-images fs-4 text-teal"></i>
+							<svg class="bi w-100 h-auto hvr-bounce-in text-cerulean fs-4" width="32" height="32"
+								fill="currentColor" role="image" aria-label="images">
+								<use xlink:href="../../assets/img/bootstrap-icons.svg#images" />
+							</svg>
 						</div>
 						<div class="px-4 code-text">
 							<p class="code-secondary-text">
@@ -301,7 +314,10 @@
 					<div class="py-4 code-content">
 						<div
 							class="text-primary bg-white rounded-circle code-samples mb-2 mx-auto d-flex align-items-center justify-content-center icon-wrapper">
-							<i class="bi-ticket-perforated-fill fs-4 text-green"></i>
+							<svg class="bi w-100 h-auto hvr-bounce-in text-teal fs-4" width="32" height="32"
+								fill="currentColor" role="image" aria-label="envelope">
+								<use xlink:href="../../assets/img/bootstrap-icons.svg#ticket-perforated-fill" />
+							</svg>
 						</div>
 						<div class="px-4 code-text">
 							<p class="code-secondary-text">
@@ -319,7 +335,10 @@
 					<div class="py-4 code-content">
 						<div
 							class="text-primary bg-white rounded-circle code-samples mb-2 mx-auto d-flex align-items-center justify-content-center icon-wrapper">
-							<i class="bi-github fs-4 text-light-green"></i>
+							<svg class="bi w-100 h-auto hvr-bounce-in text-green fs-4" width="32" height="32"
+								fill="currentColor" role="image" aria-label="github">
+								<use xlink:href="../../assets/img/bootstrap-icons.svg#github" />
+							</svg>
 						</div>
 						<div class="px-4 code-text">
 							<p class="code-secondary-text p-0">
@@ -339,11 +358,11 @@
 
 <!-- about section -->
 <section>
-	<a class="anchor" name="about" id="about" aria-labelledby="title3"></a>
+	<a class="anchor" name="about" id="about"></a>
 	<div class="container p-8">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="display-5 text-primary" id="title3" tabindex="0">
+				<h2 class="display-5 text-primary">
 					About Julia
 				</h2>
 			</div>
@@ -375,26 +394,26 @@
 			</div>
 			<div class="col-md-4 offset-md-1">
 				<h4 class="text-primary">Technology &amp; Certifications</h4>
-				<ul class="list-ul">
-					<li>Adobe Creative Cloud</li>
-					<li>Experience with HTML5, CSS3 &amp; Responsive Design</li>
-					<li>Experience with Bootstrap Framework</li>
-					<li>BFA in Graphic Design</li>
-					<li>SiteCore Certified Marketer</li>
-					<li>Eloqua Email Marketing</li>
+				<ul class="list-ul" role="list">
+					<li role="listitem">Adobe Creative Cloud</li>
+					<li role="listitem">Experience with HTML5, CSS3 &amp; Responsive Design</li>
+					<li role="listitem">Experience with Bootstrap Framework</li>
+					<li role="listitem">BFA in Graphic Design</li>
+					<li role="listitem">SiteCore Certified Marketer</li>
+					<li role="listitem">Eloqua Email Marketing</li>
 				</ul>
 				<h4 class="text-primary">Skill Set</h4>
-				<ul class="list-ul">
-					<li>Branding &amp; Logo Design</li>
-					<li>Corporate Design</li>
-					<li>Digital Advertising Campaigns</li>
-					<li>eBooks</li>
-					<li>Email Campaigns</li>
-					<li>Icon Design</li>
-					<li>Infographics</li>
-					<li>Print Design</li>
-					<li>Tradeshow Booth Design</li>
-					<li>Web and Interactive Design</li>
+				<ul class="list-ul" role="list">
+					<li role="listitem">Branding &amp; Logo Design</li>
+					<li role="listitem">Corporate Design</li>
+					<li role="listitem">Digital Advertising Campaigns</li>
+					<li role="listitem">eBooks</li>
+					<li role="listitem">Email Campaigns</li>
+					<li role="listitem">Icon Design</li>
+					<li role="listitem">Infographics</li>
+					<li role="listitem">Print Design</li>
+					<li role="listitem">Tradeshow Booth Design</li>
+					<li role="listitem">Web and Interactive Design</li>
 				</ul>
 			</div>
 		</div>
@@ -406,10 +425,10 @@
 <section class="latest-work bg-primary">
         <!-- headline -->
         <div class="headline">
-                <a class="anchor" name="latest" id="latest" aria-labelledby="title4"></a>
+                <a class="anchor" name="latest" id="latest"></a>
                 <div class="container p-8">
                         <div class="row">
-                                <h2 class="display-6 text-white mb-4" tabindex="0" id="title4">Latest Work</h2>
+                                <h2 class="display-6 text-white mb-4">Latest Work</h2>
                         </div>
                 </div>
         </div>
@@ -434,11 +453,11 @@
 
 <!-- contact-->
 <section class="bg-info">
-	<a class="anchor" name="contact" id="contact" aria-labelledby="title5"></a>
+	<a class="anchor" name="contact" id="contact"></a>
 	<div class="container p-8">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="display-6 text-white mb-4" id="title5" tabindex="0">
+				<h2 class="display-6 text-white mb-4">
 					Contact Julia
 				</h2>
 				<p class="text-white mb-0">Looking for help with a project? Message me on <a
@@ -462,19 +481,29 @@
                 <div class="pt-3 col-12 col-md-9 col-lg-3 d-flex justify-content-between">
                     <a href="https://www.github.com/ninjulia" target="_blank" class="text-white" name="github"
                         rel="noreferrer" title="github" tabindex="0">
-                        <i class="bi-github text-white icon fs-1"></i>
+                        <svg class="bi" width="32" height="32" fill="currentColor" role="img" aria-label="github">
+                            <use xlink:href="../../assets/img/bootstrap-icons.svg#github" />
+                        </svg>
                     </a>
                     <a href="https://dribbble.com/becausejulia" target="_blank" class="text-white" name="dribbble"
                         rel="noreferrer" title="dribbble" tabindex="0">
-                        <i class="bi-dribbble text-white icon fs-1"></i>
+                        <svg class="bi" width="32" height="32" fill="currentColor" role="img" aria-label="dribbble">
+                            <use xlink:href="../../assets/img/bootstrap-icons.svg#dribbble" />
+                        </svg>
                     </a>
                     <a href="https://www.instagram.com/the_julia_set/" target="_blank" class="text-white"
-                        name="instagram" rel="noreferrer" title="instagram" tabindex="0">
-                        <i class="bi-instagram text-white icon fs-1"></i>
+                        name="instagram" rel="noreferrer" title="instagram" tabindex="0" role="img"
+                        aria-label="instagram">
+                        <svg class="bi" width="32" height="32" fill="currentColor">
+                            <use xlink:href="../../assets/img/bootstrap-icons.svg#instagram" />
+                        </svg>
                     </a>
+
                     <a href="https://thejuliaset.threadless.com" target="_blank" class="text-white" name="threadless"
                         rel="noreferrer" title="threadless" tabindex="0">
-                        <i class="bi-basket3-fill text-white icon fs-1"></i>
+                        <svg class="bi" width="32" height="32" fill="currentColor" role="img" aria-label="threadless">
+                            <use xlink:href="../../assets/img/bootstrap-icons.svg#basket3-fill" />
+                        </svg>
                     </a>
                 </div>
             </div>

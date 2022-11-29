@@ -37,36 +37,42 @@
   src: url("../fonts/playfair-display-v29-latin/playfair-display-v29-latin-regular.woff2") format("woff2"), url("../fonts/playfair-display-v29-latin/playfair-display-v29-latin-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: fallback;
 }
 @font-face {
   font-family: "Playfair Display";
   src: url("../fonts/playfair-display-v29-latin/playfair-display-v29-latin-700.woff2") format("woff2"), url("../fonts/playfair-display-v29-latin/playfair-display-v29-latin-700.woff") format("woff");
   font-weight: 700;
   font-style: normal;
+  font-display: fallback;
 }
 @font-face {
   font-family: Monterrat;
   src: url("../fonts/montserrat-v24-latin/montserrat-v24-latin-regular.woff2") format("woff2"), url("../fonts/montserrat-v24-latin/montserrat-v24-latin-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: fallback;
 }
 @font-face {
   font-family: Monterrat;
   src: url("../fonts/montserrat-v24-latin/montserrat-v24-latin-italic.woff2") format("woff2"), url("../fonts/montserrat-v24-latin/montserrat-v24-latin-italic.woff") format("woff");
   font-weight: normal;
   font-style: italic;
+  font-display: fallback;
 }
 @font-face {
   font-family: Monterrat;
   src: url("../fonts/montserrat-v24-latin/montserrat-v24-latin-700.woff2") format("woff2"), url("../fonts/montserrat-v24-latin/montserrat-v24-latin-700.woff") format("woff");
   font-weight: bold;
   font-style: normal;
+  font-display: fallback;
 }
 @font-face {
   font-family: Monterrat;
   src: url("../fonts/montserrat-v24-latin/montserrat-v24-latin-700italic.woff2") format("woff2"), url("../fonts/montserrat-v24-latin/montserrat-v24-latin-700italic.woff") format("woff");
   font-weight: bold;
   font-style: italic;
+  font-display: fallback;
 }
 :root {
   --bs-blue: #0d6efd;
@@ -138,11 +144,11 @@
   --bs-black-rgb: 25, 26, 35;
   --bs-body-color-rgb: 46, 48, 65;
   --bs-body-bg-rgb: 249, 249, 249;
-  --bs-font-sans-serif: "Montserrat", sans-serif !important;
+  --bs-font-sans-serif: "Montserrat", Helvetica, Arial, sans-serif !important;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(249, 249, 249, 0.15), rgba(249, 249, 249, 0));
   --bs-root-font-size: 1rem;
-  --bs-body-font-family: Montserrat, sans-serif !important;
+  --bs-body-font-family: Montserrat, Helvetica, Arial, sans-serif !important;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -203,7 +209,7 @@ hr {
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 2rem;
-  font-family: "Playfair Display", serif !important;
+  font-family: "Playfair Display", Georgia, serif !important;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -4429,7 +4435,7 @@ progress {
   z-index: var(--bs-popover-zindex);
   display: block;
   max-width: var(--bs-popover-max-width);
-  font-family: "Montserrat", sans-serif !important;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif !important;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -10757,7 +10763,7 @@ footer a i {
 .videoFrame {
   position: relative;
   padding: 20px 0 40px;
-  background: url(../../assets/img/writing/vid_background_swoosh.png) no-repeat center center;
+  background: url(../../assets/img/writing/vid_background_swoosh.webp) no-repeat center center;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -11,7 +11,7 @@ jribbble.shots(function (shotsArray) {
 
 	// wrap in required html
 	shotsArray.forEach((shot) => {
-		const slideImage = `<div class="grid-item"><img src="${shot.images.normal}" class="img-fluid rounded-1" alt="${shot.title}"></div>`;
+		const slideImage = `<div class="grid-item"><img src="${shot.images.normal}" class="img-fluid rounded-1" width="400" height=300" alt="${shot.title}" loading="lazy" /></div>`;
 
 		//push to array
 		imageArray.push(slideImage);

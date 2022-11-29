@@ -13,7 +13,6 @@
     <title>Figma for Beginers | Julia Czarnecki | Writing</title>
     
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../../assets/css/style.css" />
     <link href="../assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
@@ -30,7 +29,9 @@
         <div class="container">
             <a class="navbar-brand d-flex align-items-center text-white" 
                 href="/writing/"  target="_self" tabindex="0">
-                <i class="bi-code-slash text-white fs-1"></i>
+                <svg class="bi" width="32" height="32" fill="currentColor" role="img" aria-label="code">
+                    <use xlink:href="../../assets/img/bootstrap-icons.svg#code-slash" />
+                </svg>
                 &nbsp;&nbsp;&nbsp;Julia Czarnecki
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -137,7 +138,7 @@
 
 <section>
     <div class="container p-8">
-        <div class="row writing-container p-4 border rounded text-bg-light" tabindex="0">
+        <div class="row writing-container p-4 border rounded text-bg-light">
             
 
 <h1 id="figma-an-absolute-beginners-guide">Figma: an absolute beginner's guide</h1>
@@ -157,7 +158,7 @@
   Many UI elements are similar to those in the Creative Suite, with toggles for visibility on appearances,
   effects, and layers.
 </p>
-<img class="img-fluid mx-auto mb-4" src="../../assets/img/writing/figma/ui.png" alt="Figma UI">
+<img class="img-fluid mx-auto mb-4" src="../../assets/img/writing/figma/ui.webp" alt="Figma UI" loading="lazy" />
 
 <h3 id="toolbar">Toolbar</h3>
 <p>The toolbar features the Figma Menu, Cursor options, Frame options, Shape options, Pen/Pencil, Type, Move,
@@ -165,7 +166,8 @@
   and view setting selection are available on the right. More details on the tools and menus are available in
   the following sections.
 </p>
-<img class="img-fluid mx-auto mb-4" src="../../assets/img/writing/figma/tools.png" alt="Figma Toolbar">
+<img class="img-fluid mx-auto mb-4" src="../../assets/img/writing/figma/tools.webp" alt="Figma Toolbar"
+  loading="lazy" />
 
 <h3 id="canvas">Canvas</h3>
 <p>You have a nearly infinite Canvas at the center of your window with 65,000 units in all directions. No more
@@ -207,7 +209,7 @@
 </p>
 
 <h2 id="working-with-shapes">Working with Shapes</h2>
-<img class="img-fluid mx-auto mb-4" src="../../assets/img/writing/figma/shapes.png" alt="Shapes Menu">
+<img class="img-fluid mx-auto mb-4" src="../../assets/img/writing/figma/shapes.webp" alt="Shapes Menu" loading="lazy" />
 <p>Working with shapes in Figma is similar to working in the Adobe Suite, although the keyboard shortcuts are
   different. Shapes are 100x100 default, and you can specify the width and height in the Design Panel once the
   primitive is on the canvas.</p>
@@ -219,8 +221,8 @@
 <h3 id="circles-and-arcs">Circles and Arcs</h3>
 <p>Figma shines in how it handles circles/arc shapes. The tool lets you quickly create arcs, semi-circles,
   donuts, pie charts, and more via drag handles or by entering specific values.
-</p><img class="img-fluid mx-auto mb-4" src="../../assets/img/writing/figma/ellipse.png"
-  alt="Create more than circles with the ellipse tool">
+</p><img class="img-fluid mx-auto mb-4" src="../../assets/img/writing/figma/ellipse.webp"
+  alt="Create more than circles with the ellipse tool" loading="lazy" />
 
 <h2 id="working-with-text">Working with Text</h2>
 <p>Figma includes Google Fonts by default, provides for variable fonts, and allows you to <a
@@ -239,46 +241,48 @@
 <p>The Fill section gives you quick access to hexadecimal codes and opacity settings. Click on the color chip
   to access more options. Here you'll see a color picker, eye dropper tool, the drop-down for various gradient
   effects, and fill with an image.</p>
-<img class="img-fluid mx-auto mb-4" src="../../assets/img/writing/figma/fill.png" alt="Fill Settings">
+<img class="img-fluid mx-auto mb-4" src="../../assets/img/writing/figma/fill.webp" alt="Fill Settings" loading="lazy" />
 
 <h4 id="selecting-similar-items">Selecting similar items</h4>
 <p>As with Illustrator, you can select objects with similar parameters by first selecting an object with
   properties you'd like to match and navigating to Figma Menu &gt; Edit.</p>
-<img class="img-fluid mx-auto mb-4" src="../../assets/img/writing/figma/selectall.png"
-  alt="Select all matching layers, Select with same properties, Select same fill, Select same stroke, Select same effect, Select same text properties, Select same font, Select same instance, Select same variant ">
+<img class="img-fluid mx-auto mb-4" src="../../assets/img/writing/figma/selectall.webp"
+  alt="Select dropdown options list" loading="lazy" />
 
 <h4 id="editing-fills-of-grouped-items">Editing Fills of Grouped Items</h4>
 <p>Selecting a group will bring up the Selections colors section of the Design Panel. From here, you can
   adjust colors without clicking on each group item individually.
-</p><img class="img-fluid mx-auto mb-4" src="../../assets/img/writing/figma/color.png" alt="Selections colors options">
+</p><img class="img-fluid mx-auto mb-4" src="../../assets/img/writing/figma/color.webp" alt="Selections colors options"
+  loading="lazy" />
 
 <h3 id="strokes">Strokes</h3>
 <p>Color and opacity settings for strokes mirror working with fills. Figma allows you to set strokes for each
   edge independently from each other, allowing you to set a border-bottom effect on components easily.
 </p>
-<img class="img-fluid mx-auto mb-4" src="../../assets/img/writing/figma/stroke.png" alt="Selections colors options">
+<img class="img-fluid mx-auto mb-4" src="../../assets/img/writing/figma/stroke.webp" alt="Selections colors options"
+  loading="lazy" />
 
 <h3 id="working-with-images">Working with Images</h3>
 <p>Figma is a tool for layout design and has limited photo capabilities. Photos can be placed within shapes
   and set to fill, fit, crop or tile. Blend modes and Effects can be applied.
 </p>
-<img class="img-fluid mx-auto mb-4" style="max-width: 300px;" src="../../assets/img/writing/figma/image.png"
-  alt="Image options">
+<img class="img-fluid mx-auto mb-4" style="max-width: 300px;" src="../../assets/img/writing/figma/image.webp"
+  alt="Image options" loading="lazy" />
 
 <h3 id="blend-modes-effects">Blend Modes, Effects</h3>
 <p>The provided blending modes mirror those available in the Creative Suite. Both can be applied to Images,
   Layers, and Shapes. Some effects, however, work best with a combination of Shapes over Images.
-</p><img class="img-fluid mx-auto mb-4" style="max-width: 156px;" src="../../assets/img/writing/figma/blend.png"
-  alt="blend mode drop down">
-<img class="mx-auto mb-4" style="width: 181px; height:139px" src="../../assets/img/writing/figma/effect.png"
-  alt="Effects list">
+</p><img class="img-fluid mx-auto mb-4" style="max-width: 156px;" src="../../assets/img/writing/figma/blend.webp"
+  alt="blend mode drop down" loading="lazy" />
+<img class="mx-auto mb-4" style="width: 181px; height:139px" src="../../assets/img/writing/figma/effect.webp"
+  alt="Effects list" loading="lazy" />
 
 <h3 id="background-blur-setting">Background Blur Setting</h3>
 <p>Create a blurred background by placing a shape on top of an image. On the Shape, reduce the opacity and set
   the Background Blur effect to allow a blurred background to appear.
 </p>
-<img class="img-fluid mx-auto mb-4" style="max-width: 300px;" src="../../assets/img/writing/figma/blur.png"
-  alt="background blur effect" />
+<img class="img-fluid mx-auto mb-4" style="max-width: 300px;" src="../../assets/img/writing/figma/blur.webp"
+  alt="background blur effect" loading="lazy" />
 
 <h2 id="keyboard-shortcuts">Keyboard Shortcuts</h2>
 <p class="font-italic">Many keyboard shortcuts are the same as those in the Adobe Suite, but there are some
@@ -1094,19 +1098,29 @@
                 <div class="pt-3 col-12 col-md-9 col-lg-3 d-flex justify-content-between">
                     <a href="https://www.github.com/ninjulia" target="_blank" class="text-white" name="github"
                         rel="noreferrer" title="github" tabindex="0">
-                        <i class="bi-github text-white icon fs-1"></i>
+                        <svg class="bi" width="32" height="32" fill="currentColor" role="img" aria-label="github">
+                            <use xlink:href="../../assets/img/bootstrap-icons.svg#github" />
+                        </svg>
                     </a>
                     <a href="https://dribbble.com/becausejulia" target="_blank" class="text-white" name="dribbble"
                         rel="noreferrer" title="dribbble" tabindex="0">
-                        <i class="bi-dribbble text-white icon fs-1"></i>
+                        <svg class="bi" width="32" height="32" fill="currentColor" role="img" aria-label="dribbble">
+                            <use xlink:href="../../assets/img/bootstrap-icons.svg#dribbble" />
+                        </svg>
                     </a>
                     <a href="https://www.instagram.com/the_julia_set/" target="_blank" class="text-white"
-                        name="instagram" rel="noreferrer" title="instagram" tabindex="0">
-                        <i class="bi-instagram text-white icon fs-1"></i>
+                        name="instagram" rel="noreferrer" title="instagram" tabindex="0" role="img"
+                        aria-label="instagram">
+                        <svg class="bi" width="32" height="32" fill="currentColor">
+                            <use xlink:href="../../assets/img/bootstrap-icons.svg#instagram" />
+                        </svg>
                     </a>
+
                     <a href="https://thejuliaset.threadless.com" target="_blank" class="text-white" name="threadless"
                         rel="noreferrer" title="threadless" tabindex="0">
-                        <i class="bi-basket3-fill text-white icon fs-1"></i>
+                        <svg class="bi" width="32" height="32" fill="currentColor" role="img" aria-label="threadless">
+                            <use xlink:href="../../assets/img/bootstrap-icons.svg#basket3-fill" />
+                        </svg>
                     </a>
                 </div>
             </div>

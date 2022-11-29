@@ -13,7 +13,6 @@
     <title>Tips for buying a HDTV | Julia Czarnecki | Writing</title>
     
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../../assets/css/style.css" />
     <link href="../assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
@@ -30,7 +29,9 @@
         <div class="container">
             <a class="navbar-brand d-flex align-items-center text-white" 
                 href="/writing/"  target="_self" tabindex="0">
-                <i class="bi-code-slash text-white fs-1"></i>
+                <svg class="bi" width="32" height="32" fill="currentColor" role="img" aria-label="code">
+                    <use xlink:href="../../assets/img/bootstrap-icons.svg#code-slash" />
+                </svg>
                 &nbsp;&nbsp;&nbsp;Julia Czarnecki
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -137,7 +138,7 @@
 
 <section>
     <div class="container p-8">
-        <div class="row writing-container p-4 border rounded text-bg-light" tabindex="0">
+        <div class="row writing-container p-4 border rounded text-bg-light">
             
 <article class="content container">
   <div class="row">
@@ -184,20 +185,23 @@
     <div class="col-lg-3 offset-lg-1">
       <div class="sidebar">
         <h4>What to look for</h4>
-        <ul class="list-ul">
-          <li><strong>Resolution:</strong> 1080p "True HD" for screens above 34".</li>
-          <li><strong>Screen Type:</strong> LED screens are brighter, thinner and more energy efficient.</li>
-          <li><strong>Size:</strong> Depends on your set up.</li>
-          <li><strong>Inputs:</strong> At least 3 HDMI ports and whatever else you need to connect your
+        <ul class="list-ul" role="list">
+          <li role="listItem"><strong>Resolution:</strong> 1080p "True HD" for screens above 34".</li>
+          <li role="listItem"><strong>Screen Type:</strong> LED screens are brighter, thinner and more energy efficient.
+          </li>
+          <li role="listItem"><strong>Size:</strong> Depends on your set up.</li>
+          <li role="listItem"><strong>Inputs:</strong> At least 3 HDMI ports and whatever else you need to connect your
             equipment.
           </li>
         </ul>
 
         <h4>What to ignore</h4>
-        <ul class="list-ul">
-          <li>Refresh rates over 240Hz. They are hard for most people to detect and add to the cost.</li>
-          <li>Contrast ratios are non-standardized and vary from brand to brand.</li>
-          <li>4K or Ultra HD and OLED Screens are the latest and greatest and have a hefty price tag.</li>
+        <ul class="list-ul" role="list">
+          <li role="listItem">Refresh rates over 240Hz. They are hard for most people to detect and add to the cost.
+          </li>
+          <li role="listItem">Contrast ratios are non-standardized and vary from brand to brand.</li>
+          <li role="listItem">4K or Ultra HD and OLED Screens are the latest and greatest and have a hefty price tag.
+          </li>
         </ul>
       </div>
     </div>
@@ -219,19 +223,29 @@
                 <div class="pt-3 col-12 col-md-9 col-lg-3 d-flex justify-content-between">
                     <a href="https://www.github.com/ninjulia" target="_blank" class="text-white" name="github"
                         rel="noreferrer" title="github" tabindex="0">
-                        <i class="bi-github text-white icon fs-1"></i>
+                        <svg class="bi" width="32" height="32" fill="currentColor" role="img" aria-label="github">
+                            <use xlink:href="../../assets/img/bootstrap-icons.svg#github" />
+                        </svg>
                     </a>
                     <a href="https://dribbble.com/becausejulia" target="_blank" class="text-white" name="dribbble"
                         rel="noreferrer" title="dribbble" tabindex="0">
-                        <i class="bi-dribbble text-white icon fs-1"></i>
+                        <svg class="bi" width="32" height="32" fill="currentColor" role="img" aria-label="dribbble">
+                            <use xlink:href="../../assets/img/bootstrap-icons.svg#dribbble" />
+                        </svg>
                     </a>
                     <a href="https://www.instagram.com/the_julia_set/" target="_blank" class="text-white"
-                        name="instagram" rel="noreferrer" title="instagram" tabindex="0">
-                        <i class="bi-instagram text-white icon fs-1"></i>
+                        name="instagram" rel="noreferrer" title="instagram" tabindex="0" role="img"
+                        aria-label="instagram">
+                        <svg class="bi" width="32" height="32" fill="currentColor">
+                            <use xlink:href="../../assets/img/bootstrap-icons.svg#instagram" />
+                        </svg>
                     </a>
+
                     <a href="https://thejuliaset.threadless.com" target="_blank" class="text-white" name="threadless"
                         rel="noreferrer" title="threadless" tabindex="0">
-                        <i class="bi-basket3-fill text-white icon fs-1"></i>
+                        <svg class="bi" width="32" height="32" fill="currentColor" role="img" aria-label="threadless">
+                            <use xlink:href="../../assets/img/bootstrap-icons.svg#basket3-fill" />
+                        </svg>
                     </a>
                 </div>
             </div>

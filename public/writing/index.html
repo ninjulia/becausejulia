@@ -13,7 +13,6 @@
     <title>Writing Portfolio | Julia Czarnecki | Writing</title>
     
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../../assets/css/style.css" />
     <link href="../assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
@@ -30,7 +29,9 @@
         <div class="container">
             <a class="navbar-brand d-flex align-items-center text-white" 
                 href="/writing/"  target="_self" tabindex="0">
-                <i class="bi-code-slash text-white fs-1"></i>
+                <svg class="bi" width="32" height="32" fill="currentColor" role="img" aria-label="code">
+                    <use xlink:href="../../assets/img/bootstrap-icons.svg#code-slash" />
+                </svg>
                 &nbsp;&nbsp;&nbsp;Julia Czarnecki
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -144,7 +145,7 @@
 
 <!-- writing samples -->
 <section class="p-8">
-  <a class="anchor" name="samples" id="samples" aria-label="writing samples"></a>
+  <a class="anchor" name="samples" id="samples"></a>
   <div class="container">
     <div class="row writing-showcase">
 
@@ -253,8 +254,8 @@
 <!-- end writing samples -->
 <section class="text-bg-primary">
   <div class="container p-8">
-    <a class="anchor text-light" name="about" id="writingAbout" aria-labelledby="title2">
-      <h2 id="title2" tabindex="0">About Julia</h2>
+    <a class="anchor text-light" name="writingAbout" id="writingAbout">
+      <h2>About Julia</h2>
     </a>
     <div class="row">
       <div class="col-md-7">
@@ -276,48 +277,48 @@
 
       <div class="col-md-4 offset-md-1">
         <h3 class="text-light">Skillset</h3>
-        <ul class="list-ul">
-          <li>Blog Post Writing</li>
-          <li>Editing &amp; Proofreading</li>
-          <li>How to Guides</li>
-          <li>Microsoft Style Guide Formatting</li>
-          <li>Project Management</li>
-          <li>Research</li>
-          <li>SOPs</li>
-          <li>Scriptwriting</li>
-          <li>Technical Writing</li>
+        <ul class="list-ul" role="list">
+          <li role="listitem">Blog Post Writing</li>
+          <li role="listitem">Editing &amp; Proofreading</li>
+          <li role="listitem">How to Guides</li>
+          <li role="listitem">Microsoft Style Guide Formatting</li>
+          <li role="listitem">Project Management</li>
+          <li role="listitem">Research</li>
+          <li role="listitem">SOPs</li>
+          <li role="listitem">Scriptwriting</li>
+          <li role="listitem">Technical Writing</li>
         </ul>
 
         <h3 class="text-light">Bonus Skills</h3>
-        <ul class="list-ul">
-          <li>Branding</li>
-          <li>Code Optimization</li>
-          <li>Design</li>
-          <li>Email Design &amp; Coding</li>
-          <li>HTML/CSS (LESS &amp; SASS)</li>
-          <li>Illustration</li>
-          <li>Infographics</li>
-          <li>Presentations</li>
-          <li>Voice-Over Work</li>
+        <ul class="list-ul" role="list">
+          <li role="listitem">Branding</li>
+          <li role="listitem">Code Optimization</li>
+          <li role="listitem">Design</li>
+          <li role="listitem">Email Design &amp; Coding</li>
+          <li role="listitem">HTML/CSS (LESS &amp; SASS)</li>
+          <li role="listitem">Illustration</li>
+          <li role="listitem">Infographics</li>
+          <li role="listitem">Presentations</li>
+          <li role="listitem">Voice-Over Work</li>
         </ul>
 
         <h3 class="text-light">Technology &amp; Certifications</h3>
-        <ul class="list-ul">
-          <li>
+        <ul class="list-ul" role="list">
+          <li role="listitem">
             Adobe Creative Cloud
             <br />
             <span style="font-style: italic; font-size: 0.75em">(Photoshop, Illustrator, InDesign)</span>
           </li>
-          <li>Figma</li>
-          <li>Experience with Bootstrap Framework</li>
-          <li>Experience with WordPress CMS</li>
-          <li>Eloqua Email Marketing</li>
-          <li>
+          <li role="listitem">Figma</li>
+          <li role="listitem">Experience with Bootstrap Framework</li>
+          <li role="listitem">Experience with WordPress CMS</li>
+          <li role="listitem">Eloqua Email Marketing</li>
+          <li role="listitem">
             Google &amp; Microsoft Suite
             <br />
             <span style="font-style: italic; font-size: 0.75em">(Word, Excel, Outlook, PowerPoint)</span>
           </li>
-          <li>
+          <li role="listitem">
             Project Management Software
             <br />
             <span style="font-style: italic; font-size: 0.75em">(InMotion, Jira, Trello)</span>
@@ -327,7 +328,7 @@
     </div>
   </div>
 </section>
-<a class="anchor" name="contact" id="writingContact"></a>
+<a class="anchor" name="writingContact" id="writingContact"></a>
 <!-- end page content -->
 
     </main>
@@ -342,19 +343,29 @@
                 <div class="pt-3 col-12 col-md-9 col-lg-3 d-flex justify-content-between">
                     <a href="https://www.github.com/ninjulia" target="_blank" class="text-white" name="github"
                         rel="noreferrer" title="github" tabindex="0">
-                        <i class="bi-github text-white icon fs-1"></i>
+                        <svg class="bi" width="32" height="32" fill="currentColor" role="img" aria-label="github">
+                            <use xlink:href="../../assets/img/bootstrap-icons.svg#github" />
+                        </svg>
                     </a>
                     <a href="https://dribbble.com/becausejulia" target="_blank" class="text-white" name="dribbble"
                         rel="noreferrer" title="dribbble" tabindex="0">
-                        <i class="bi-dribbble text-white icon fs-1"></i>
+                        <svg class="bi" width="32" height="32" fill="currentColor" role="img" aria-label="dribbble">
+                            <use xlink:href="../../assets/img/bootstrap-icons.svg#dribbble" />
+                        </svg>
                     </a>
                     <a href="https://www.instagram.com/the_julia_set/" target="_blank" class="text-white"
-                        name="instagram" rel="noreferrer" title="instagram" tabindex="0">
-                        <i class="bi-instagram text-white icon fs-1"></i>
+                        name="instagram" rel="noreferrer" title="instagram" tabindex="0" role="img"
+                        aria-label="instagram">
+                        <svg class="bi" width="32" height="32" fill="currentColor">
+                            <use xlink:href="../../assets/img/bootstrap-icons.svg#instagram" />
+                        </svg>
                     </a>
+
                     <a href="https://thejuliaset.threadless.com" target="_blank" class="text-white" name="threadless"
                         rel="noreferrer" title="threadless" tabindex="0">
-                        <i class="bi-basket3-fill text-white icon fs-1"></i>
+                        <svg class="bi" width="32" height="32" fill="currentColor" role="img" aria-label="threadless">
+                            <use xlink:href="../../assets/img/bootstrap-icons.svg#basket3-fill" />
+                        </svg>
                     </a>
                 </div>
             </div>
