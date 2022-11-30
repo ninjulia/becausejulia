@@ -10224,13 +10224,11 @@ input[type=submit] {
   padding-bottom: 2rem;
 }
 
-.icon {
+.bi {
   display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
+  font-size: 2rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .list-ul {

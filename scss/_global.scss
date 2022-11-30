@@ -28,13 +28,11 @@ input[type="submit"] {
 }
 
 // style svgicons
-.icon {
+.bi {
 	display: inline-block;
-	width: ($font-size-root * 1.5);
-	height: ($font-size-root * 1.5);
-	stroke-width: 0;
-	stroke: currentColor;
-	fill: currentColor;
+	font-size: ($font-size-root * 2);
+	width: ($font-size-root * 2);
+	height: ($font-size-root * 2);
 }
 
 //

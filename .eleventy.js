@@ -5,6 +5,9 @@ const fg = require("fast-glob");
 const showcaseImages = fg.sync([".editorconfig", "**/assets/img/design/*-s*"], { ignore: ["**/src/**"] });
 
 module.exports = function (eleventyConfig) {
+	//exclude components.njk from production
+	eleventyConfig.ignores.add("**/src/components.njk");
+
 	//shuffle arrays via CSS-tricks.com
 	function myShuffle(o) {
 		for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
@@ -13,18 +16,23 @@ module.exports = function (eleventyConfig) {
 
 	//filter based on page url
 	eleventyConfig.addFilter("filterImg", (showcase, currentUrl) => {
-		let match = [];
-		match.push(currentUrl.replace("/design/", "").replace("/", ""));
+		let pageName = [];
+
+		//first remove /design and trailing /
+		pageName.push(currentUrl.replace("/design/", "").replace("/", ""));
 
 		//filter images to match page name
-		const list = showcase.filter((item) => item.match(match));
+		const imgList = showcase.filter((item) => item.match(`${pageName}-s`));
 
-		//double list
-		let pubList = list.concat(list);
+		//randomize and return
+		myShuffle(imgList);
 
-		//randomize and return (todo)
-		myShuffle(pubList);
-		return pubList;
+		//double list if under 12
+		let showcaseShuffle = imgList.concat(imgList);
+
+		//return showcaseShuffle;
+		const sourceContent = ["src/**/*.njk", "src/**/*.html", "src/**/*.md", "src/**/*.liquid", "src/**/*.js"];
+		return sourceContent;
 	});
 
 	//create showcase collection

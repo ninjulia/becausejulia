@@ -31,6 +31,7 @@ module.exports = async function () {
 				variables: true,
 				keyframes: true,
 				transitions: true,
+				safelist: ["text-bg-deep-purple", "text-bg-primary", "text-bg-deep-blue", "text-bg-mid-blue", "text-bg-cerulean", "text-bg-teal", "text-bg-green", "text-bg-light-green", "text-bg-lime", "text-bg-danger", "text-bg-info", "text-bg-light", "text-bg-deeper-purple"],
 			}),
 		])
 			.process(css, {
