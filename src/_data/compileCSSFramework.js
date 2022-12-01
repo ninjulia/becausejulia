@@ -31,7 +31,7 @@ module.exports = async function () {
 				variables: true,
 				keyframes: true,
 				transitions: true,
-				safelist: ["text-bg-deep-purple", "text-bg-primary", "text-bg-deep-blue", "text-bg-mid-blue", "text-bg-cerulean", "text-bg-teal", "text-bg-green", "text-bg-light-green", "text-bg-lime", "text-bg-danger", "text-bg-info", "text-bg-light", "text-bg-deeper-purple"],
+				safelist: ["text-bg-deep-purple", "text-bg-primary", "text-bg-deep-blue", "text-bg-mid-blue", "text-bg-cerulean", "text-bg-teal", "text-bg-green", "text-bg-light-green", "text-bg-lime", "text-bg-danger", "text-bg-info", "text-bg-light", "text-bg-deeper-purple", "btn-deep-purple", "btn-deep-blue", "btn-mid-blue", "btn-cerulean", "btn-teal", "btn-green", "btn-light-green", "btn-lime", "btn-brand-gradient"],
 			}),
 		])
 			.process(css, {
@@ -39,13 +39,10 @@ module.exports = async function () {
 				to: destinationCSS,
 			})
 			.then((result) => {
-				// Combine with Reboot - must have copy in folder because node_modules are .gitignore
 				let newCSS = result.css;
-				let rebootCSS = fs.readFileSync("src/assets/css/bootstrap-reboot.min.css");
-				let allCSS = rebootCSS + newCSS;
 
 				// Minify
-				let compiledCSS = new MinifyCSS().minify(allCSS)["styles"];
+				let compiledCSS = new MinifyCSS().minify(newCSS)["styles"];
 
 				// Save
 				fs.writeFileSync(destinationCSS, compiledCSS, { encoding: "utf8" });

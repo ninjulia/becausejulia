@@ -62,10 +62,10 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "intro";
 @import "code";
 @import "showcase";
-@import "writing";
 
 //page specific styling
 @import "design";
+@import "writing";
 @import "linktree";
 
 //testing only

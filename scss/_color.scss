@@ -62,8 +62,10 @@ $brand-gradient: linear-gradient(to bottom right, #440154, #482475, #414487, #35
 }
 
 //semi-transparent $info background
+$info-transparent: rgba($info, 0.8);
+
 .bg-info-transparent {
-	background-color: rgba($info, 0.8);
+	background-color: $info-transparent;
 }
 
 //for use on header / footer bars

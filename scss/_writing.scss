@@ -23,28 +23,17 @@
 	}
 
 	.card {
-		padding: 0;
 		background-color: $lightest;
 		grid-column: span 1;
 
 		.card-header {
-			width: 100%;
-			font-style: italic;
 			font-size: 0.75em;
 		}
-		.card-body {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
 
-			.card-text {
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
-			}
-			.btn {
-				align-self: flex-end;
-			}
+		.card-text {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
 	}
 }
@@ -53,28 +42,6 @@
 	.img-fluid {
 		max-width: 500px;
 	}
-}
-
-.shentel {
-	max-width: 500px;
-	margin: 0 auto;
-}
-
-.videoFrame {
-	position: relative;
-	padding: 20px 0 40px;
-	background: url(../../assets/img/writing/vid_background_swoosh.webp) no-repeat center center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.videoFrame .videoContainer iframe {
-	display: block;
-	margin: 0 auto;
-	max-width: 100%;
-	height: auto;
-	box-shadow: rgba(25, 25, 25, 0.6) 3px 3px 4px 0;
 }
 
 th,

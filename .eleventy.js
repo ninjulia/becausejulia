@@ -1,3 +1,6 @@
+//add html-minifier
+const htmlmin = require("html-minifier");
+
 //Import fast-glob package to import images to showcase module
 const fg = require("fast-glob");
 
@@ -30,9 +33,7 @@ module.exports = function (eleventyConfig) {
 		//double list if under 12
 		let showcaseShuffle = imgList.concat(imgList);
 
-		//return showcaseShuffle;
-		const sourceContent = ["src/**/*.njk", "src/**/*.html", "src/**/*.md", "src/**/*.liquid", "src/**/*.js"];
-		return sourceContent;
+		return showcaseShuffle;
 	});
 
 	//create showcase collection
@@ -42,6 +43,20 @@ module.exports = function (eleventyConfig) {
 			showcaseImagesUrl.push(showcaseImages[i].replace("public", "../.."));
 		}
 		return showcaseImagesUrl;
+	});
+
+	//minify HTML Output - from 11ty docs/config/#transforms
+	eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+		if (this.outputPath && this.outputPath.endsWith(".html")) {
+			let minified = htmlmin.minify(content, {
+				useShortDoctype: true,
+				removeComments: true,
+				collapseWhitespace: true,
+			});
+			return minified;
+		}
+
+		return content;
 	});
 
 	//copy assets folder

@@ -4,17 +4,14 @@
 //remove padding so grid goes edge to edge
 //
 .latest-work {
-	margin: 0;
-	padding: 0;
 	display: grid;
 	grid-auto-rows: repeat(3, minmax(64px, 1fr));
 	grid-template-columns: 1fr;
 
 	.headline,
 	.view-link {
-		width: 100%;
 		max-height: fit-content;
-		background-color: rgba($info, 0.75);
+		background-color: $info-transparent;
 		z-index: 11;
 	}
 
@@ -30,7 +27,7 @@
 		grid-column-start: 1;
 
 		&:hover {
-			background-color: rgba($info, 0.9);
+			background-color: $info-transparent;
 		}
 	}
 }
@@ -44,12 +41,7 @@
 	grid-row-start: 1;
 	grid-row-end: 4;
 	grid-column-start: 1;
-
-	margin: 0;
-	padding: 0;
-	width: 100%;
 	overflow: hidden;
-
 	display: grid;
 	grid-auto-rows: 1fr;
 	grid-template-columns: repeat(5, 1fr);

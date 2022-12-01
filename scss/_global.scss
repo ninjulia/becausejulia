@@ -1,16 +1,4 @@
 //
-// Style Overrides for Modules / Components
-//
-
-//Optional Bootstrap preferences
-$enable-reduced-motion: true;
-@media prefers-reduced-motion {
-	//either hook into bootstrap transitions or remove .hvr.style
-}
-
-$enable-negative-margins: true;
-
-//
 // style text as links
 //
 .link-effect {
@@ -20,7 +8,6 @@ $enable-negative-margins: true;
 //
 // Default Spacing Overrides
 //
-
 p:last-of-type,
 .list-ul li:last-of-type,
 input[type="submit"] {
