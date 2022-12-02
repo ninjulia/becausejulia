@@ -12,6 +12,7 @@
 
 // 4. Include any default map overrides here
 $theme-colors: map-merge($theme-colors, $custom-colors);
+$theme-colors: map-remove($theme-colors, "blue", "indigo", "pink", "red", "orange", "yellow", "cyan");
 @import "spacers";
 
 // 5. Include remainder of required parts
@@ -66,7 +67,6 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 //page specific styling
 @import "design";
 @import "writing";
-@import "linktree";
 
 //testing only
 //@import "testing";

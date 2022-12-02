@@ -1,6 +1,7 @@
 //
 // Writing Section Styles
 //
+//
 
 .writing-showcase {
 	display: grid;
@@ -23,7 +24,6 @@
 	}
 
 	.card {
-		background-color: $lightest;
 		grid-column: span 1;
 
 		.card-header {
@@ -32,7 +32,6 @@
 
 		.card-text {
 			white-space: nowrap;
-			overflow: hidden;
 			text-overflow: ellipsis;
 		}
 	}
@@ -41,40 +40,5 @@
 .writing-container {
 	.img-fluid {
 		max-width: 500px;
-	}
-}
-
-th,
-td {
-	padding: 0.25rem 0.5rem;
-	text-align: center;
-}
-
-td h1,
-td h2,
-td h3 {
-	margin: 0;
-	padding: 0;
-}
-.example {
-	text-decoration: underline;
-}
-
-.product {
-	margin: 30px 0px;
-	border-bottom: 1px solid #999999;
-	.feature {
-		border-radius: 10px;
-		background: #00446a;
-		color: #ffffff;
-		padding: 5px;
-		margin-bottom: 20px;
-	}
-}
-
-.footnotes {
-	font-size: 0.6rem;
-	a {
-		display: block;
 	}
 }
