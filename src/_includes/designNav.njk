@@ -6,7 +6,7 @@
         {% for design in collections.design %}
         <li>
             <a class="dropdown-item" {% if currentUrl===design.url %}aria-current="page" {% endif %}
-                href="{{ design.url}}">
+                href="{{design.url}}">
                 {{ design.data.headline }}
             </a>
         </li>

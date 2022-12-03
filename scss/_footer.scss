@@ -5,16 +5,31 @@ footer {
 	background-color: $gray-900 !important;
 	color: $gray-100;
 
-	p {font-size: 0.8rem;}
+	p {
+		font-size: 0.8rem;
+	}
 
-	a {
+	.icon-link {
 		text-decoration: none;
+		font-size: 0;
+		line-height: 0;
 
-		&:hover { opacity: 0.5; }
+		&:hover {
+			opacity: 0.5;
+		}
 
-		i {
-			margin:0;
-			padding:0;
+		.bi {
+			width: ($spacer * 1.25);
+			height: ($spacer * 1.25);
 		}
 	}
+}
+
+.dribbble {
+	background-color: RGB(234, 76, 137);
+}
+
+.insta {
+	background-color: #f77737;
+	background-image: linear-gradient(to bottom right, #405de6, #5b51d8, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80);
 }

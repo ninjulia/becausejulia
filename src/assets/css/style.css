@@ -10133,7 +10133,7 @@ input[type=submit] {
 .list-ul {
   padding: 0;
   list-style: none;
-  margin-left: 1rem;
+  margin-left: 1.25rem;
 }
 .list-ul li:before {
   content: "•";
@@ -10195,15 +10195,26 @@ footer {
 footer p {
   font-size: 0.8rem;
 }
-footer a {
+footer .icon-link {
   text-decoration: none;
+  font-size: 0;
+  line-height: 0;
 }
-footer a:hover {
+footer .icon-link:hover {
   opacity: 0.5;
 }
-footer a i {
-  margin: 0;
-  padding: 0;
+footer .icon-link .bi {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.dribbble {
+  background-color: RGB(234, 76, 137);
+}
+
+.insta {
+  background-color: #f77737;
+  background-image: linear-gradient(to bottom right, #405de6, #5b51d8, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80);
 }
 
 .hvr-bounce-in, .code-samples i:before,
@@ -10666,10 +10677,6 @@ footer a i {
 .writing-showcase .card .card-text {
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-
-.writing-container .img-fluid {
-  max-width: 500px;
 }
 
 /*# sourceMappingURL=style.css.map */

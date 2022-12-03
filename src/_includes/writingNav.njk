@@ -6,7 +6,7 @@
         {% for writings in collections.writing %}
         <li>
             <a class="dropdown-item" {% if currentUrl===writings.url %}aria-current="page" {%endif%}
-                href="/writing/#samples">
+                href="{{writings.url}}">
                 {{ writings.data.headline }}
             </a>
         </li>

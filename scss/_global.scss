@@ -28,7 +28,7 @@ input[type="submit"] {
 .list-ul {
 	padding: 0;
 	list-style: none;
-	margin-left: $spacer;
+	margin-left: ($spacer * 1.25);
 
 	li:before {
 		content: "\2022";
