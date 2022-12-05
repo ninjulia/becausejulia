@@ -2,7 +2,7 @@
 
 Julia Czarnecki | Design | Code | Digital
 
-Code Repository for portfolio website [becausejulia.com](https://www.becausejulia.com). Project files uploaded here for your code review and Netlify.com web hosting.
+Code repository for my design portfolio website, [becausejulia.com](https://www.becausejulia.com). Project files are uploaded here for your code review and Netlify web hosting. I selected the Bootstrap framework for its ease of use and component library, although it notoriously delivers some code bloat. To combat that, I went with 11ty for a static site generator, known for its performance and low barrier to entry. In the future, I'd like to continue optimizing my use of both systems to deliver a more performant site.
 
 ## Table of contents
 
@@ -44,7 +44,7 @@ I am standing on the shoulders of giants
 
 - HTML, CSS (SCSS), JS, Njk
 - 11ty
-- Git
+- Node.js
 
 ### Links
 
@@ -68,7 +68,7 @@ I am standing on the shoulders of giants
 #### Back-End
 
 - Organize \_includes, better leverage templates
-- Set Design banner, thumbnail via design.js
+- Set Design banner, thumbnail via design.js logic
 - Fix issue with "currentUrl" variable set on multiple templates
 - Further optimize SCSS/CSS
 - Optimize Bootstrap.js use
@@ -77,14 +77,14 @@ I am standing on the shoulders of giants
 #### Index
 
 - Replace H1 with dynamic text, resting on 'I work on websites'
-- Update code section to use GitHub API to show starred repos
+- Update code section to leverage GitHub API to show key repos
 - About - re-write to better reflect abilities - leverage icons for tools/software
 
 #### Design
 
 - Add more samples
 - Further shuffle showcase images, do not allow pattern to repeat
-- Display on index in specified order
+- Display thumbnails on index in specified order
 
 #### Writing
 
@@ -107,4 +107,4 @@ I am standing on the shoulders of giants
 
 ### Licensing
 
-Becausejulia.com designed and coded by Julia Czarnecki leveraging dependencies above. Becausejulia.com code released under MIT license. All logos, fonts, and imagery used remain property of their respective copyright owners.
+Becausejulia.com designed and coded by Julia Czarnecki leveraging dependencies above and thus released under MIT license. All logos, fonts, and imagery used remain property of their respective copyright owners.
