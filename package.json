@@ -4,12 +4,8 @@
 	"description": "> Julia Czarnecki | Design | Code | Digital",
 	"main": "index.js",
 	"scripts": {
-		"watch:sass": "sass --watch ./scss:./src/assets/css",
-		"build:sass": "sass ./scss:./src/assets/css",
-		"watch:eleventy": "eleventy --serve",
-		"build:eleventy": "eleventy",
-		"start": "npm-run-all build:sass --parallel watch:*",
-		"build": "npm-run-all build:*"
+		"start": "eleventy --serve",
+		"build": "eleventy"
 	},
 	"repository": {
 		"type": "git",
