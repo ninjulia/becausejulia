@@ -63,9 +63,9 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("./src/assets");
 
 	//open new browser on run
-	eleventyConfig.setBrowserSyncConfig({
-		open: true,
-	});
+	//eleventyConfig.setBrowserSyncConfig({
+	//	open: true,
+	//});
 
 	//output to public folder
 	return {
