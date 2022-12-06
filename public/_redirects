@@ -1,4 +1,4 @@
-//set redirects for netlify
+# set redirects for netlify
 
 /banners.html         /design/display  301
 /ebook.html           /design/ebook    301
