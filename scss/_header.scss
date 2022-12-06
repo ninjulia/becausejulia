@@ -26,7 +26,7 @@ a[aria-current="page"] {
 		content: "";
 		display: block;
 		position: relative;
-		height: ($spacer * 5);
-		margin-top: -($spacer * 5);
+		height: ($spacer * 4);
+		margin-top: -($spacer * 3.5);
 	}
 }

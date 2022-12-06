@@ -4,4 +4,5 @@ node_modules/
 # build artefacts
 src/components.njk
 src/_data/
-package-build.json
+package-dev.json
+#package-ship.json

@@ -30,20 +30,18 @@ tags: ['writing', 'Documentation', 'How to Guide']
 </p>
 <h2>How?</h2>
 <p>Each of our production teams share some responsibility for optimization. Ultimately, we should focus on crafting
-  emails that are simple, and easy to follow regardless of device or environment.</p>
+  emails that are simple and easy to follow regardless of device or environment.</p>
 <h2>Copywriting</h2>
 <p>Litmus' research indicates that the average attention span is just 13.4 seconds, so keeping copy concise is
-  essential. Avoid jargon, and limit the use of acronyms if possible. Never rely on browsers to translate text, but
-  send
-  the text out to a copywriter for the best possible result.</p>
+  essential. Avoid jargon and limit the use of acronyms if possible. Never rely on browsers to translate text, but
+  send the text out to a copywriter for the best possible result.</p>
 <h3>Helpful tools:</h3>
 <ul class="list-ul" role="list">
   <li role="listitem">Flesch Reading Ease Test
     <ul class="list-ul" role="list">
       <li role="listitem">Aim for a score of 50-60 out of 100.</li>
       <li role="listitem">A score in this range means the text is easy to read for 13-15yr old students, although you
-        should adjust to
-        your target audience.</li>
+        should adjust to your target audience.</li>
     </ul>
   </li>
   <li role="listitem">Grammarly / Yoast</li>
@@ -51,7 +49,7 @@ tags: ['writing', 'Documentation', 'How to Guide']
 </ul>
 <h2>Design</h2>
 <p>Consider that there are a variety of visual impairments. Design with low-vision, colorblindness, and cognitive
-  abilities in mind, and don't assume a subscriber with vision issues will be using a screen reader. The email should
+  abilities in mind. Don't assume a subscriber with vision issues will be using a screen reader. The email should
   still read well with images turned off.</p>
 <p>As with copy, simple is better. Use a strong hierarchy with sufficient text contrast and avoid overly complex
   layouts. Litmus recommends a single column layout - which avoids excess cognitive load and renders well in mobile
@@ -70,16 +68,13 @@ tags: ['writing', 'Documentation', 'How to Guide']
 <h2>Coding</h2>
 <p>Properly formatted, semantic HTML is essential for rendering across all devices, with some key updates for
   screen-reader devices. We currently set unique alt-text on images and style them to preserve the messaging when
-  users
-  have the images turned off, which will also maintain the messaging for screen readers.</p>
+  users have the images turned off, which will also maintain the messaging for screen readers.</p>
 <p>In the HTML tag, make sure to set the lang attribute. Without it, screen readers could pronounce text differently,
-  resulting in text with different intent. Be sure to always set the title tag, as screen readers will read this
-  aloud,
-  and set the correct content type (such as UTF-8 character encoding).</p>
+  resulting in text with different intent. Be sure to always set the title tag as screen readers will read this
+  aloud and set the correct content type (such as UTF-8 character encoding).</p>
 <p>All tables used for presentation should be marked role="presentation" so that screen readers announce the content
   within instead of reading the html contents. The exception to this, of course, is for data tables. Be sure to mark
-  all
-  CTAs with role="button" to indicate the function of the link.</p>
+  all CTAs with role="button" to indicate the function of the link.</p>
 <p>Use header and paragraph tags appropriately and encode all special characters. Be sure to use the correct header
   level (h1, h2) as well.</p>
 <h2>Hey Siri!</h2>
@@ -101,8 +96,7 @@ tags: ['writing', 'Documentation', 'How to Guide']
     voice-specific CTA</li>
   <li role="listitem">Will announce emoji. ie: "smiling face", "airplane"</li>
   <li role="listitem">Will handle acronyms differently depending on punctuation. For US vs U.S. Siri will read the first
-    word as "us"
-    and pronounce the second as "U" "S".</li>
+    word as "us" and pronounce the second as "U" "S".</li>
 </ul>
 <h2>References:</h2>
 <ul class="list-ul" role="list">
