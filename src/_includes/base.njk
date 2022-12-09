@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {% set currentUrl = page.url %}
+    {% set writingCheck = r/writing*/%}
+
+    {% if currentUrl === '/'%}
+    <title>{{title}}</title>
+    {% elif writingCheck.test(currentUrl)%}
+    <title>{{ title }} | Julia Czarnecki | Writing</title>
+    {% else %}
+    <title>{{ title }} | Julia Czarnecki | Design</title>
+    {% endif %}
+
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link href="../assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+
+<body class="vh-100">
+
+
+    <!-- header -->
+    {% include "header.njk" %}
+    <!-- /header -->
+
+    <main role="main">
+
+        {{ content | safe }}
+
+    </main>
+
+    <!-- footer -->
+    {% include "footer.njk" %}
+    <!-- /footer -->

@@ -1,0 +1,14 @@
+//
+// Intro and Design Display
+//
+
+.intro {
+	p {
+		max-width: 80ch;
+	}
+}
+
+.fig-detail,
+.code-secondary-text {
+	font-size: ($font-size-base * 0.8);
+}

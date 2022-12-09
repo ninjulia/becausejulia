@@ -1,0 +1,7 @@
+# set redirects for netlify
+
+/banners.html         /design/display  301
+/ebook.html           /design/ebook    301
+/elearning.html       /design/elearn   301
+/recipe.html          /design/recipe   301
+/web-management.html  /design/web      301

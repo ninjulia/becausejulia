@@ -1,0 +1,17 @@
+//
+//Custom Buttons
+//
+.btn-brand-gradient {
+	background-image: $brand-gradient;
+	--bs-btn-color: var(--bs-white);
+	--bs-btn-bg: $purple;
+	--bs-btn-border-color: $purple;
+	--bs-btn-border-radius: 0.5rem;
+	--bs-btn-hover-color: reverse-gradient($brand-gradient);
+	--bs-btn-hover-bg: #{shade-color($purple, 10%)};
+	--bs-btn-hover-border-color: #{shade-color($purple, 10%)};
+	--bs-btn-focus-shadow-rgb: $purple;
+	--bs-btn-active-color: var(--bs-btn-hover-color);
+	--bs-btn-active-bg: #{shade-color($purple, 20%)};
+	--bs-btn-active-border-color: #{shade-color($purple, 20%)};
+}

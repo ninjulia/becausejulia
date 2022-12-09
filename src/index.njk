@@ -1,0 +1,276 @@
+---
+
+title: Julia Czarnecki | Design | Code | Digital
+layout: base.njk
+
+---
+
+<section class="bg-brand-gradient pt-8 px-0 pb-0">
+	<!-- intro -->
+	<div class="container intro p-8 text-white">
+		<div class="row">
+			<div class="col-12">
+				<h1 class="display-1 text-center">I work on websites.</h1>
+				<p class="text-center lead mb-3 mx-auto">
+					I'm a digital designer and a front end developer. I love turning marketing goals into unique
+					experiences that engage and delight across a variety of digital platforms.
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- /intro -->
+
+	<!-- designs-->
+	<div class="container p-8">
+		<a class="anchor" name="design" id="design"></a>
+		<div class="row justify-content-center">
+
+			{% for design in collections.design %}
+			{% include "thumbnails.njk"%}
+			{% endfor %}
+
+		</div>
+	</div>
+	<!-- /designs -->
+
+	<div class="row p-0 m-0">
+		<div class="col-12 position-relative bottom-0 w-100 p-0">
+			<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1440 320" role="presentation">
+				<path fill="#191a23" fill-opacity="1"
+					d="M0,32L40,42.7C80,53,160,75,240,90.7C320,107,400,117,480,133.3C560,149,640,171,720,202.7C800,235,880,277,960,250.7C1040,224,1120,128,1200,80C1280,32,1360,32,1400,32L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+				</path>
+			</svg>
+		</div>
+	</div>
+
+</section>
+
+
+<!-- code section -->
+<section class="bg-info text-white py-8">
+	<a class="anchor" name="code" id="code"></a>
+	<div class="container p-8">
+		<div class="row">
+			<div class="col-12 mb-9">
+				<h2 class="display-5">
+					Code Highlights
+				</h2>
+			</div>
+		</div>
+
+		<!-- first code row -->
+		<div class="row code">
+			<div class="col-lg-4 mb-5 text-center">
+				<div
+					class="rounded-circle code-samples mb-4 mx-auto d-flex align-items-center justify-content-center text-dark bg-white p-8">
+					<svg class="bi w-100 h-auto hvr-bounce-in text-purple fs-2" width="32" height="32"
+						fill="currentColor" role="presentation">
+						<use xlink:href="../../assets/img/bootstrap-set.svg#envelope-paper" />
+					</svg>
+				</div>
+				<h3 class="display-6">Newsletter</h3>
+				<p class="mx-3">Email Code | Responsive Layout</p>
+				<p class="mx-3">
+					<a class="btn btn-primary" href="https://github.com/ninjulia/email_newsletter" target="_blank"
+						role="button">
+						View Project &raquo;
+					</a>
+				</p>
+			</div>
+
+			<div class="col-lg-4 mb-5 text-center">
+				<div
+					class="rounded-circle code-samples mb-4 mx-auto d-flex align-items-center justify-content-center text-dark bg-white p-8">
+					<svg class="bi w-100 h-auto hvr-bounce-in text-deep-blue fs-2" width="32" height="32"
+						fill="currentColor" role="presentation">
+						<use xlink:href="../../assets/img/bootstrap-set.svg#file-earmark-play" />
+					</svg>
+				</div>
+				<h3 class="display-6">Email with Video</h3>
+				<p class="mx-3">Email Code | Progressive Enhancements</p>
+				<p class="mx-3">
+					<a class="btn btn-primary" href="https://github.com/ninjulia/email_html5video" target="_blank"
+						role="button">
+						Get the Details &raquo;
+					</a>
+				</p>
+			</div>
+
+			<div class="col-lg-4 mb-5 text-center">
+				<div
+					class="rounded-circle code-samples mb-4 mx-auto d-flex align-items-center justify-content-center text-dark bg-white p-8">
+					<svg class="bi w-100 h-auto hvr-bounce-in text-mid-blue fs-2" width="32" height="32"
+						fill="currentColor" role="presentation">
+						<use xlink:href="../../assets/img/bootstrap-set.svg#hourglass-split" />
+					</svg>
+				</div>
+				<h3 class="display-6">Download Visualizer</h3>
+				<p class="mx-3">Front End Web | JQuery</p>
+				<p class="mx-3">
+					<a class="btn btn-primary" href="https://github.com/ninjulia/JavaScript_SpeedVisualizer"
+						role="button">
+						See it in Action &raquo;
+					</a>
+				</p>
+			</div>
+		</div>
+		<!-- /first code row -->
+
+		<!-- secondary code row -->
+		<div class="row mb-9">
+			<div class="col-md-4 code-second">
+				<a href="https://github.com/ninjulia/email_carousel" target="_blank">
+					<div class="py-4 code-content">
+						<div
+							class="text-primary bg-white rounded-circle code-samples mb-2 mx-auto d-flex align-items-center justify-content-center icon-wrapper">
+							<svg class="bi w-100 h-auto hvr-bounce-in text-cerulean fs-4" width="32" height="32"
+								fill="currentColor" role="presentation">
+								<use xlink:href="../../assets/img/bootstrap-set.svg#images" />
+							</svg>
+						</div>
+						<div class="px-4 code-text">
+							<p class="code-secondary-text">
+								<span class="code-secondary-headline h6 fw-bold text-white d-block p-0 m-0">Email with
+									Carousel</span>Email Code | Progressive
+								Enhancements<br />
+								<span class="m-0 p-0 link-effect">Take a look &raquo;</span>
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="col-md-4 code-second">
+				<a href="https://github.com/ninjulia/email_scratchoff" target="_blank">
+					<div class="py-4 code-content">
+						<div
+							class="text-primary bg-white rounded-circle code-samples mb-2 mx-auto d-flex align-items-center justify-content-center icon-wrapper">
+							<svg class="bi w-100 h-auto hvr-bounce-in text-teal fs-4" width="32" height="32"
+								fill="currentColor" role="presentation">
+								<use xlink:href="../../assets/img/bootstrap-set.svg#ticket-perforated-fill" />
+							</svg>
+						</div>
+						<div class="px-4 code-text">
+							<p class="code-secondary-text">
+								<span class="code-secondary-headline h6 fw-bold text-white d-block p-0 m-0">Scratch-off
+									Email</span>
+								Email Code | Progressive Enhancements<br />
+								<span class="m-0 p-0 link-effect">See it &raquo;</span>
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="col-md-4 code-second">
+				<a class="m-0 p-0 page-link" href="https://github.com/ninjulia" target="_blank">
+					<div class="py-4 code-content">
+						<div
+							class="text-primary bg-white rounded-circle code-samples mb-2 mx-auto d-flex align-items-center justify-content-center icon-wrapper">
+							<svg class="bi w-100 h-auto hvr-bounce-in text-green fs-4" width="32" height="32"
+								fill="currentColor" role="presentation">
+								<use xlink:href="../../assets/img/bootstrap-set.svg#github" />
+							</svg>
+						</div>
+						<div class="px-4 code-text">
+							<p class="code-secondary-text p-0">
+								<span class="code-secondary-headline h6 fw-bold text-white d-block p-0 m-0">More Code
+									Projects</span>
+								See these code projects and my latest work on github.<br />
+								<span class="m-0 p-0 link-effect">Go to github &raquo;</span>
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<!-- /secondary code row -->
+		</div>
+	</div>
+</section>
+<!-- /code section -->
+
+<!-- about section -->
+<section>
+	<a class="anchor" name="about" id="about"></a>
+	<div class="container p-8">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="display-5 text-primary">
+					About Julia
+				</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-7">
+				<h3 class="text-primary">I hate endings.</h3>
+				<p>
+					Web projects really never end. Each project requires research, design, coding, and then more
+					research, more design — well, you get the point. There's always something to improve and always
+					something new to learn. That's what I love about working with the web.
+				</p>
+				<h3 class="text-primary">I wear many hats.</h3>
+				<p>
+					Working in small groups (both in agencies and as part of an in-house creative team) has
+					sharpened my
+					multi-tasking skills. I've taken on roles usually divided between different departments in other
+					companies. I've tackled video production, thrown down on copy writing, and after the project has
+					shipped, I'm behind the scenes checking to see how the users are reacting to the designs.
+				</p>
+				<h3 class="text-primary">But more about me.</h3>
+				<p>
+					In my spare time I love being taken for walks by my dog, exploring new cities, and keeping up
+					with web design trends and technologies. I am always looking to expand my horizons by taking on new
+					projects and meeting new people. So reach out and <a href="/#contact">drop me a line</a>.
+				</p>
+			</div>
+			<div class="col-md-4 offset-md-1">
+				<h4 class="text-primary">Technology &amp; Certifications</h4>
+				<ul class="list-ul" role="list">
+					<li role="listitem">Adobe Creative Cloud</li>
+					<li role="listitem">Experience with HTML5, CSS3 &amp; Responsive Design</li>
+					<li role="listitem">Experience with Bootstrap Framework</li>
+					<li role="listitem">BFA in Graphic Design</li>
+					<li role="listitem">SiteCore Certified Marketer</li>
+					<li role="listitem">Eloqua Email Marketing</li>
+				</ul>
+				<h4 class="text-primary">Skill Set</h4>
+				<ul class="list-ul" role="list">
+					<li role="listitem">Branding &amp; Logo Design</li>
+					<li role="listitem">Corporate Design</li>
+					<li role="listitem">Digital Advertising Campaigns</li>
+					<li role="listitem">eBooks</li>
+					<li role="listitem">Email Campaigns</li>
+					<li role="listitem">Icon Design</li>
+					<li role="listitem">Infographics</li>
+					<li role="listitem">Print Design</li>
+					<li role="listitem">Tradeshow Booth Design</li>
+					<li role="listitem">Web and Interactive Design</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /about section -->
+
+<!-- latest work section -->
+{% include "grid.njk" %}
+<!-- /latest work section -->
+
+<!-- contact-->
+<section class="bg-info">
+	<a class="anchor" name="contact" id="contact"></a>
+	<div class="container p-8">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="display-6 text-white mb-4">
+					Contact Julia
+				</h2>
+				<p class="text-white mb-0">Looking for help with a project? Message me on <a
+						href="https://www.instagram.com/the_julia_set/" target="_blank" class="text-white"
+						name="instagram" rel="noreferrer">Instagram</a>.</p>
+			</div>
+		</div>
+
+	</div>
+</section>
+<!-- /contact-->

@@ -1,0 +1,21 @@
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Writing
+    </a>
+    <ul class="dropdown-menu">
+        {% for writings in collections.writing %}
+        <li>
+            <a class="dropdown-item" {% if currentUrl===writings.url %}aria-current="page" {%endif%}
+                href="{{writings.url}}">
+                {{ writings.data.headline }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="/writing/#writingAbout">About</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="/writing/#writingContact">Contact</a>
+</li>

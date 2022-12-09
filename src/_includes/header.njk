@@ -1,0 +1,31 @@
+{% set currentUrl = page.url %}
+{% set typeTest = r/writing*/%}
+<header class="w-100 fixed-top bg-darkest">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-darkest d-lg-flex justify-content-baseline" role="navigation">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center text-white" {% if typeTest.test(currentUrl)%}
+                href="/writing/" {% else %} href="/" {% endif %} target="_self" tabindex="0">
+                <svg class="bi" width="32" height="32" fill="currentColor" role="img" aria-label="code">
+                    <use xlink:href="../../assets/img/bootstrap-set.svg#code-slash" />
+                </svg>
+                &nbsp;&nbsp;&nbsp;Julia Czarnecki
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+
+
+                    {% if typeTest.test(currentUrl)%}
+                    {% include "writingNav.njk" %}
+                    {% else %}
+                    {% include "designNav.njk" %}
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
