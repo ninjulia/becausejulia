@@ -1,0 +1,118 @@
+---
+title: Writing Portfolio
+layout: base.njk
+---
+
+
+<!-- intro -->
+<section class="bg-brand-gradient pt-8 px-0 pb-0">
+
+  <div class="container intro p-8 text-white">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="display-3 text-center">Documentation,<br>Technical &amp; Web Writing</h1>
+        <p class="lead text-center mb-3 mx-auto">I have several years of experience crafting solutions for highly
+          technical industries &mdash;
+          including Software-as-a-Service. I love turning technical concepts into concise
+          communications that help internal teams and customers thrive.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- intro -->
+
+<!-- writing samples -->
+<section class="p-8">
+  <a class="anchor" name="samples" id="samples"></a>
+  <div class="container">
+    <div class="row writing-showcase">
+
+      {% set colors = ['deep-purple', 'primary', 'deep-blue', 'mid-blue', 'cerulean', 'teal', 'green', 'light-green',
+      'lime', 'danger' ] %}
+      {% for samples in collections.writing %}
+
+      {% include "card.njk" %}
+
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+<!-- /writing samples -->
+<section class="text-bg-primary">
+  <div class="container p-8">
+    <a class="anchor text-light" name="writingAbout" id="writingAbout">
+      <h2>About Julia</h2>
+    </a>
+    <div class="row">
+      <div class="col-md-7">
+        <h2 class="text-light"><span id="myExp"></span>Years of Experience within the IT Space</h2>
+        <p>I love simplifying the highly technical and crafting solutions to empower clients to grow their businesses.
+          I'm particularly proud of the work I accomplished bridging SMEs, Customer Support, and Marketing departments
+          to craft materials for both internal and external applications.</p>
+
+        <h2 class="text-light">Bringing a Design Sensibility</h2>
+        <p>I'm no stranger to Photoshop, Illustrator, and the rest of the Adobe Cloud Suite to develop documentation
+          solutions and edit technical illustrations. In my previous roles, I was also responsible for making sure
+          external documents adhered to brand standards in addition to checking for technical accuracy.</p>
+
+        <h2 class="text-light">But more about me.</h2>
+        <p>In my spare time, I love being taken for walks by my dog, exploring new cities, and keeping up with new
+          trends and technologies. I am always looking to expand my horizons by taking on new projects and meeting new
+          people.</p>
+      </div>
+
+      <div class="col-md-4 offset-md-1">
+        <h3 class="text-light">Skillset</h3>
+        <ul class="list-ul" role="list">
+          <li role="listitem">Blog Post Writing</li>
+          <li role="listitem">Editing &amp; Proofreading</li>
+          <li role="listitem">How to Guides</li>
+          <li role="listitem">Microsoft Style Guide Formatting</li>
+          <li role="listitem">Project Management</li>
+          <li role="listitem">Research</li>
+          <li role="listitem">SOPs</li>
+          <li role="listitem">Scriptwriting</li>
+          <li role="listitem">Technical Writing</li>
+        </ul>
+
+        <h3 class="text-light">Bonus Skills</h3>
+        <ul class="list-ul" role="list">
+          <li role="listitem">Branding</li>
+          <li role="listitem">Code Optimization</li>
+          <li role="listitem">Design</li>
+          <li role="listitem">Email Design &amp; Coding</li>
+          <li role="listitem">HTML/CSS (LESS &amp; SASS)</li>
+          <li role="listitem">Illustration</li>
+          <li role="listitem">Infographics</li>
+          <li role="listitem">Presentations</li>
+          <li role="listitem">Voice-Over Work</li>
+        </ul>
+
+        <h3 class="text-light">Technology &amp; Certifications</h3>
+        <ul class="list-ul" role="list">
+          <li role="listitem">
+            Adobe Creative Cloud
+            <br />
+            <span style="font-style: italic; font-size: 0.75em">(Photoshop, Illustrator, InDesign)</span>
+          </li>
+          <li role="listitem">Figma</li>
+          <li role="listitem">Experience with Bootstrap Framework</li>
+          <li role="listitem">Experience with WordPress CMS</li>
+          <li role="listitem">Eloqua Email Marketing</li>
+          <li role="listitem">
+            Google &amp; Microsoft Suite
+            <br />
+            <span style="font-style: italic; font-size: 0.75em">(Word, Excel, Outlook, PowerPoint)</span>
+          </li>
+          <li role="listitem">
+            Project Management Software
+            <br />
+            <span style="font-style: italic; font-size: 0.75em">(InMotion, Jira, Trello)</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<a name="writingContact" id="writingContact"></a>

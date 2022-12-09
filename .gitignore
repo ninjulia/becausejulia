@@ -1,8 +1,8 @@
-scss/
-node_modules
+# dependencies installed by npm
+node_modules/
 
 # build artefacts
-src/components.njk
+#src/components.njk
 #src/_data/
 package-dev.json
 #package-ship.json
