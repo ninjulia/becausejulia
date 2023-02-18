@@ -6,12 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    {% set currentUrl = page.url %}
     {% set writingCheck = r/writing*/%}
 
-    {% if currentUrl === '/'%}
+    {% if page.url === '/'%}
     <title>{{title}}</title>
-    {% elif writingCheck.test(currentUrl)%}
+    {% elif writingCheck.test(page.url)%}
     <title>{{ title }} | Julia Czarnecki | Writing</title>
     {% else %}
     <title>{{ title }} | Julia Czarnecki | Design</title>

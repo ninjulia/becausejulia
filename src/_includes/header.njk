@@ -1,9 +1,8 @@
-{% set currentUrl = page.url %}
-{% set typeTest = r/writing*/%}
+{% set writingCheck = r/writing*/%}
 <header class="w-100 fixed-top bg-darkest">
     <nav class="navbar navbar-expand-lg navbar-dark bg-darkest d-lg-flex justify-content-baseline" role="navigation">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center text-white" {% if typeTest.test(currentUrl)%}
+            <a class="navbar-brand d-flex align-items-center text-white" {% if writingCheck.test(page.url)%}
                 href="/writing/" {% else %} href="/" {% endif %} target="_self" tabindex="0">
                 <svg class="bi" width="32" height="32" fill="currentColor" role="img" aria-label="code">
                     <use xlink:href="../../assets/img/bootstrap-set.svg#code-slash" />
@@ -19,7 +18,7 @@
                 <ul class="navbar-nav me-auto">
 
 
-                    {% if typeTest.test(currentUrl)%}
+                    {% if writingCheck.test(page.url)%}
                     {% include "writingNav.njk" %}
                     {% else %}
                     {% include "designNav.njk" %}

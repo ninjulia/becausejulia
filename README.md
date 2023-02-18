@@ -69,10 +69,11 @@ I am standing on the shoulders of giants
 
 - Organize \_includes, better leverage templates
 - Set Design banner, thumbnail via design.js logic
-- Fix issue with "currentUrl" variable set on multiple templates
+- ~~Fix issue with "currentUrl" variable set on multiple templates~~
 - Further optimize SCSS/CSS
 - Optimize Bootstrap.js use
 - favicon - add support for multi-format
+- ~~Fix issue with getDate variable~~
 
 #### Index
 
