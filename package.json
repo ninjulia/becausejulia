@@ -1,18 +1,27 @@
 {
 	"name": "becausejulia",
 	"version": "1.0.2",
-	"description": "> Julia Czarnecki | Design | Code | Digital",
+	"description": "Julia Czarnecki | Design | Code | Digital",
 	"main": "index.js",
 	"scripts": {
-		"start": "eleventy --serve",
-		"build": "eleventy"
+		"watch:sass": "sass  --no-source-map --watch scss:src/assets/css",
+		"watch:eleventy": "eleventy --serve --incremental --quiet",
+		"build:sass-site": "sass  --no-source-map scss/style.scss src/assets/css/style.css",
+		"build:sass": "npm-run-all --parallel build:sass-site",
+		"build:eleventy": "eleventy",
+		"postbuild": "postcss src/assets/css/*.css -u autoprefixer cssnano -r --no-map",
+		"start": "cross-env ELEVENTY_ENV=dev npm-run-all build:sass --parallel watch:*",
+		"build": "cross-env ELEVENTY_ENV=prod npm-run-all build:sass build:eleventy",
+		"lint": "stylelint \"scss/**/*.scss\" \"scss/**/**/*.scss\" \"scss/**/**/**/*.scss\" --custom-syntax postcss-scss",
+		"lint:fix": "stylelint --fix \"scss/**/*.scss\" \"scss/**/**/*.scss\" \"scss/**/**/**/*.scss\" --custom-syntax postcss-scss",
+		"bump": "npm --no-git-tag-version version"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/ninjulia/becausejulia.git"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "JuliA",
 	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/ninjulia/becausejulia/issues"
@@ -21,18 +30,40 @@
 	"devDependencies": {
 		"@11ty/eleventy": "^2.0.0",
 		"@fullhuman/postcss-purgecss": "^5.0.0",
+		"autoprefixer": "^10.4.13",
 		"bootstrap": "^5.2.3",
 		"bootstrap-icons": "^1.10.2",
+		"clean-css": "^5.3.1",
+		"cross-env": "^7.0.3",
+		"cssnano": "^5.0.15",
 		"fast-glob": "^3.2.12",
 		"html-minifier": "^4.0.0",
-		"markdown-it": "^13.0.1",
+		"markdown-it": "^12.3.2",
+		"markdown-it-anchor": "^8.4.1",
 		"npm-run-all": "^4.1.5",
-		"postcss": "^8.4.19",
-		"sass": "^1.56.1"
+		"postcss": "^8.4.5",
+		"postcss-cli": "^9.1.0",
+		"postcss-scss": "^4.0.3",
+		"sass": "^1.48.0",
+		"stylelint": "^14.2.0",
+		"stylelint-config-prettier": "^9.0.3",
+		"stylelint-config-standard": "^24.0.0",
+		"stylelint-config-twbs-bootstrap": "^7.0.0",
+		"stylelint-order": "^5.0.0",
+		"stylelint-scss": "^4.1.0"
 	},
+	"browserslist": [
+		">= 0.5%",
+		"last 2 major versions",
+		"not dead",
+		"Chrome >= 60",
+		"Firefox >= 60",
+		"Firefox ESR",
+		"iOS >= 12",
+		"Safari >= 12",
+		"not Explorer <= 11"
+	],
 	"dependencies": {
-		"autoprefixer": "^10.4.13",
-		"clean-css": "^5.3.1",
-		"postcss-cli": "^10.0.0"
+		"dotenv": "^16.0.3"
 	}
 }

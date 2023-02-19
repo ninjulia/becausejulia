@@ -1,8 +1,9 @@
-//add html-minifier
+//Helper packages
+require("dotenv").config();
 const htmlmin = require("html-minifier");
-
-//Import fast-glob package to import images to showcase module
 const fg = require("fast-glob");
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
 
 //Run search for showcase images
 const showcaseImages = fg.sync([".editorconfig", "**/assets/img/design/*-s*"], {
@@ -10,8 +11,13 @@ const showcaseImages = fg.sync([".editorconfig", "**/assets/img/design/*-s*"], {
 });
 
 module.exports = function (eleventyConfig) {
-	//exclude components.njk from production
-	eleventyConfig.ignores.add("**/src/components.njk");
+	//compile scss
+	eleventyConfig.addWatchTarget("./scss/");
+
+	//TO DO: exclude components.njk from PROD, allow on DEV
+	if (process.env.ELEVENTY_ENV === "prod") {
+		eleventyConfig.ignores.add("**/src/components.njk");
+	}
 
 	//shuffle arrays via CSS-tricks.com
 	function myShuffle(o) {
@@ -50,6 +56,12 @@ module.exports = function (eleventyConfig) {
 		}
 		return showcaseImagesUrl;
 	});
+
+	// markdown settings
+	let markdownLibrary = markdownIt({
+		html: true,
+	});
+	eleventyConfig.setLibrary("md", markdownLibrary);
 
 	//minify HTML Output - from 11ty docs/config/#transforms
 	eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
