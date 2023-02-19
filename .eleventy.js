@@ -14,7 +14,7 @@ module.exports = function (eleventyConfig) {
 	//compile scss
 	eleventyConfig.addWatchTarget("./scss/");
 
-	//TO DO: exclude components.njk from PROD, allow on DEV
+	//exclude components.njk from PROD
 	if (process.env.ELEVENTY_ENV === "prod") {
 		eleventyConfig.ignores.add("**/src/components.njk");
 	}
