@@ -11,7 +11,7 @@
 		"build:eleventy": "eleventy",
 		"postbuild": "postcss src/assets/css/*.css -u autoprefixer cssnano -r --no-map",
 		"start": "cross-env ELEVENTY_ENV=dev npm-run-all build:sass --parallel watch:*",
-		"build": "cross-env ELEVENTY_ENV=prod npm-run-all build:sass build:eleventy",
+		"build": "cross-env ELEVENTY_ENV=prod npm-run-all build:eleventy",
 		"lint": "stylelint \"scss/**/*.scss\" \"scss/**/**/*.scss\" \"scss/**/**/**/*.scss\" --custom-syntax postcss-scss",
 		"lint:fix": "stylelint --fix \"scss/**/*.scss\" \"scss/**/**/*.scss\" \"scss/**/**/**/*.scss\" --custom-syntax postcss-scss",
 		"bump": "npm --no-git-tag-version version"
