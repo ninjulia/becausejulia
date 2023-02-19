@@ -74,14 +74,9 @@
     defer></script>
 <script src="../../assets/js/date.js" type="text/javascript" defer></script>
 
-<!-- only show dribbble images on main -->
-
-
-
-{% if currentUrl === '/' %}
-{% if meta.env == 'prod' %}
+<!-- only show dribbble images on prod -->
+{% if page.url === '/' and meta.env === 'prod' %}
 <script src="https://absorbed-andesaurus.glitch.me/jribbble.min.js" defer></script>
-{% endif %}
 <script src="../assets/js/jribbble.js" type="text/javascript" defer></script>
 {% endif %}
 
