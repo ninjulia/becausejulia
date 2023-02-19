@@ -5,7 +5,9 @@ const htmlmin = require("html-minifier");
 const fg = require("fast-glob");
 
 //Run search for showcase images
-const showcaseImages = fg.sync([".editorconfig", "**/assets/img/design/*-s*"], { ignore: ["**/src/**"] });
+const showcaseImages = fg.sync([".editorconfig", "**/assets/img/design/*-s*"], {
+	ignore: ["**/src/**"],
+});
 
 module.exports = function (eleventyConfig) {
 	//exclude components.njk from production
@@ -13,7 +15,11 @@ module.exports = function (eleventyConfig) {
 
 	//shuffle arrays via CSS-tricks.com
 	function myShuffle(o) {
-		for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+		for (
+			var j, x, i = o.length;
+			i;
+			j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x
+		);
 		return o;
 	}
 
@@ -64,9 +70,9 @@ module.exports = function (eleventyConfig) {
 
 	//open new browser on run
 	eleventyConfig.setBrowserSyncConfig({
-		//	open: true,
+		open: true,
 		//set to false to disable
-		snippet: false,
+		//snippet: false,
 	});
 
 	//output to public folder
@@ -77,4 +83,3 @@ module.exports = function (eleventyConfig) {
 		},
 	};
 };
-

@@ -19,9 +19,9 @@
 
 
                     {% if writingCheck.test(page.url)%}
-                    {% include "writingNav.njk" %}
+                    {% include "../_navs/writingNav.njk" %}
                     {% else %}
-                    {% include "designNav.njk" %}
+                    {% include "../_navs/designNav.njk" %}
                     {% endif %}
                 </ul>
             </div>

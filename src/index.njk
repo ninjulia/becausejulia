@@ -26,7 +26,7 @@ layout: base.njk
 		<div class="row justify-content-center">
 
 			{% for design in collections.design %}
-			{% include "thumbnails.njk"%}
+			{% include "./_includes/_components/thumbnails.njk"%}
 			{% endfor %}
 
 		</div>
@@ -253,7 +253,7 @@ layout: base.njk
 <!-- /about section -->
 
 <!-- latest work section -->
-{% include "grid.njk" %}
+{% include "./_includes/_components/grid.njk" %}
 <!-- /latest work section -->
 
 <!-- contact-->

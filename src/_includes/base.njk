@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    {% set designCheck = r/design*/%}
     {% set writingCheck = r/writing*/%}
 
     {% if page.url === '/'%}
@@ -22,18 +23,14 @@
 </head>
 
 <body class="vh-100">
-
-
     <!-- header -->
-    {% include "header.njk" %}
+    {% include "./_components/header.njk" %}
     <!-- /header -->
 
     <main role="main">
-
         {{ content | safe }}
-
     </main>
 
     <!-- footer -->
-    {% include "footer.njk" %}
+    {% include "./_components/footer.njk" %}
     <!-- /footer -->

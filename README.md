@@ -67,7 +67,7 @@ I am standing on the shoulders of giants
 
 #### Back-End
 
-- Organize \_includes, better leverage templates
+- ~~Organize \_includes, better leverage templates~~
 - Set Design banner, thumbnail via design.js logic
 - ~~Fix issue with "currentUrl" variable set on multiple templates~~
 - Further optimize SCSS/CSS
