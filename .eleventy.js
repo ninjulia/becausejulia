@@ -3,7 +3,6 @@ require("dotenv").config();
 const htmlmin = require("html-minifier");
 const fg = require("fast-glob");
 const markdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
 
 //Run search for showcase images
 const showcaseImages = fg.sync([".editorconfig", "**/assets/img/design/*-s*"], {
