@@ -10677,3 +10677,46 @@ footer .icon-link .bi {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+#latest-grid .grid-item {
+  background: linear-gradient(to bottom right, #440154, #482475, #414487, #355f8d, #2a788e, #21908d, #22a884, #42be71, #7ad151);
+  position: relative;
+  z-index: 1;
+}
+#latest-grid .grid-item img {
+  opacity: 0;
+  transition: opacity 16s linear;
+}
+#latest-grid .grid-item:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top left, #440154, #482475, #414487, #355f8d, #2a788e, #21908d, #22a884, #42be71, #7ad151);
+  z-index: -1;
+  animation: Breathe 16s linear infinite;
+  opacity: 0;
+  transition: opacity 16s linear;
+}
+#latest-grid .grid-item.no-before:before {
+  opacity: 0;
+}
+#latest-grid .full-opacity {
+  opacity: 1 !important;
+}
+#latest-grid .zero-opacity {
+  opacity: 0;
+}
+@keyframes Breathe {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

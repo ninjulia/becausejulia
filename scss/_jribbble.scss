@@ -1,0 +1,45 @@
+#latest-grid {
+	.grid-item {
+		background: $brand-gradient;
+		position: relative;
+		z-index: 1;
+
+		img {
+			opacity: 0;
+			transition: opacity 16s linear;
+		}
+	}
+
+	.grid-item:before {
+		position: absolute;
+		content: "";
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: $brand-gradient-inverted;
+		z-index: -1;
+		animation: Breathe 16s linear infinite;
+		opacity: 0;
+		transition: opacity 16s linear;
+	}
+
+	.grid-item.transparent:before {
+		opacity: 0;
+	}
+	.full-opacity {
+		opacity: 1 !important;
+	}
+
+	@keyframes Breathe {
+		from {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+}

@@ -1,5 +1,7 @@
 //////////////////////////////////Latest Work from Dribbble
-jribbble.setToken("9abe753478a2afe894caf7454fb22d9008891cc96538a0c1b47aeeb7b68efe0d");
+jribbble.setToken(
+	"9abe753478a2afe894caf7454fb22d9008891cc96538a0c1b47aeeb7b68efe0d"
+);
 
 //
 //procure shots - dribbble returns 12
@@ -11,7 +13,7 @@ jribbble.shots(function (shotsArray) {
 
 	// wrap in required html
 	shotsArray.forEach((shot) => {
-		const slideImage = `<div class="grid-item"><img src="${shot.images.normal}" class="img-fluid rounded-1" width="400" height=300" alt="${shot.title}" loading="lazy" /></div>`;
+		const slideImage = `<div class="grid-item"><img src="${shot.images.normal}" class="img-fluid rounded-1" width="400" height="300" alt="${shot.title}" loading="lazy" /></div>`;
 
 		//push to array
 		imageArray.push(slideImage);
