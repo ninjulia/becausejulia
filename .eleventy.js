@@ -20,12 +20,21 @@ module.exports = function (eleventyConfig) {
 
 	//shuffle arrays via CSS-tricks.com
 	function myShuffle(o) {
+		const returnArray = [];
 		for (
 			var j, x, i = o.length;
 			i;
 			j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x
 		);
-		return o;
+		//shuffle sometimes returns duplicates, this re-sorts
+		for (a = 0; a < o.length; a++) {
+			if (a === 0 || o[a] !== o[a - 1]) {
+				returnArray.push(o[a]);
+			} else {
+				returnArray.unshift(o[a]);
+			}
+		}
+		return returnArray;
 	}
 
 	//filter based on page url
@@ -38,13 +47,9 @@ module.exports = function (eleventyConfig) {
 		//filter images to match page name
 		const imgList = showcase.filter((item) => item.match(`${pageName}-s`));
 
-		//randomize and return
-		myShuffle(imgList);
-
-		//double list if under 12
+		//randomize and return (double if under 12)
 		let showcaseShuffle = imgList.concat(imgList);
-
-		return showcaseShuffle;
+		return myShuffle(showcaseShuffle);
 	});
 
 	//create showcase collection
