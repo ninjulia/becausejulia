@@ -8,19 +8,25 @@ jribbble.setToken(
 //
 jribbble.shots(function (shotsArray) {
 	//where to put the shots
-	const gridInner = document.querySelector("#latest-grid");
-	const imageArray = [];
+	const before = document.querySelectorAll(".grid-item");
+	imageArray = [];
 
-	// wrap in required html
+	//set 1 image in each grid-item
+
 	shotsArray.forEach((shot) => {
-		const slideImage = `<div class="grid-item"><img src="${shot.images.normal}" class="img-fluid rounded-1" width="400" height="300" alt="${shot.title}" loading="lazy" /></div>`;
-
-		//push to array
-		imageArray.push(slideImage);
+		const dribbbleImage = `<img src="${shot.images.normal}" class="img-fluid rounded-1" width="400" height="300" alt="${shot.title}" loading="lazy" />`;
+		imageArray.push(dribbbleImage);
 	});
+	for (i = 0; i < before.length; i++) {
+		//add image to .grid-item
+		before[i].innerHTML = imageArray[i];
 
-	//add array of items to grid
-	gridInner.innerHTML = imageArray.join("");
+		//listen for image load
+		const image = before[i].querySelector("img");
+		if (image) {
+			image.addEventListener("load", testImg(image, before[i]));
+		}
+	}
 });
 
 //
@@ -30,3 +36,9 @@ jribbble.user(function (userObj) {
 	const gridSubText = `<p class="text-white mb-0 pb-0">View more posts from <a href="${userObj.html_url}" target="_blank" class="text-white">${userObj.login} on dribbble.</a></p>`;
 	document.getElementById("viewMore").innerHTML = gridSubText;
 });
+
+function testImg(image, div) {
+	div.classList.add("transparent");
+	image.classList.add("full-opacity");
+	image.removeEventListener("load", testImg);
+}

@@ -1,4 +1,6 @@
 #latest-grid {
+	$timing: 3s;
+
 	.grid-item {
 		background: $brand-gradient;
 		position: relative;
@@ -6,22 +8,20 @@
 
 		img {
 			opacity: 0;
-			transition: opacity 16s linear;
+			transition: opacity $timing linear;
 		}
 	}
 
 	.grid-item:before {
 		position: absolute;
 		content: "";
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
+		inset: 0;
+		width: 100%;
 		background: $brand-gradient-inverted;
 		z-index: -1;
-		animation: Breathe 16s linear infinite;
+		animation: Breathe $timing linear infinite;
 		opacity: 0;
-		transition: opacity 16s linear;
+		transition: opacity $timing linear;
 	}
 
 	.grid-item.transparent:before {

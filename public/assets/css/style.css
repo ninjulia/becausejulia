@@ -10685,29 +10685,24 @@ footer .icon-link .bi {
 }
 #latest-grid .grid-item img {
   opacity: 0;
-  transition: opacity 16s linear;
+  transition: opacity 3s linear;
 }
 #latest-grid .grid-item:before {
   position: absolute;
   content: "";
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
+  width: 100%;
   background: linear-gradient(to top left, #440154, #482475, #414487, #355f8d, #2a788e, #21908d, #22a884, #42be71, #7ad151);
   z-index: -1;
-  animation: Breathe 16s linear infinite;
+  animation: Breathe 3s linear infinite;
   opacity: 0;
-  transition: opacity 16s linear;
+  transition: opacity 3s linear;
 }
-#latest-grid .grid-item.no-before:before {
+#latest-grid .grid-item.transparent:before {
   opacity: 0;
 }
 #latest-grid .full-opacity {
   opacity: 1 !important;
-}
-#latest-grid .zero-opacity {
-  opacity: 0;
 }
 @keyframes Breathe {
   from {
