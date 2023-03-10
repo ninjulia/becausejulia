@@ -59,9 +59,9 @@ $theme-colors: map-remove(
 @import "../node_modules/bootstrap/scss/utilities/api";
 
 // 8. Add additional custom code here
-//import custom component styling
+//import custom componet styling
 @import "global";
-@import "mybuttons";
+@import "myButtons";
 @import "header";
 @import "footer";
 
