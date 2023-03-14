@@ -1,34 +1,39 @@
 #latest-grid {
-	$timing: 3s;
+	$timing: 5s;
+	$half: 2.5s;
 
 	.grid-item {
 		background: $brand-gradient;
 		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		z-index: 1;
 
 		img {
 			opacity: 0;
+			transition: opacity $timing ease-in;
+			&.full-opacity {
+				opacity: 1;
+			}
+		}
+
+		&:before {
+			position: absolute;
+			content: "";
+			inset: 0;
+			width: 100%;
+			background: $brand-gradient-inverted;
+			z-index: -1;
+			animation: Breathe $timing linear infinite;
+			opacity: 1;
 			transition: opacity $timing linear;
 		}
-	}
 
-	.grid-item:before {
-		position: absolute;
-		content: "";
-		inset: 0;
-		width: 100%;
-		background: $brand-gradient-inverted;
-		z-index: -1;
-		animation: Breathe $timing linear infinite;
-		opacity: 0;
-		transition: opacity $timing linear;
-	}
-
-	.grid-item.transparent:before {
-		opacity: 0;
-	}
-	.full-opacity {
-		opacity: 1 !important;
+		&.transparent:before {
+			opacity: 0;
+			animation: none;
+		}
 	}
 
 	@keyframes Breathe {
@@ -41,5 +46,21 @@
 		to {
 			opacity: 1;
 		}
+	}
+}
+
+.lettersIn {
+	overflow: hidden;
+	white-space: nowrap;
+	animation: typing 2.5s steps(92, end);
+}
+
+/* The typing effect */
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
 	}
 }

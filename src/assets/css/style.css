@@ -10166,11 +10166,27 @@ input[type=submit] {
 
 header {
   height: 4rem;
+  position: relative;
 }
 
 main,
 .portfolio-header {
   margin-top: 4rem;
+}
+
+.skip-nav {
+  margin-top: -24px;
+  transform: translate(0, -120%);
+  transition: all 325ms ease-in;
+}
+
+.skip-nav-link:focus {
+  display: inline-block;
+}
+
+.skip-nav:has(.skip-nav-link:focus) {
+  margin-top: 0;
+  transform: translate(0, 0);
 }
 
 .nav-item {
@@ -10681,11 +10697,17 @@ footer .icon-link .bi {
 #latest-grid .grid-item {
   background: linear-gradient(to bottom right, #440154, #482475, #414487, #355f8d, #2a788e, #21908d, #22a884, #42be71, #7ad151);
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
 }
 #latest-grid .grid-item img {
   opacity: 0;
-  transition: opacity 3s linear;
+  transition: opacity 5s ease-in;
+}
+#latest-grid .grid-item img.full-opacity {
+  opacity: 1;
 }
 #latest-grid .grid-item:before {
   position: absolute;
@@ -10694,15 +10716,13 @@ footer .icon-link .bi {
   width: 100%;
   background: linear-gradient(to top left, #440154, #482475, #414487, #355f8d, #2a788e, #21908d, #22a884, #42be71, #7ad151);
   z-index: -1;
-  animation: Breathe 3s linear infinite;
-  opacity: 0;
-  transition: opacity 3s linear;
+  animation: Breathe 5s linear infinite;
+  opacity: 1;
+  transition: opacity 5s linear;
 }
 #latest-grid .grid-item.transparent:before {
   opacity: 0;
-}
-#latest-grid .full-opacity {
-  opacity: 1 !important;
+  animation: none;
 }
 @keyframes Breathe {
   from {
@@ -10713,5 +10733,21 @@ footer .icon-link .bi {
   }
   to {
     opacity: 1;
+  }
+}
+
+.lettersIn {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2.5s steps(92, end);
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }

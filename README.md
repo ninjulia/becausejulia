@@ -67,13 +67,15 @@ I am standing on the shoulders of giants
 
 #### Back-End
 
-- ~~Organize \_includes, better leverage templates~~
-- Set Design banner, thumbnail via design.js logic
-- ~~Fix issue with "currentUrl" variable set on multiple templates~~
-- Further optimize SCSS/CSS
-- Optimize Bootstrap.js use
+- set up jribbble as async, style loading appearances
 - favicon - add support for multi-format
+- Set Design banner, thumbnail via design.js logic
+- ~~Organize \_includes, better leverage templates~~
+- ~~Fix issue with "currentUrl" variable set on multiple templates~~
+- ~~Further optimize SCSS/CSS~~
+- ~~Optimize Bootstrap.js use~~
 - ~~Fix issue with getDate variable~~
+- ~~Add support for "skip nav" link~~
 
 #### Index
 

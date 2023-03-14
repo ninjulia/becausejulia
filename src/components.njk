@@ -2,9 +2,7 @@
 title: samples
 layout: base.njk
 ---
-<!-- latest work section -->
-{% include "./_includes/_components/grid.njk" %}
-<!-- /latest work section -->
+
 
 
 <section>
@@ -738,26 +736,41 @@ layout: base.njk
 
     <!-- content -->
     <div id="latest-grid" class="grid text-bg-info m-0 p-0 w-100">
-        <div class='grid-item'></div>
-        <div class='grid-item'></div>
-        <div class='grid-item'></div>
-        <div class='grid-item'></div>
+        <div class='grid-item rounded-1'><img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+        </div>
+        <div class='grid-item rounded-1'><img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+        </div>
+        <div class='grid-item rounded-1'><img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+        </div>
+        <div class='grid-item rounded-1'><img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+        </div>
 
-        <div class='grid-item'></div>
-        <div class='grid-item'></div>
-        <div class='grid-item'></div>
-        <div class='grid-item'></div>
+        <div class='grid-item rounded-1'><img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+        </div>
+        <div class='grid-item rounded-1'><img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+        </div>
+        <div class='grid-item rounded-1'><img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+        </div>
+        <div class='grid-item rounded-1'><img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+        </div>
 
-        <div class='grid-item'></div>
-        <div class='grid-item'></div>
-        <div class='grid-item'></div>
-        <div class='grid-item'></div>
+        <div class='grid-item rounded-1'><img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+        </div>
+        <div class='grid-item rounded-1'><img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+        </div>
+        <div class='grid-item rounded-1'><img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+        </div>
+        <div class='grid-item rounded-1'><img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+        </div>
     </div>
     <!-- view more link -->
     <div class="view-link">
         <div class="container p-8">
-            <div class="row" id="viewMore">
-                <!-- insert view more link via jribbble.js -->
+            <div class="row">
+                <p id="viewMore" class="text-white mb-0 pb-0">
+                    Loading images from Dribbble<span id="loadingDots"></span>
+                    <!-- show loading text or view more link via jribbble.js -->
+                </p>
             </div>
         </div>
     </div>
@@ -765,5 +778,5 @@ layout: base.njk
 </section>
 
 
-<script src="https://absorbed-andesaurus.glitch.me/jribbble.min.js" defer></script>
-<script src="../../assets/js/test.js" type="text/javascript" defer></script>
+<script src="https://absorbed-andesaurus.glitch.me/jribbble.min.js"></script>
+<script src="../../assets/js/jribbble.js" type="text/javascript"></script>

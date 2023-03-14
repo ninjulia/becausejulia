@@ -1,5 +1,16 @@
 {% set writingCheck = r/writing*/%}
 <header class="w-100 fixed-top bg-darkest">
+    <div class="skip-nav pb-2 container">
+        <div class="row">
+            <div class="col-12 bg-darkest">
+                <a class="skip-nav-link p-2 text-white" href="#main-content">
+                    Skip Navigation
+                </a>
+            </div>
+        </div>
+    </div>
+
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-darkest d-lg-flex justify-content-baseline" role="navigation">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center text-white" {% if writingCheck.test(page.url)%}
