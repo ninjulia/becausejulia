@@ -87,7 +87,7 @@ function loaded(image, div) {
 		loadingDots.innerText = "";
 		loadingDots.remove();
 
-		//transition loading text
+		//once css transition starts to reveal image, update loading text
 		image.addEventListener("transitionstart", postLoad(image));
 	}
 }
@@ -103,10 +103,8 @@ function postLoad(image) {
 	viewMore.addEventListener("animationend", (e) => {
 		//remove && replace class, add new text
 		viewMore.classList.remove("lettersOut");
-		viewMore.innerHTML = "&nbsp;";
-
 		viewMore.classList.add("lettersIn");
 		viewMore.innerHTML = html;
-		viewMore.removeEventListener("animationend", this);
+		viewMore.removeEventListener("animationend", e);
 	});
 }

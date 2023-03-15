@@ -10701,6 +10701,7 @@ footer .icon-link .bi {
   justify-content: center;
   align-items: center;
   z-index: 1;
+  overflow: hidden;
 }
 #latest-grid .grid-item img {
   opacity: 0;
@@ -10736,16 +10737,38 @@ footer .icon-link .bi {
   }
 }
 
-.lettersIn {
+.lettersIn,
+.lettersOut {
+  display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  animation: typing 2.5s steps(92, end);
+  animation-duration: 2.5s;
+}
+
+.lettersIn {
+  animation-name: typing;
+  animation-direction: normal;
+  animation-timing-function: steps(92, start);
+}
+
+.lettersOut {
+  animation-name: delete;
+  animation-direction: normal;
+  animation-timing-function: steps(56, end);
 }
 
 /* The typing effect */
+@keyframes delete {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
 @keyframes typing {
   from {
-    width: 0;
+    width: 0%;
   }
   to {
     width: 100%;

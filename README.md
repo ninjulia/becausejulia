@@ -55,27 +55,18 @@ I am standing on the shoulders of giants
 
 ### Current Release
 
-- MVP completed 12/22
-- Set up 11ty tooling
-- Upgraded to Bootstrap 5.2.3
-- Cleaned up SCSS files and 'Brand' Theming
-- Optimized images to next-gen formats
-- Addressed accessability issues
-- Addressed Lighthouse mobile performance issues
+- Back-End Improvements completed 03/23
+- favicon - add support for multi-format
+
+- Set Design banner, thumbnail via logic
+- Organize \_includes, better leverage templates
+- Fix issue with "currentUrl" variable set on multiple templates
+- Set up Prod / Dev environmental variable
+- Fix issue with getDate variable
+- Add support for "skip nav" link
+- Set up jribbble as async, style loading appearances
 
 ### Future improvements
-
-#### Back-End
-
-- set up jribbble as async, style loading appearances
-- favicon - add support for multi-format
-- Set Design banner, thumbnail via design.js logic
-- ~~Organize \_includes, better leverage templates~~
-- ~~Fix issue with "currentUrl" variable set on multiple templates~~
-- ~~Further optimize SCSS/CSS~~
-- ~~Optimize Bootstrap.js use~~
-- ~~Fix issue with getDate variable~~
-- ~~Add support for "skip nav" link~~
 
 #### Index
 

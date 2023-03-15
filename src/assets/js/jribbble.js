@@ -1,107 +1,112 @@
-//simulate loading
-let loadCounter = 1;
-let testInterval = setTimeout(function () {
-	put();
-}, 5000);
-
-// functions to handle display while loading
+//get required items from DOM
+const imageSet = document.querySelectorAll(".grid-img");
+const viewMore = document.getElementById("viewMore");
 const loadingDots = document.getElementById("loadingDots");
 
-dotCount = 0;
-counter = 0;
-let interval = setInterval(function () {
-	loadingDots.innerText = ".".repeat(dotCount);
-	let action;
-	counter++;
-	if (counter > 0 && counter < 4) {
-		action = dotCount++;
-	} else if (counter >= 4 && counter < 6) {
-		action = dotCount--;
-	} else if (counter === 6) {
-		counter = 0;
-		dotCount = 0;
-	}
-	action;
-}, 1000);
+//initialize variables
+let dotInterval = "",
+	dotCount = 0,
+	counter = 0,
+	imageArray = [],
+	imageObj = {},
+	html = "";
 
-function loaded() {
-	clearInterval(interval);
-	dotCount = 0;
-	counter = 0;
-	loadingDots.innerText = "";
-	loadingDots.remove();
-}
-
-//remove styling once images loaded
-function testImg(image, div) {
-	div.classList.add("transparent");
-	image.classList.add("full-opacity");
-	image.removeEventListener("load", testImg);
-}
-
-//////////////////////////////////Jribbble functionality
+//set up jribbble, return required data
 jribbble.setToken(
 	"9abe753478a2afe894caf7454fb22d9008891cc96538a0c1b47aeeb7b68efe0d"
 );
 
-//
-//procure shots - dribbble returns 12
-//
-function put() {
-	clearInterval(testInterval);
-
-	jribbble.shots(function (shotsArray) {
-		//where to put the shots
-		const holder = document.querySelectorAll(".grid-item");
-		const imageSet = document.querySelectorAll(".grid-img");
-		imageArray = [];
-
-		//get src & alt text for each
-		shotsArray.forEach((shot) => {
-			const imageObj = {
-				src: shot.images.normal,
-				alt: shot.title,
-			};
-			imageArray.push(imageObj);
-		});
-
-		for (i = 0; i < imageSet.length; i++) {
-			//add image essentials to DOM
-			imageSet[i].src = imageArray[i].src;
-			imageSet[i].alt = imageArray[i].alt;
-
-			//listen for image load
-			imageSet[i].addEventListener("load", testImg(imageSet[i], holder[i]));
-		}
-
-		jribbble.user(function (userObj) {
-			//set as innerHTML after everything has loaded
-			postLoad(
-				`View more posts from <a href="${userObj.html_url}" target="_blank" class="text-white">${userObj.login} on dribbble.</a>`
-			);
-		});
+jribbble.shots(function (shotsArray) {
+	//get src & alt text for each
+	shotsArray.forEach((shot) => {
+		imageObj = {
+			src: shot.images.normal,
+			alt: shot.title,
+		};
+		imageArray.push(imageObj);
 	});
+	setImages();
+});
+
+jribbble.user(function (userObj) {
+	return (html = `View more posts from <a href="${userObj.html_url}" target="_blank" class="text-white">${userObj.login} on dribbble.</a>`);
+});
+
+//add dribbble images to DOM once ready, add event listener if loaded
+function setImages() {
+	for (i = 0; i < imageSet.length; i++) {
+		imageSet[i].src = imageArray[i].src;
+		imageSet[i].alt = imageArray[i].alt;
+
+		//add event listener to add classes once loaded
+		imageSet[i].addEventListener(
+			"load",
+			loaded(imageSet[i], imageSet[i].parentNode)
+		);
+	}
 }
 
-function postLoad(html) {
-	const viewMore = document.getElementById("viewMore");
-	let str = viewMore.innerText;
+//display loading indicator until images ready
+do {
+	loadingFunction();
+} while (!imageSet[11].complete);
 
-	loaded();
-	//clear "loading" text over .5 * SCSS transition timing to loaded state
-	const lettersOut = setInterval(() => {
-		if (str.length > 1) {
-			str = str.substring(0, str.length - 1);
-			viewMore.innerText = str;
-		} else if (str.length === 1) {
-			//keep viewMore from collapsing, but show nothing
-			viewMore.innerHTML = `&nbsp`;
-			str = "";
-			clearInterval(lettersOut);
-
-			//add transition, set text
-			viewMore.classList.add("lettersIn");
-			viewMore.innerHTML = html;
+//add "..." while waiting for load
+function loadingFunction() {
+	dotInterval = setInterval(function () {
+		loadingDots.innerText = ".".repeat(dotCount);
+		let action;
+		counter++;
+		if (counter > 0 && counter < 4) {
+			action = dotCount++;
+		} else if (counter >= 4 && counter < 6) {
+			action = dotCount--;
+		} else if (counter === 6) {
+			counter = 0;
+			dotCount = 0;
 		}
-	}, (2500 / 46) * 2);
+		action;
+	}, 1000);
+}
+
+//apply to images onLoad - added via setImages()
+function loaded(image, div) {
+	//add appropriate classes to display div and images
+	div.classList.add("transparent");
+	image.classList.add("full-opacity");
+
+	//remove eventListener for load
+	image.removeEventListener("load", loaded);
+
+	//check if last image, call postLoad() events
+	if (image === imageSet[11]) {
+		//stop loading indicators
+		clearInterval(dotInterval);
+		dotCount = 0;
+		counter = 0;
+		loadingDots.innerText = "";
+		loadingDots.remove();
+
+		//transition loading text
+		image.addEventListener("transitionstart", postLoad(image));
+	}
+}
+
+//update loading text
+function postLoad(image) {
+	image.removeEventListener("transitionstart", postLoad);
+
+	//remove text slowly via css transition
+	viewMore.classList.add("lettersOut");
+
+	//once loading text css transition fires,
+	viewMore.addEventListener("animationend", (e) => {
+		//remove && replace class, add new text
+		viewMore.classList.remove("lettersOut");
+		viewMore.innerHTML = "&nbsp;";
+
+		viewMore.classList.add("lettersIn");
+		viewMore.innerHTML = html;
+		viewMore.removeEventListener("animationend", this);
+	});
 }

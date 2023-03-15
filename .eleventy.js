@@ -37,7 +37,7 @@ module.exports = function (eleventyConfig) {
 		return returnArray;
 	}
 
-	//filter based on page url
+	//filter showcase collection based on page url
 	eleventyConfig.addFilter("filterImg", (showcase, currentUrl) => {
 		let pageName = [];
 
