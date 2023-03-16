@@ -10396,7 +10396,6 @@ footer .icon-link .bi {
 
 .latest-work {
   display: grid;
-  grid-auto-rows: repeat(3, minmax(64px, 1fr));
   grid-template-columns: 1fr;
 }
 .latest-work .headline,
@@ -10737,28 +10736,40 @@ footer .icon-link .bi {
   }
 }
 
+#viewMore {
+  display: inline;
+  overflow: hidden;
+  width: 320px;
+  height: 48px;
+  white-space: break-spaces;
+}
+
+@media screen and (min-width: 450px) {
+  #viewMore {
+    width: auto;
+    height: auto;
+    white-space: nowrap;
+  }
+}
 .lettersIn,
 .lettersOut {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
+  animation-direction: normal;
+  animation-delay: 0s;
   animation-duration: 2.5s;
 }
 
 .lettersIn {
-  animation-name: typing;
-  animation-direction: normal;
+  animation-name: lettersIn;
   animation-timing-function: steps(92, start);
 }
 
 .lettersOut {
-  animation-name: delete;
-  animation-direction: normal;
+  animation-name: lettersOut;
   animation-timing-function: steps(56, end);
 }
 
 /* The typing effect */
-@keyframes delete {
+@keyframes lettersOut {
   from {
     width: 100%;
   }
@@ -10766,7 +10777,7 @@ footer .icon-link .bi {
     width: 0%;
   }
 }
-@keyframes typing {
+@keyframes lettersIn {
   from {
     width: 0%;
   }

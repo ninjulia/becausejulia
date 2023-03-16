@@ -1,4 +1,4 @@
-//////////////////////////////////Get year for copyright
+////////////////////////////////Get year for copyright
 let currentYear = new Date().getFullYear();
 document.getElementById("year").innerHTML = currentYear;
 

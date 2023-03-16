@@ -88,7 +88,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.setBrowserSyncConfig({
 		open: true,
 		//set to false to disable
-		//snippet: false,
+		//snippet: true,
 	});
 
 	//output to public folder

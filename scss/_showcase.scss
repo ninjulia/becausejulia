@@ -5,7 +5,6 @@
 //
 .latest-work {
 	display: grid;
-	grid-auto-rows: repeat(3, minmax(64px, 1fr));
 	grid-template-columns: 1fr;
 
 	.headline,

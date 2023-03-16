@@ -67,3 +67,38 @@
         </div>
         <!-- /view more link -->
 </section>
+
+<!-- display loading sequence while waiting for deferred js -->
+<script>
+        //get required elements from DOM
+        const loadingDots = document.getElementById("loadingDots");
+        const imageSet = document.querySelectorAll(".grid-img");
+
+        //initialize variables
+        let dotInterval = "",
+                dotCount = 0,
+                counter = 0;
+
+        //display loading indicator until images ready
+        do {
+                loadingFunction();
+        } while (!imageSet[11].complete);
+
+        //add "..." while waiting for load
+        function loadingFunction() {
+                dotInterval = setInterval(function () {
+                        loadingDots.innerText = ".".repeat(dotCount);
+                        let action;
+                        counter++;
+                        if (counter > 0 && counter < 4) {
+                                action = dotCount++;
+                        } else if (counter >= 4 && counter < 6) {
+                                action = dotCount--;
+                        } else if (counter === 6) {
+                                counter = 0;
+                                dotCount = 0;
+                        }
+                        action;
+                }, 1000);
+        }
+</script>
