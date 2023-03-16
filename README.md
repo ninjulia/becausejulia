@@ -56,15 +56,14 @@ I am standing on the shoulders of giants
 ### Current Release
 
 - Back-End Improvements completed 03/23
-- favicon - add support for multi-format
-
-- Set Design banner, thumbnail via logic
-- Organize \_includes, better leverage templates
-- Fix issue with "currentUrl" variable set on multiple templates
-- Set up Prod / Dev environmental variable
-- Fix issue with getDate variable
-- Add support for "skip nav" link
-- Set up jribbble as async, style loading appearances
+  - Favicon - add support for multi-format
+  - Set Design banner, thumbnail via logic
+  - Organize \_includes, better leverage templates
+  - Fix issue with "currentUrl" variable set on multiple templates
+  - Set up Prod / Dev environmental variable
+  - Fix issue with getDate variable
+  - Add support for "skip nav" link
+  - Set up jribbble as async, style loading appearances
 
 ### Future improvements
 
