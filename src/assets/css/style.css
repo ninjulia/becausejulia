@@ -10174,19 +10174,14 @@ main,
   margin-top: 4rem;
 }
 
-.skip-nav {
-  margin-top: -24px;
-  transform: translate(0, -120%);
-  transition: all 325ms ease-in;
+#skipNav {
+  height: 2.625rem;
+  margin-top: -2.625rem;
+  transition: margin-top 325ms ease-in;
 }
 
-.skip-nav-link:focus {
-  display: inline-block;
-}
-
-.skip-nav:has(.skip-nav-link:focus) {
-  margin-top: 0;
-  transform: translate(0, 0);
+#skipNav:focus-within {
+  margin-top: 0rem;
 }
 
 .nav-item {
