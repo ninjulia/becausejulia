@@ -73,6 +73,10 @@
         //get required elements from DOM
         const loadingDots = document.getElementById("loadingDots");
         const imageSet = document.querySelectorAll(".grid-img");
+        const viewMore = document.getElementById("viewMore");
+
+        //set variables
+        const error = `An error occurred. <a href='https://dribbble.com/becausejulia' name='latest_work' rel='noreferrer' title='dribbble'>View the latest images</a> by BecauseJulia on Dribbble.`;
 
         //initialize variables
         let dotInterval = "",
@@ -83,6 +87,12 @@
         do {
                 loadingFunction();
         } while (!imageSet[11].complete);
+
+        // if(jribbble === error){
+        //         clearInterval(dotInterval)
+        //         viewMore.innerHTML = error;
+
+        // }
 
         //add "..." while waiting for load
         function loadingFunction() {

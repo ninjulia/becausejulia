@@ -1,14 +1,13 @@
-//get required items from DOM
-const viewMore = document.getElementById("viewMore");
-
 //initialize variables
 let imageArray = [],
-	imageObj = {},
-	html = "";
+	imageObj = {};
+
+console.log("9abe753478a2afe894caf7454fb22d9008891cc96538a0c1b47aeeb7b68efe0d");
 
 //set up jribbble, return required data
 jribbble.setToken(
 	"9abe753478a2afe894caf7454fb22d9008891cc96538a0c1b47aeeb7b68efe0d"
+	//process.env.JRIBBBLE_API_KEY
 );
 
 jribbble.shots(function (shotsArray) {
@@ -78,7 +77,11 @@ function postLoad(image) {
 		viewMore.innerHTML = "&nbsp;";
 
 		viewMore.classList.add("lettersIn");
-		viewMore.innerHTML = html;
+		if (html.length > 0) {
+			viewMore.innerHTML = html;
+		} else {
+			viewMore.innerHTML = error;
+		}
 		viewMore.removeEventListener("animationend", this);
 	});
 }
