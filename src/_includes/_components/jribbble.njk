@@ -76,23 +76,11 @@
         const viewMore = document.getElementById("viewMore");
 
         //set variables
-        const error = `An error occurred. <a href='https://dribbble.com/becausejulia' name='latest_work' rel='noreferrer' title='dribbble'>View the latest images</a> by BecauseJulia on Dribbble.`;
+        const error = `An error occurred. <a href='https://dribbble.com/becausejulia' name='latest_work' rel='noreferrer' title='dribbble' class="text-white">View the latest images</a> by BecauseJulia on Dribbble.`;
 
-        //initialize variables
         let dotInterval = "",
                 dotCount = 0,
                 counter = 0;
-
-        //display loading indicator until images ready
-        do {
-                loadingFunction();
-        } while (!imageSet[11].complete);
-
-        // if(jribbble === error){
-        //         clearInterval(dotInterval)
-        //         viewMore.innerHTML = error;
-
-        // }
 
         //add "..." while waiting for load
         function loadingFunction() {
@@ -111,4 +99,19 @@
                         action;
                 }, 1000);
         }
+
+        //display loading indicator until images ready
+        do {
+                loadingFunction();
+        } while (!imageSet[11].complete);
+
+        //wait 6 secs and fail if needed
+        setTimeout(() => {
+                if (!imageSet[0].src) {
+                        clearInterval(dotInterval)
+                        viewMore.innerHTML = error;
+                        imageSet.forEach(image => image.parentNode.classList.add("transparent"))
+                }
+
+        }, 6000)
 </script>
