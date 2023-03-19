@@ -76,7 +76,8 @@
 
 <!-- only show dribbble images on main -->
 
-{% if page.url === '/' and meta.env === 'dev' %}
+{# {% if page.url === '/' and meta.env === 'prod' %} #}
+{% if page.url === '/' %}
 <script src="https://absorbed-andesaurus.glitch.me/jribbble.min.js" defer></script>
 <script src="../../assets/js/jribbble.js" type="text/javascript" defer></script>
 {% endif %}
