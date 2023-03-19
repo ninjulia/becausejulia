@@ -100,6 +100,8 @@ jribbble.setToken(
 	`${JRIBBBLE_API_KEY}`
 );
 
-let jUser = jribbble.user(function (userObj) {
+var jUser = jribbble.user(function (userObj) {
 	return `View more posts from <a href="${userObj.html_url}" target="_blank" class="text-white">${userObj.login} on dribbble.</a>`;
 });
+
+export default jUser;
