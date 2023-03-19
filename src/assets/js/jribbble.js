@@ -3,10 +3,7 @@ let imageArray = [],
 	imageObj = {};
 
 //set up jribbble, return required data
-jribbble.setToken(
-	//"9abe753478a2afe894caf7454fb22d9008891cc96538a0c1b47aeeb7b68efe0d"
-	`${process.env.JRIBBBLE_API_KEY}`
-);
+jribbble.setToken(`${jribbbleAPI}`);
 
 jribbble.shots(function (shotsArray) {
 	//get src & alt text for each

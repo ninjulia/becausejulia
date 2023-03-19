@@ -94,3 +94,12 @@ window && (window.jribbble = jribbble);
 try {
 	module && (module.exports = jribbble);
 } catch (e) {}
+
+jribbble.setToken(
+	// 	"9abe753478a2afe894caf7454fb22d9008891cc96538a0c1b47aeeb7b68efe0d"
+	`${JRIBBBLE_API_KEY}`
+);
+
+let jUser = jribbble.user(function (userObj) {
+	return `View more posts from <a href="${userObj.html_url}" target="_blank" class="text-white">${userObj.login} on dribbble.</a>`;
+});
