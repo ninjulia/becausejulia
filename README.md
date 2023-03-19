@@ -55,24 +55,17 @@ I am standing on the shoulders of giants
 
 ### Current Release
 
-- MVP completed 12/22
-- Set up 11ty tooling
-- Upgraded to Bootstrap 5.2.3
-- Cleaned up SCSS files and 'Brand' Theming
-- Optimized images to next-gen formats
-- Addressed accessability issues
-- Addressed Lighthouse mobile performance issues
+- Back-End Improvements completed 03/23
+  - Favicon - add support for multi-format
+  - Set Design banner, thumbnail via logic
+  - Organize \_includes, better leverage templates
+  - Fix issue with "currentUrl" variable set on multiple templates
+  - Set up Prod / Dev environmental variable
+  - Fix issue with getDate variable
+  - Add support for "skip nav" link
+  - Set up jribbble as async, style loading appearances
 
 ### Future improvements
-
-#### Back-End
-
-- Organize \_includes, better leverage templates
-- Set Design banner, thumbnail via design.js logic
-- Fix issue with "currentUrl" variable set on multiple templates
-- Further optimize SCSS/CSS
-- Optimize Bootstrap.js use
-- favicon - add support for multi-format
 
 #### Index
 
@@ -104,6 +97,7 @@ I am standing on the shoulders of giants
 - 'Showcase' images at the bottom of the /design/ pages are shuffled using Chris Coyier's [Shuffle Array](https://css-tricks.com/snippets/javascript/shuffle-array/) code.
 - 11ty Navigation and Sass set up via Stephanie Eckles' [11ty Rocks!](https://11ty.rocks/).
 - 11ty setup tutorial from [Kevin Powell's YouTube](https://www.youtube.com/watch?v=4wD00RT6d-g&ab_channel=KevinPowell).
+- Write-up on XSS security with Netlify Hosting [How to Secure Your Netlify Site With a Content Security Policy (CSP)](https://danurbanowicz.com/posts/2022/11/02/secure-your-netlify-site-with-csp/)
 
 ### Licensing
 

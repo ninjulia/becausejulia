@@ -47,28 +47,28 @@
   font-display: fallback;
 }
 @font-face {
-  font-family: Monterrat;
+  font-family: Montserrat;
   src: url("../fonts/montserrat-v24-latin/montserrat-v24-latin-regular.woff2") format("woff2"), url("../fonts/montserrat-v24-latin/montserrat-v24-latin-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: fallback;
 }
 @font-face {
-  font-family: Monterrat;
+  font-family: Montserrat;
   src: url("../fonts/montserrat-v24-latin/montserrat-v24-latin-italic.woff2") format("woff2"), url("../fonts/montserrat-v24-latin/montserrat-v24-latin-italic.woff") format("woff");
   font-weight: normal;
   font-style: italic;
   font-display: fallback;
 }
 @font-face {
-  font-family: Monterrat;
+  font-family: Montserrat;
   src: url("../fonts/montserrat-v24-latin/montserrat-v24-latin-700.woff2") format("woff2"), url("../fonts/montserrat-v24-latin/montserrat-v24-latin-700.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: fallback;
 }
 @font-face {
-  font-family: Monterrat;
+  font-family: Montserrat;
   src: url("../fonts/montserrat-v24-latin/montserrat-v24-latin-700italic.woff2") format("woff2"), url("../fonts/montserrat-v24-latin/montserrat-v24-latin-700italic.woff") format("woff");
   font-weight: bold;
   font-style: italic;
@@ -10166,11 +10166,22 @@ input[type=submit] {
 
 header {
   height: 4rem;
+  position: relative;
 }
 
 main,
 .portfolio-header {
   margin-top: 4rem;
+}
+
+#skipNav {
+  height: 2.625rem;
+  margin-top: -2.625rem;
+  transition: margin-top 325ms ease-in;
+}
+
+#skipNav:focus-within {
+  margin-top: 0rem;
 }
 
 .nav-item {
@@ -10380,7 +10391,6 @@ footer .icon-link .bi {
 
 .latest-work {
   display: grid;
-  grid-auto-rows: repeat(3, minmax(64px, 1fr));
   grid-template-columns: 1fr;
 }
 .latest-work .headline,
@@ -10511,7 +10521,6 @@ footer .icon-link .bi {
 .grid-item img {
   margin: 0;
   padding: 0;
-  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 50% 50%;
@@ -10679,4 +10688,95 @@ footer .icon-link .bi {
   text-overflow: ellipsis;
 }
 
-/*# sourceMappingURL=style.css.map */
+#latest-grid .grid-item {
+  background: linear-gradient(to bottom right, #440154, #482475, #414487, #355f8d, #2a788e, #21908d, #22a884, #42be71, #7ad151);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  overflow: hidden;
+}
+#latest-grid .grid-item img {
+  opacity: 0;
+  transition: opacity 5s ease-in;
+}
+#latest-grid .grid-item img.full-opacity {
+  opacity: 1;
+}
+#latest-grid .grid-item:before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  width: 100%;
+  background: linear-gradient(to top left, #440154, #482475, #414487, #355f8d, #2a788e, #21908d, #22a884, #42be71, #7ad151);
+  z-index: -1;
+  animation: Breathe 5s linear infinite;
+  opacity: 1;
+  transition: opacity 5s linear;
+}
+#latest-grid .grid-item.transparent:before {
+  opacity: 0;
+  animation: none;
+}
+@keyframes Breathe {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#viewMore {
+  display: inline;
+  overflow: hidden;
+  width: 320px;
+  height: 48px;
+  white-space: break-spaces;
+}
+
+@media screen and (min-width: 450px) {
+  #viewMore {
+    width: auto;
+    height: auto;
+    white-space: nowrap;
+  }
+}
+.lettersIn,
+.lettersOut {
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-duration: 2.5s;
+}
+
+.lettersIn {
+  animation-name: lettersIn;
+  animation-timing-function: steps(92, start);
+}
+
+.lettersOut {
+  animation-name: lettersOut;
+  animation-timing-function: steps(56, end);
+}
+
+/* The typing effect */
+@keyframes lettersOut {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+@keyframes lettersIn {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}

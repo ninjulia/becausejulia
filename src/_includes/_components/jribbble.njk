@@ -1,0 +1,114 @@
+<section class="latest-work bg-primary">
+        <!-- headline -->
+        <div class="headline w-100">
+                <a class="anchor" name="latest" id="latest"></a>
+                <div class="container p-8">
+                        <div class="row">
+                                <h2 class="display-6 text-white mb-4">Latest Work</h2>
+                        </div>
+                </div>
+        </div>
+
+        <!-- /headline -->
+
+        <!-- content -->
+        <div id="latest-grid" class="grid text-bg-info m-0 p-0 w-100">
+                <div class='grid-item rounded-1'>
+                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+                </div>
+                <div class='grid-item rounded-1'>
+                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+                </div>
+                <div class='grid-item rounded-1'>
+                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+                </div>
+                <div class='grid-item rounded-1'>
+                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+                </div>
+
+                <div class='grid-item rounded-1'>
+                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+                </div>
+                <div class='grid-item rounded-1'>
+                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+                </div>
+                <div class='grid-item rounded-1'>
+                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+                </div>
+                <div class='grid-item rounded-1'>
+                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+                </div>
+
+                <div class='grid-item rounded-1'>
+                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+                </div>
+                <div class='grid-item rounded-1'>
+                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+                </div>
+                <div class='grid-item rounded-1'>
+                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+                </div>
+                <div class='grid-item rounded-1'>
+                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+                </div>
+        </div>
+        <!-- /content -->
+
+        <!-- view more link -->
+        <div class="view-link">
+                <div class="container p-8">
+                        <div class="row">
+                                <p id="viewMore" class="text-white mb-0 pb-0">
+                                        <!-- show loading text or view more link via jribbble.js -->
+                                        Loading images from Dribbble<span id="loadingDots"></span>
+                                </p>
+                        </div>
+                </div>
+        </div>
+        <!-- /view more link -->
+</section>
+
+<!-- display loading sequence while waiting for deferred js -->
+<script>
+        //get required elements from DOM
+        const loadingDots = document.getElementById("loadingDots");
+        const imageSet = document.querySelectorAll(".grid-img");
+        const viewMore = document.getElementById("viewMore");
+
+        //set variables
+        const error = `An error occurred. <a href='https://dribbble.com/becausejulia' name='latest_work' rel='noreferrer' title='dribbble'>View the latest images</a> by BecauseJulia on Dribbble.`;
+
+        //initialize variables
+        let dotInterval = "",
+                dotCount = 0,
+                counter = 0;
+
+        //display loading indicator until images ready
+        do {
+                loadingFunction();
+        } while (!imageSet[11].complete);
+
+        // if(jribbble === error){
+        //         clearInterval(dotInterval)
+        //         viewMore.innerHTML = error;
+
+        // }
+
+        //add "..." while waiting for load
+        function loadingFunction() {
+                dotInterval = setInterval(function () {
+                        loadingDots.innerText = ".".repeat(dotCount);
+                        let action;
+                        counter++;
+                        if (counter > 0 && counter < 4) {
+                                action = dotCount++;
+                        } else if (counter >= 4 && counter < 6) {
+                                action = dotCount--;
+                        } else if (counter === 6) {
+                                counter = 0;
+                                dotCount = 0;
+                        }
+                        action;
+                }, 1000);
+        }
+</script>

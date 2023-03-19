@@ -1,11 +1,10 @@
-<!-- showcase -->
-<section class="latest-work bg-primary m-0 p-0">
-    <div id="latest-grid" class="grid text-bg-info">
-        {% for selected in collections.showcase %}
+{% set currentUrl = page.url %}
+<section class="latest-work bg-info">
+    <div class="grid text-bg-info">
+        {% for selected in collections.showcase | filterImg(page.url) %}
         <div class="grid-item overflow-hidden">
             <img src="{{selected}}" class="img-fluid rounded-1" width="400" height="300" alt="" loading="lazy" />
         </div>
         {% endfor %}
     </div>
 </section>
-<!-- /showcase -->

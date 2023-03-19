@@ -1,23 +1,43 @@
-//add html-minifier
+//Helper packages
+require("dotenv").config();
 const htmlmin = require("html-minifier");
-
-//Import fast-glob package to import images to showcase module
 const fg = require("fast-glob");
+const markdownIt = require("markdown-it");
 
 //Run search for showcase images
-const showcaseImages = fg.sync([".editorconfig", "**/assets/img/design/*-s*"], { ignore: ["**/src/**"] });
+const showcaseImages = fg.sync([".editorconfig", "**/assets/img/design/*-s*"], {
+	ignore: ["**/src/**"],
+});
 
 module.exports = function (eleventyConfig) {
-	//exclude components.njk from production
-	eleventyConfig.ignores.add("**/src/components.njk");
+	//compile scss
+	eleventyConfig.addWatchTarget("./scss/");
+
+	//exclude components.njk from PROD
+	if (process.env.ELEVENTY_ENV === "prod") {
+		eleventyConfig.ignores.add("**/src/components.njk");
+	}
 
 	//shuffle arrays via CSS-tricks.com
 	function myShuffle(o) {
-		for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-		return o;
+		const returnArray = [];
+		for (
+			var j, x, i = o.length;
+			i;
+			j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x
+		);
+		//shuffle sometimes returns duplicates, this re-sorts
+		for (a = 0; a < o.length; a++) {
+			if (a === 0 || o[a] !== o[a - 1]) {
+				returnArray.push(o[a]);
+			} else {
+				returnArray.unshift(o[a]);
+			}
+		}
+		return returnArray;
 	}
 
-	//filter based on page url
+	//filter showcase collection based on page url
 	eleventyConfig.addFilter("filterImg", (showcase, currentUrl) => {
 		let pageName = [];
 
@@ -27,13 +47,9 @@ module.exports = function (eleventyConfig) {
 		//filter images to match page name
 		const imgList = showcase.filter((item) => item.match(`${pageName}-s`));
 
-		//randomize and return
-		myShuffle(imgList);
-
-		//double list if under 12
+		//randomize and return (double if under 12)
 		let showcaseShuffle = imgList.concat(imgList);
-
-		return showcaseShuffle;
+		return myShuffle(showcaseShuffle);
 	});
 
 	//create showcase collection
@@ -44,6 +60,12 @@ module.exports = function (eleventyConfig) {
 		}
 		return showcaseImagesUrl;
 	});
+
+	// markdown settings
+	let markdownLibrary = markdownIt({
+		html: true,
+	});
+	eleventyConfig.setLibrary("md", markdownLibrary);
 
 	//minify HTML Output - from 11ty docs/config/#transforms
 	eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
@@ -64,9 +86,9 @@ module.exports = function (eleventyConfig) {
 
 	//open new browser on run
 	eleventyConfig.setBrowserSyncConfig({
-		//	open: true,
+		open: true,
 		//set to false to disable
-		snippet: false,
+		//snippet: true,
 	});
 
 	//output to public folder
@@ -77,4 +99,3 @@ module.exports = function (eleventyConfig) {
 		},
 	};
 };
-

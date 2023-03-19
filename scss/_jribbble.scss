@@ -1,0 +1,107 @@
+#latest-grid {
+	$timing: 5s;
+	$half: 2.5s;
+
+	.grid-item {
+		background: $brand-gradient;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 1;
+		overflow: hidden;
+
+		img {
+			opacity: 0;
+			transition: opacity $timing ease-in;
+			&.full-opacity {
+				opacity: 1;
+			}
+		}
+
+		&:before {
+			position: absolute;
+			content: "";
+			inset: 0;
+			width: 100%;
+			background: $brand-gradient-inverted;
+			z-index: -1;
+			animation: Breathe $timing linear infinite;
+			opacity: 1;
+			transition: opacity $timing linear;
+		}
+
+		&.transparent:before {
+			opacity: 0;
+			animation: none;
+		}
+	}
+
+	@keyframes Breathe {
+		from {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+}
+//xs 0px - 450px
+#viewMore {
+	display: inline;
+	overflow: hidden;
+
+	width: 320px;
+	height: 48px;
+	white-space: break-spaces;
+}
+
+// room for 100% width after 450px
+@media screen and (min-width: 450px) {
+	#viewMore {
+		width: auto;
+		height: auto;
+		white-space: nowrap;
+	}
+}
+
+.lettersIn,
+.lettersOut {
+	animation-direction: normal;
+	animation-delay: 0s;
+	animation-duration: 2.5s;
+}
+
+.lettersIn {
+	animation-name: lettersIn;
+	//View More text count = 46 * 2 = 92
+	animation-timing-function: steps(92, start);
+}
+
+.lettersOut {
+	animation-name: lettersOut;
+	//Loading text count = 28 * 2 = 56
+	animation-timing-function: steps(56, end);
+}
+
+/* The typing effect */
+@keyframes lettersOut {
+	from {
+		width: 100%;
+	}
+	to {
+		width: 0%;
+	}
+}
+
+@keyframes lettersIn {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 100%;
+	}
+}

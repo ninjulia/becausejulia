@@ -8,40 +8,35 @@
 
     <title>{{ headline }} | Julia Czarnecki | Design</title>
     <link rel="stylesheet" href="../../../../assets/css/style.css" />
-    <link href="../../assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any"><!-- 32×32 -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
+    <link rel="manifest" href="/manifest.webmanifest">
 
 </head>
 
 <body class="vh-100">
     <!-- header -->
-    {% include "header.njk" %}
+    {% include "./_components/header.njk" %}
     <!-- /header -->
 
-    <section style="background: url('{{ banner }}') no-repeat center center"
-        class="position-relative d-flex justify-content-center align-items-center portfolio-header text-center text-white bg-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="display-2">{{ headline }}</h1>
-                    <p class="pb-0 mb-0">{{ title }}</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <main role="main">
-        <!-- breadcrumb -->
-        <div class="container">
-            <ol class="breadcrumb mt-3 mb-0">
-                <li><a href="/">Home &rsaquo;&rsaquo;</a>&nbsp;&nbsp;</li>
-                <li><a href="/#design">Design &rsaquo;&rsaquo;</a>&nbsp;&nbsp;</li>
-                <li class="active">{{ headline }}</li>
-            </ol>
-        </div>
-        <!-- /breadcrumb -->
+    <!--  hero  -->
+    {% include "./_components/designHero.njk" %}
+    <!-- / hero -->
+
+    <main role="main" id="main-content">
+
+        <!--  breadcrumb  -->
+        {% include "./_components/breadcrumb.njk" %}
+        <!-- / breadcrumb -->
+
         <section class="portfolio_start p-8">
             <div class="container text-start">
                 <h2 class="display-4">Concept</h2>
+
                 {{content | safe}}
+
             </div>
         </section>
 
@@ -49,27 +44,17 @@
         {% set colors = ['text-bg-info', 'text-bg-light', 'text-bg-deeper-purple' ] %}
         {% for feature in featurettes %}
 
-        {% include "featurette.njk" %}
+        {% include "./_components/featurette.njk" %}
 
         {% endfor %}
         <!-- /featurettes -->
 
         <!-- showcase -->
-        {% set currentUrl = page.url %}
-        <section class="latest-work bg-info">
-            <div class="grid text-bg-info">
-                {% for selected in collections.showcase | filterImg(page.url) %}
-                <div class="grid-item overflow-hidden">
-                    <img src="{{selected}}" class="img-fluid rounded-1" width="400" height="300" alt=""
-                        loading="lazy" />
-                </div>
-                {% endfor %}
-            </div>
-        </section>
+        {% include "./_components/showcase.njk" %}
         <!-- /showcase -->
 
     </main>
 
     <!-- footer -->
-    {% include "footer.njk" %}
+    {% include "./_components/footer.njk" %}
     <!-- /footer -->

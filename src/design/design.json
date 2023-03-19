@@ -1,4 +1,5 @@
 {
-    "layout": "design.njk",
-    "tags": "design"
+	"type": "Design",
+	"layout": "design.njk",
+	"tags": "design"
 }

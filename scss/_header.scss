@@ -5,12 +5,25 @@
 //set header height and main margin the same
 header {
 	height: ($spacer * 4);
+	position: relative;
 }
 main,
 .portfolio-header {
 	margin-top: ($spacer * 4);
 }
 
+//Skip Link Styling
+#skipNav {
+	height: 2.625rem;
+	margin-top: -2.625rem;
+	transition: margin-top 325ms ease-in;
+}
+
+#skipNav:focus-within {
+	margin-top: 0rem;
+}
+
+//Navigation items
 .nav-item {
 	padding: 0 ($spacer * 2);
 }
