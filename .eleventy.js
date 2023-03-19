@@ -4,17 +4,12 @@ const htmlmin = require("html-minifier");
 const fg = require("fast-glob");
 const markdownIt = require("markdown-it");
 
-const jribbble = require("jribbble");
-
 //Run search for showcase images
 const showcaseImages = fg.sync([".editorconfig", "**/assets/img/design/*-s*"], {
 	ignore: ["**/src/**"],
 });
 
 module.exports = function (eleventyConfig) {
-	//set jribbble access token
-	jribbble.setToken(JRIBBBLE_API_KEY);
-
 	//compile scss
 	eleventyConfig.addWatchTarget("./scss/");
 

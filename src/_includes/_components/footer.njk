@@ -76,9 +76,12 @@
 
 <!-- only show dribbble images on main -->
 
-
-
-<script src="../assets/js/promises.js" type="module" defer></script>
+{% if currentUrl === '/' %}
+{% if meta.env == 'prod' %}
+<script src="https://absorbed-andesaurus.glitch.me/jribbble.min.js" defer></script>
+{% endif %}
+<script src="../assets/js/jribbble.js" type="text/javascript" defer></script>
+{% endif %}
 
 </body>
 
