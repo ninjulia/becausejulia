@@ -1,5 +1,5 @@
 # set redirects for netlify
-
+/*                    /404/index.html  404
 /banners.html         /design/display  301
 /ebook.html           /design/ebook    301
 /elearning.html       /design/elearn   301
