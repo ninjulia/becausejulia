@@ -31,5 +31,21 @@ footer {
 
 .insta {
 	background-color: #f77737;
-	background-image: linear-gradient(to bottom right, #405de6, #5b51d8, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80);
+	background-image: linear-gradient(
+		to bottom right,
+		#405de6,
+		#5b51d8,
+		#833ab4,
+		#c13584,
+		#e1306c,
+		#fd1d1d,
+		#f56040,
+		#f77737,
+		#fcaf45,
+		#ffdc80
+	);
+}
+
+.mastodon {
+	background-color: #595aff;
 }

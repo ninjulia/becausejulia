@@ -190,66 +190,7 @@ layout: base.njk
 <!-- /code section -->
 
 <!-- about section -->
-<section>
-	<a class="anchor" name="about" id="about"></a>
-	<div class="container p-8">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="display-5 text-primary">
-					About Julia
-				</h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-7">
-				<h3 class="text-primary">I hate endings.</h3>
-				<p>
-					Web projects really never end. Each project requires research, design, coding, and then more
-					research, more design — well, you get the point. There's always something to improve and always
-					something new to learn. That's what I love about working with the web.
-				</p>
-				<h3 class="text-primary">I wear many hats.</h3>
-				<p>
-					Working in small groups (both in agencies and as part of an in-house creative team) has
-					sharpened my
-					multi-tasking skills. I've taken on roles usually divided between different departments in other
-					companies. I've tackled video production, thrown down on copy writing, and after the project has
-					shipped, I'm behind the scenes checking to see how the users are reacting to the designs.
-				</p>
-				<h3 class="text-primary">But more about me.</h3>
-				<p>
-					In my spare time I love being taken for walks by my dog, exploring new cities, and keeping up
-					with web design trends and technologies. I am always looking to expand my horizons by taking on new
-					projects and meeting new people. So reach out and <a href="/#contact">drop me a line</a>.
-				</p>
-			</div>
-			<div class="col-md-4 offset-md-1">
-				<h4 class="text-primary">Technology &amp; Certifications</h4>
-				<ul class="list-ul" role="list">
-					<li role="listitem">Adobe Creative Cloud</li>
-					<li role="listitem">Experience with HTML5, CSS3 &amp; Responsive Design</li>
-					<li role="listitem">Experience with Bootstrap Framework</li>
-					<li role="listitem">BFA in Graphic Design</li>
-					<li role="listitem">SiteCore Certified Marketer</li>
-					<li role="listitem">Eloqua Email Marketing</li>
-				</ul>
-				<h4 class="text-primary">Skill Set</h4>
-				<ul class="list-ul" role="list">
-					<li role="listitem">Branding &amp; Logo Design</li>
-					<li role="listitem">Corporate Design</li>
-					<li role="listitem">Digital Advertising Campaigns</li>
-					<li role="listitem">eBooks</li>
-					<li role="listitem">Email Campaigns</li>
-					<li role="listitem">Icon Design</li>
-					<li role="listitem">Infographics</li>
-					<li role="listitem">Print Design</li>
-					<li role="listitem">Tradeshow Booth Design</li>
-					<li role="listitem">Web and Interactive Design</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</section>
+{% include "./_includes/_components/about.njk" %}
 <!-- /about section -->
 
 <!-- latest work section -->
@@ -265,9 +206,8 @@ layout: base.njk
 				<h2 class="display-6 text-white mb-4">
 					Contact Julia
 				</h2>
-				<p class="text-white mb-0">Looking for help with a project? Message me on <a
-						href="https://www.instagram.com/the_julia_set/" target="_blank" class="text-white"
-						name="instagram" rel="noreferrer">Instagram</a>.</p>
+				<p class="text-white mb-0">Looking for help with a project? Message me on <a rel="me"
+						href="https://mastodon.world/@becausejulia" class="text-white" name="mastodon">Mastodon</a>.</p>
 			</div>
 		</div>
 
