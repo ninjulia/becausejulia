@@ -10307,6 +10307,28 @@ footer .icon-link .bi {
   font-size: 0.8rem;
 }
 
+#statCenter {
+  border-block-start: 1px solid #482475;
+  border-block-end: 1px solid #482475;
+  border-inline-start: none;
+  border-inline-end: none;
+  padding-block-start: 1rem;
+  margin-block-end: 1rem;
+  max-width: 50%;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+@media (min-width: 576px) {
+  #statCenter {
+    border-block-start: none;
+    border-block-end: none;
+    border-inline-start: 1px solid #482475;
+    border-inline-end: 1px solid #482475;
+    padding-block-start: 0;
+    margin-block-end: 0;
+  }
+}
 .code-samples {
   width: 140px;
   height: 140px;
@@ -10525,6 +10547,7 @@ footer .icon-link .bi {
 .grid-item img {
   margin: 0;
   padding: 0;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 50% 50%;
@@ -10738,49 +10761,5 @@ footer .icon-link .bi {
 #viewMore {
   display: inline;
   overflow: hidden;
-  width: 320px;
-  height: 48px;
-  white-space: break-spaces;
-}
-
-@media screen and (min-width: 450px) {
-  #viewMore {
-    width: auto;
-    height: auto;
-    white-space: nowrap;
-  }
-}
-.lettersIn,
-.lettersOut {
-  animation-direction: normal;
-  animation-delay: 0s;
-  animation-duration: 2.5s;
-}
-
-.lettersIn {
-  animation-name: lettersIn;
-  animation-timing-function: steps(92, start);
-}
-
-.lettersOut {
-  animation-name: lettersOut;
-  animation-timing-function: steps(56, end);
-}
-
-/* The typing effect */
-@keyframes lettersOut {
-  from {
-    width: 100%;
-  }
-  to {
-    width: 0%;
-  }
-}
-@keyframes lettersIn {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
+  min-height: 48px;
 }

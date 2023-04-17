@@ -49,59 +49,10 @@
 		}
 	}
 }
-//xs 0px - 450px
+//keep height even when text removed via js
 #viewMore {
 	display: inline;
 	overflow: hidden;
 
-	width: 320px;
-	height: 48px;
-	white-space: break-spaces;
-}
-
-// room for 100% width after 450px
-@media screen and (min-width: 450px) {
-	#viewMore {
-		width: auto;
-		height: auto;
-		white-space: nowrap;
-	}
-}
-
-.lettersIn,
-.lettersOut {
-	animation-direction: normal;
-	animation-delay: 0s;
-	animation-duration: 2.5s;
-}
-
-.lettersIn {
-	animation-name: lettersIn;
-	//View More text count = 46 * 2 = 92
-	animation-timing-function: steps(92, start);
-}
-
-.lettersOut {
-	animation-name: lettersOut;
-	//Loading text count = 28 * 2 = 56
-	animation-timing-function: steps(56, end);
-}
-
-/* The typing effect */
-@keyframes lettersOut {
-	from {
-		width: 100%;
-	}
-	to {
-		width: 0%;
-	}
-}
-
-@keyframes lettersIn {
-	from {
-		width: 0%;
-	}
-	to {
-		width: 100%;
-	}
+	min-height: 48px;
 }

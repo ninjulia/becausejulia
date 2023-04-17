@@ -1,0 +1,22 @@
+#statCenter {
+	border-block-start: 1px solid $primary;
+	border-block-end: 1px solid $primary;
+	border-inline-start: none;
+	border-inline-end: none;
+	padding-block-start: $spacer;
+	margin-block-end: $spacer;
+	max-width: 50%;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
+}
+
+@include media-breakpoint-up(sm) {
+	#statCenter {
+		border-block-start: none;
+		border-block-end: none;
+		border-inline-start: 1px solid $primary;
+		border-inline-end: 1px solid $primary;
+		padding-block-start: 0;
+		margin-block-end: 0;
+	}
+}

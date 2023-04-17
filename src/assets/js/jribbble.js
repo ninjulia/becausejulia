@@ -1,4 +1,7 @@
-//initialize variables
+let linkText = `More from BecauseJulia on dribbble.`;
+const linkLetters = linkText.split("");
+let i;
+let timer;
 let imageArray = [],
 	imageObj = {};
 
@@ -17,10 +20,6 @@ jribbble.shots(function (shotsArray) {
 		imageArray.push(imageObj);
 	});
 	setImages();
-});
-
-jribbble.user(function (userObj) {
-	return (html = `View more posts from <a href="${userObj.html_url}" target="_blank" class="text-white">${userObj.login} on dribbble.</a>`);
 });
 
 //add dribbble images to DOM once ready, add event listener if loaded
@@ -54,31 +53,45 @@ function loaded(image, div) {
 		counter = 0;
 		loadingDots.innerText = "";
 		loadingDots.remove();
-
-		//transition loading text
-		image.addEventListener("transitionrun", postLoad(image));
+		//remove text
+		textOut();
 	}
 }
 
-//update loading text
-function postLoad(image) {
-	image.removeEventListener("transitionrun", postLoad);
-
-	//remove text slowly via css transition
-	viewMore.classList.add("lettersOut");
-
-	//once loading text css transition fires,
-	viewMore.addEventListener("animationend", (e) => {
-		//remove && replace class, add new text
-		viewMore.classList.remove("lettersOut");
-		viewMore.innerHTML = "&nbsp;";
-
-		viewMore.classList.add("lettersIn");
-		if (html.length > 0) {
-			viewMore.innerHTML = html;
+function textOut() {
+	clearInterval(timer);
+	setTimeout(() => {
+		viewMore.innerText = viewMore.innerText.substring(
+			0,
+			viewMore.innerText.length - 1
+		);
+		if (viewMore.innerText.length > 0) {
+			textOut();
 		} else {
-			viewMore.innerHTML = error;
+			clearTimeout(this);
+			setText();
 		}
-		viewMore.removeEventListener("animationend", this);
-	});
+	}, 50);
+}
+
+//add text via timer
+function textIn() {
+	clearInterval(timer);
+	i = 0;
+	timer = setInterval(() => {
+		dribbbleLink.textContent += linkLetters[i];
+		i++;
+		if (i === linkLetters.length) {
+			clearInterval(timer);
+		}
+	}, 50);
+}
+
+function setText() {
+	const myLink = document.createElement("a");
+	myLink.href = `https://dribbble.com/becausejulia`;
+	myLink.classList.add("text-white");
+	myLink.setAttribute("id", "dribbbleLink");
+	viewMore.appendChild(myLink);
+	textIn();
 }
