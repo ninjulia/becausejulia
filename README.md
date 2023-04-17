@@ -63,15 +63,15 @@ I am standing on the shoulders of giants
   - Set up Prod / Dev environmental variable
   - Fix issue with getDate variable
   - Add support for "skip nav" link
-  - Set up jribbble as async, style loading appearances
 
 ### Future improvements
 
-#### Index
+#### Index - working Q2 2023
 
 - Replace H1 with dynamic text, resting on 'I work on websites'
 - Update code section to leverage GitHub API to show key repos
 - About - re-write to better reflect abilities - leverage icons for tools/software
+- Set up jribbble as async
 
 #### Design
 
