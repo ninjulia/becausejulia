@@ -12,10 +12,10 @@ Code repository for my design portfolio website, [becausejulia.com](https://www.
   - [Tech and Tooling](#tech-and-tooling)
   - [Links](#links)
 - [Project Roadmap](#project-roadmap)
+  - [Current Screenshot](#current-screenshot)
   - [Current Release](#current-release)
   - [Future Improvements](#future-improvements)
 - [Acknowledgments](#acknowledgments)
-- [Licensing](#licensing)
 
 ## Project Dependencies
 
@@ -53,25 +53,26 @@ I am standing on the shoulders of giants
 
 ## Project Roadmap
 
+### Current Screenshot
+
+![Current Screenshot](screenshot.png?raw=true)
+
 ### Current Release
 
-- Back-End Improvements completed 03/23
-  - Favicon - add support for multi-format
-  - Set Design banner, thumbnail via logic
-  - Organize \_includes, better leverage templates
-  - Fix issue with "currentUrl" variable set on multiple templates
-  - Set up Prod / Dev environmental variable
-  - Fix issue with getDate variable
-  - Add support for "skip nav" link
+- "Index" Improvements completed 04/23
+  - About - leverage icons for tools/software
+  - Set up jribbble as async
+  - Added skip to content link (most useful on 2nd level pages)
+  - Removed links to Instagram - swapped for Mastodon (because LinkedIn is spammy AF).
 
 ### Future improvements
 
 #### Index - working Q2 2023
 
-- Replace H1 with dynamic text, resting on 'I work on websites'
+- ~~Replace H1 with dynamic text, resting on 'I work on websites'~~
+- Update H1 / intro section text
+- Intro section js: curtain drop effect with background, load in design samples one at a time.
 - Update code section to leverage GitHub API to show key repos
-- About - re-write to better reflect abilities - leverage icons for tools/software
-- Set up jribbble as async
 
 #### Design
 
@@ -99,6 +100,4 @@ I am standing on the shoulders of giants
 - 11ty setup tutorial from [Kevin Powell's YouTube](https://www.youtube.com/watch?v=4wD00RT6d-g&ab_channel=KevinPowell).
 - Write-up on XSS security with Netlify Hosting [How to Secure Your Netlify Site With a Content Security Policy (CSP)](https://danurbanowicz.com/posts/2022/11/02/secure-your-netlify-site-with-csp/)
 
-### Licensing
-
-Becausejulia.com designed and coded by Julia Czarnecki leveraging dependencies above and thus released under MIT license. All logos, fonts, and imagery used remain property of their respective copyright owners.
+Becausejulia.com designed and coded by Julia Czarnecki leveraging dependencies above. All logos, fonts, and imagery used remain property of their respective copyright owners.
