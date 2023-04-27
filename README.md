@@ -64,14 +64,14 @@ I am standing on the shoulders of giants
   - Set up jribbble as async
   - Added skip to content link (most useful on 2nd level pages)
   - Removed links to Instagram - swapped for Mastodon (because LinkedIn is spammy AF).
+  - Update H1 / intro section text
 
 ### Future improvements
 
 #### Index - working Q2 2023
 
 - ~~Replace H1 with dynamic text, resting on 'I work on websites'~~
-- Update H1 / intro section text
-- Intro section js: curtain drop effect with background, load in design samples one at a time.
+- ~~Intro section js: curtain drop effect with background, load in design samples one at a time.~~
 - Update code section to leverage GitHub API to show key repos
 
 #### Design
