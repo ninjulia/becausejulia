@@ -1,10 +1,18 @@
 //
 // Intro and Design Display
 //
-
-.intro {
-	p {
-		max-width: 80ch;
+.intro-section {
+	.intro {
+		p {
+			max-width: 65ch;
+		}
+	}
+	svg {
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+		margin-block-end: -1px;
 	}
 }
 
