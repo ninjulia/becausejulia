@@ -4,21 +4,23 @@
 .portfolio-header {
 	height: 300px;
 
-	//adjust contrast on header
+	display: grid;
+	background: $info-transparent;
+	grid-template: 'container';
+	place-items: center;
+	place-content: center;
+	overflow: hidden;
 
-	&:before {
-		content: " ";
-		display: block;
-		position: absolute;
-		height: 300px;
-		left: 0;
-		width: 100%;
-		background: $info-transparent;
-		z-index: 1;
+	& > * {
+		grid-area: container;
 	}
 
-	.container {
-		z-index: 2;
+	.hero-image {
+		height: auto;
+		aspect-ratio: 16/5;
+		object-fit: cover;
+		position: relative;
+		z-index: -1;
 	}
 
 	h1,
