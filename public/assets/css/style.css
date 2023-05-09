@@ -10205,6 +10205,7 @@ main,
 }
 .btn-nav-fancy .hamburger {
   --button-color: var(--bs-navbar-color);
+  stroke: var(--button-color);
   transition: translate 1s, rotate 1s;
   background: none;
 }
