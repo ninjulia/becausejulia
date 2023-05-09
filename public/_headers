@@ -3,4 +3,5 @@
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
-  Content-Security-Policy: default-src 'none'; connect-src 'self' https://api.dribbble.com/v2/user/shots; font-src 'self'; img-src 'self' https://cdn.dribbble.com; manifest-src 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/ https://absorbed-andesaurus.glitch.me/; style-src 'self';
+
+  Content-Security-Policy: default-src 'none'; base-uri 'none'; connect-src 'self' https://api.dribbble.com/v2/user/shots; font-src 'self'; img-src 'self' https://cdn.dribbble.com; manifest-src 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/ https://absorbed-andesaurus.glitch.me/; style-src 'self'; require-trusted-types-for 'script';

@@ -10201,10 +10201,10 @@ main,
 
 /* Fancy Navigation button */
 .btn-nav-fancy {
-  --button-color: var(--bs-navbar-color);
   overflow: hidden;
 }
 .btn-nav-fancy .hamburger {
+  --button-color: var(--bs-navbar-color);
   transition: translate 1s, rotate 1s;
   background: none;
 }
