@@ -7,6 +7,7 @@ header {
 	height: ($spacer * 4);
 	position: relative;
 }
+
 main,
 .portfolio-header {
 	margin-top: ($spacer * 4);
@@ -28,7 +29,7 @@ main,
 	padding: 0 ($spacer * 2);
 }
 
-a[aria-current="page"] {
+a[aria-current='page'] {
 	@extend .text-muted;
 }
 
@@ -36,10 +37,38 @@ a[aria-current="page"] {
 .anchor {
 	text-decoration: none;
 	&:before {
-		content: "";
+		content: '';
 		display: block;
 		position: relative;
 		height: ($spacer * 4);
 		margin-top: -($spacer * 3.5);
+	}
+}
+
+/* Fancy Navigation button */
+.btn-nav-fancy {
+	overflow: hidden;
+
+	.hamburger {
+		--button-color: var(--bs-navbar-color);
+		stroke: var(--button-color);
+		transition: translate 1s, rotate 1s;
+		background: none;
+	}
+
+	.line {
+		transition: 1s;
+		stroke-dasharray: 60 31 60 300;
+	}
+
+	&[aria-expanded='true'] {
+		.hamburger {
+			translate: 2px -3px;
+			rotate: 0.125turn;
+		}
+		.line {
+			stroke-dasharray: 60 105 60 300;
+			stroke-dashoffset: -90;
+		}
 	}
 }

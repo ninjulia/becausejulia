@@ -65,14 +65,11 @@ I am standing on the shoulders of giants
   - Added skip to content link (most useful on 2nd level pages)
   - Removed links to Instagram - swapped for Mastodon (because LinkedIn is spammy AF).
   - Update H1 / intro section text
+  - Added animated SVG hamburger icon
+  - Pulled Code samples into own component
+  - Added XSS protection
 
 ### Future improvements
-
-#### Index - working Q2 2023
-
-- ~~Replace H1 with dynamic text, resting on 'I work on websites'~~
-- ~~Intro section js: curtain drop effect with background, load in design samples one at a time.~~
-- Update code section to leverage GitHub API to show key repos
 
 #### Design
 
@@ -99,5 +96,6 @@ I am standing on the shoulders of giants
 - 11ty Navigation and Sass set up via Stephanie Eckles' [11ty Rocks!](https://11ty.rocks/).
 - 11ty setup tutorial from [Kevin Powell's YouTube](https://www.youtube.com/watch?v=4wD00RT6d-g&ab_channel=KevinPowell).
 - Write-up on XSS security with Netlify Hosting [How to Secure Your Netlify Site With a Content Security Policy (CSP)](https://danurbanowicz.com/posts/2022/11/02/secure-your-netlify-site-with-csp/)
+- Cool animated SVG hamburger icon from [Basic, Intermediate & Pro animated hamburger icons](https://youtu.be/R00QiudbD4Y) by Kevin Powell.
 
 Becausejulia.com designed and coded by Julia Czarnecki leveraging dependencies above. All logos, fonts, and imagery used remain property of their respective copyright owners.

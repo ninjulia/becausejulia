@@ -10199,6 +10199,29 @@ main,
   margin-top: -3.5rem;
 }
 
+/* Fancy Navigation button */
+.btn-nav-fancy {
+  overflow: hidden;
+}
+.btn-nav-fancy .hamburger {
+  --button-color: var(--bs-navbar-color);
+  stroke: var(--button-color);
+  transition: translate 1s, rotate 1s;
+  background: none;
+}
+.btn-nav-fancy .line {
+  transition: 1s;
+  stroke-dasharray: 60 31 60 300;
+}
+.btn-nav-fancy[aria-expanded=true] .hamburger {
+  translate: 2px -3px;
+  rotate: 0.125turn;
+}
+.btn-nav-fancy[aria-expanded=true] .line {
+  stroke-dasharray: 60 105 60 300;
+  stroke-dashoffset: -90;
+}
+
 footer {
   background-color: #2e3041 !important;
   color: white;
@@ -10662,19 +10685,22 @@ footer .icon-link .bi {
 }
 .portfolio-header {
   height: 300px;
-}
-.portfolio-header:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  height: 300px;
-  left: 0;
-  width: 100%;
+  display: grid;
   background: rgba(25, 26, 35, 0.8);
-  z-index: 1;
+  grid-template: "container";
+  place-items: center;
+  place-content: center;
+  overflow: hidden;
 }
-.portfolio-header .container {
-  z-index: 2;
+.portfolio-header > * {
+  grid-area: container;
+}
+.portfolio-header .hero-image {
+  height: auto;
+  aspect-ratio: 16/5;
+  object-fit: cover;
+  position: relative;
+  z-index: -1;
 }
 .portfolio-header h1, .portfolio-header .h1,
 .portfolio-header p {
