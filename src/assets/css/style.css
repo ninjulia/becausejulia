@@ -11670,6 +11670,18 @@ footer .icon-link .bi {
   background-color: #595aff;
 }
 
+.pinterest {
+  background-color: #e60023;
+}
+
+.linkedin {
+  background-color: #0a66c2;
+}
+
+.insta-footer {
+  background-color: var(--bs-body-bg) !important;
+}
+
 .hvr-bounce-in, .code-samples i:before,
 .hvr-sink {
   -webkit-transition-duration: 1s;
