@@ -37,18 +37,18 @@ $grays: (
 );
 
 $custom-colors: (
-	"purple": $primary,
-	"light": $gray-300,
-	"deep-purple": #440154,
-	"deep-blue": #414487,
-	"mid-blue": #355f8d,
-	"cerulean": #2a788e,
-	"teal": #2dc8c2,
-	"green": #22a884,
-	"light-green": #42be71,
-	"lime": #7ad151,
-	"deeper-purple": darken(#440154, 12%),
-	"pop": lighten($primary, 45%),
+	'purple': $primary,
+	'light': $gray-300,
+	'deep-purple': #440154,
+	'deep-blue': #414487,
+	'mid-blue': #355f8d,
+	'cerulean': #2a788e,
+	'teal': #2dc8c2,
+	'green': #22a884,
+	'light-green': #42be71,
+	'lime': #7ad151,
+	'deeper-purple': darken(#440154, 12%),
+	'pop': lighten($primary, 45%),
 );
 
 //set main gradient
@@ -80,6 +80,10 @@ $brand-gradient-inverted: linear-gradient(
 .bg-brand-gradient {
 	background: #482475;
 	background-image: $brand-gradient;
+}
+
+.bg-grey {
+	background-color: lighten($gray-600, 40%);
 }
 
 //semi-transparent $info background

@@ -4,6 +4,10 @@
   background-image: linear-gradient(to bottom right, #440154, #482475, #414487, #355f8d, #2a788e, #21908d, #22a884, #42be71, #7ad151);
 }
 
+.bg-grey {
+  background-color: #e7e7ee;
+}
+
 .bg-info-transparent {
   background-color: rgba(25, 26, 35, 0.8);
 }
@@ -12140,6 +12144,26 @@ footer .icon-link .bi {
   }
   .portfolio-header:before {
     height: 600px;
+  }
+}
+.quick-facts {
+  columns: 1;
+}
+.quick-facts dt,
+.quick-facts dd {
+  display: inline;
+}
+.quick-facts dt::after {
+  content: ":";
+  margin-inline-end: 1rem;
+}
+.quick-facts dd {
+  text-wrap: pretty;
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .quick-facts {
+    columns: 2;
   }
 }
 .featurette .text-muted {

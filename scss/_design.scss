@@ -44,6 +44,30 @@
 	@extend .lead;
 }
 
+//Quick Facts styling
+.quick-facts {
+	columns: 1;
+	dt,
+	dd {
+		display: inline;
+	}
+	dt {
+	}
+	dt::after {
+		content: ':';
+		margin-inline-end: $spacer;
+	}
+	dd {
+		text-wrap: pretty;
+	}
+}
+
+@include media-breakpoint-between(sm, lg) {
+	.quick-facts {
+		columns: 2;
+	}
+}
+
 .featurette {
 	//add back text color from Bootstrap 5.3.1 removal
 	.text-muted {
