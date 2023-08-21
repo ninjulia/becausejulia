@@ -5,7 +5,7 @@ order: 4
 
 quickFacts:
   {
-    Audience: 'B2B, IT Managed Service Providers (MSP)',
+    Audience: 'B2B',
     Industry: 'IT SaaS',
     Company: 'RapidFire Tools, Inc.',
     Role: 'Lead Designer',
