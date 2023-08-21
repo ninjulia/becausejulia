@@ -11755,7 +11755,8 @@ footer .icon-link .bi {
 .intro-section .intro p {
   max-width: 65ch;
 }
-.intro-section svg {
+
+.intro-sploosh {
   display: block;
   width: 100%;
   max-width: 100%;
@@ -12149,21 +12150,43 @@ footer .icon-link .bi {
 .quick-facts {
   columns: 1;
 }
+.quick-facts .group {
+  display: grid;
+  grid-template-columns: minmax(85px, 1fr) 4fr;
+  grid-column-gap: 0.75em;
+}
 .quick-facts dt,
 .quick-facts dd {
   display: inline;
 }
+.quick-facts dt {
+  text-align: end;
+}
 .quick-facts dt::after {
   content: ":";
-  margin-inline-end: 1rem;
 }
 .quick-facts dd {
-  text-wrap: pretty;
+  text-align: start;
 }
 
+@media (max-width: 320px) {
+  .quick-facts .group {
+    display: block;
+  }
+  .quick-facts dt,
+  .quick-facts dd {
+    display: block;
+    text-align: left;
+  }
+}
 @media (min-width: 576px) and (max-width: 991.98px) {
   .quick-facts {
     columns: 2;
+    column-fill: balance;
+    column-gap: 1em;
+  }
+  .quick-facts .group {
+    grid-template-columns: 5.3125em auto;
   }
 }
 .featurette .text-muted {

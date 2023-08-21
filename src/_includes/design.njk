@@ -43,22 +43,18 @@
                     <div class="col-lg-4 offset-lg-1">
                         <div class="bg-grey p-4 rounded-3">
                             <h3>Quick Facts</h3>
-                            <div class="quick-facts">
-                                <dl>
-                                    {% for key, fact in quickFacts%}
-                                    <div class="group">
-                                        <dt>
-                                            {{key}}
-                                        </dt>
-                                        <dd>
-                                            {{fact}}
-                                        </dd>
-                                    </div>
-                                    {% endfor %}
-                                </dl>
-                            </div>
+                            <dl class="quick-facts">
+                                {% for key, fact in quickFacts%}
+                                <div class="group">
+                                    <dt>{{key}}</dt>
+                                    <dd>{{fact}}</dd>
+                                </div>
+                                {% endfor %}
+                            </dl>
                         </div>
                     </div>
+                </div>
+            </div>
         </section>
 
         <!-- highlight -->
@@ -84,9 +80,9 @@
                     </div>
                 </div>
             </div>
-            <div class="p-0 m-0">
+            <div class="intro-sploosh m-0">
                 <div class="col-12 p-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1440 320" role="presentation">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1440 320">
                         <path fill="#191a23" fill-opacity="1"
                             d="M0,32L40,42.7C80,53,160,75,240,90.7C320,107,400,117,480,133.3C560,149,640,171,720,202.7C800,235,880,277,960,250.7C1040,224,1120,128,1200,80C1280,32,1360,32,1400,32L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
                         </path>

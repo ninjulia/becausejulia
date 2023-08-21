@@ -47,24 +47,54 @@
 //Quick Facts styling
 .quick-facts {
 	columns: 1;
+
+	.group {
+		display: grid;
+		grid-template-columns: minmax(85px, 1fr) 4fr;
+		grid-column-gap: 0.75em;
+	}
+
 	dt,
 	dd {
 		display: inline;
 	}
+
 	dt {
+		text-align: end;
 	}
 	dt::after {
 		content: ':';
-		margin-inline-end: $spacer;
 	}
+
 	dd {
-		text-wrap: pretty;
+		text-align: start;
+	}
+}
+
+@media (max-width: 320px) {
+	.quick-facts {
+		.group {
+			display: block;
+		}
+
+		dt,
+		dd {
+			display: block;
+			text-align: left;
+		}
 	}
 }
 
 @include media-breakpoint-between(sm, lg) {
 	.quick-facts {
 		columns: 2;
+		column-fill: balance;
+		column-gap: 1em;
+
+		//sized to longest key
+		.group {
+			grid-template-columns: 5.3125em auto;
+		}
 	}
 }
 

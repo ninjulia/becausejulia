@@ -7,13 +7,14 @@
 			max-width: 65ch;
 		}
 	}
-	svg {
-		display: block;
-		width: 100%;
-		max-width: 100%;
-		height: auto;
-		margin-block-end: -1px;
-	}
+}
+
+.intro-sploosh {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	margin-block-end: -1px;
 }
 
 .fig-detail,
