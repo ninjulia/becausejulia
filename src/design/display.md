@@ -19,6 +19,7 @@ highlight:
       subhead: Seven sizes for most uses.,
       description: 'Banners were created in the most common (and cost-effective) display ad sizes for use with Google Ads and on Meta properties (Facebook and Instagram). Design elements were resized and sometimes omitted to promote readability but maintain campaign design integrity.',
       alt: Sample Digital ads,
+      img: './src/assets/img/design/display-h1.png',
     },
   ]
 

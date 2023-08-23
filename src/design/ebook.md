@@ -20,6 +20,7 @@ highlight:
       subhead: More than just an eBook template.,
       description: "I crafted an eBook template and initial eBook to establish a brand tone and visuals to leverage in future marketing efforts. The brand needed to convey the RapidFire Tool's positioning as a friendly, knowledgeable, and supportive business partner to subscribers. I achieved this by leveraging expressive photography, and bold typography, and working closely with the team to keep the copy easily scanable.",
       alt: Select pages from initial ebook,
+      img: './src/assets/img/design/ebook-h1.png',
     },
   ]
 

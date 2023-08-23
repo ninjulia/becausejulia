@@ -66,9 +66,16 @@
                     <div class="col-lg-8">
                         <div class="row">
                             <div class="col-12">
-                                <img src="../../assets/img/design/{{ page.fileSlug }}-h1.webp"
-                                    alt="{{ highlight[loop.index0].alt }}" width="992" height=""
-                                    class="img-fluid mb-8" />
+                                {% image
+                                highlight[loop.index0].img,
+                                highlight[loop.index0].alt,
+                                '(min-width:1400px) 829px,
+                                (min-width:1200px) 709px,
+                                (min-width:1000px) 589px,
+                                (min-width:780px) 656px,
+                                (min-width:580px) 476px,
+                                calc(100vw - 64px)',
+                                "img-fluid mb-8" %}
                             </div>
                             <div class="col-12">
                                 <h3>{{ highlight[loop.index0].headline }}<br /><span class="text-muted fs-4">{{

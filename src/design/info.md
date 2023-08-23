@@ -19,6 +19,7 @@ highlight:
       subhead: From raw data to an engaging visual.,
       description: 'RapidFire Tools provided the copy for each infographic, but I designed the visual style. The infographics are sized to print on Tabloid or A3 paper, leaving space for the MSP to add their contact details. I leveraged the same font and graphic style for both infographics to reinforce the connection to the MSP.',
       alt: GDPR At-A-Glance Today and Is Your Business as Safe as You Think infographics,
+      img: './src/assets/img/design/info-h1.png',
     },
   ]
 
