@@ -59,16 +59,35 @@ I am standing on the shoulders of giants
 
 ### Current Release
 
-- "Design" Improvements completed 08/23
-  - Added Infographic portfolio piece
-  - Display thumbnails on index in specified order
-  - Added [eleventy-plugin-lazyimages](https://github.com/liamfiddler/eleventy-plugin-lazyimages) to manage lazy load & image sizing
-  - Blocking ChatGPT bot in Robots.txt
+- "Index" Improvements completed 04/23
+  - About - leverage icons for tools/software
+  - Set up jribbble as async
+  - Added skip to content link (most useful on 2nd level pages)
+  - Removed links to Instagram - swapped for Mastodon (because LinkedIn is spammy AF).
+  - Update H1 / intro section text
+  - Added animated SVG hamburger icon
+  - Pulled Code samples into own component
+  - Added XSS protection
 
 ### Future improvements
 
-- Moving to Notion and GitHub Issues/Projects to manage backlog going forward.
-- Re-evaluating next steps
+#### Design
+
+- Add more samples
+- Further shuffle showcase images, do not allow pattern to repeat
+- Display thumbnails on index in specified order
+
+#### Writing
+
+- Convert to blog
+- Leverage md files, not html
+- Re-title samples to what they're samples of, not title of the piece
+- Include "Concept" section as displayed on /design/ pages
+
+#### Instagram
+
+- Redesign
+- quick set classes to showcase if platform has current sales
 
 ## Acknowledgments
 
