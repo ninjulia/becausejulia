@@ -115,7 +115,7 @@ module.exports = function (eleventyConfig) {
 	});
 
 	//copy assets folder, filter out /design/ PNGs
-	eleventyConfig.addPassthroughCopy('./src/assets', { filter: ['!**/design/*.png'] });
+	eleventyConfig.addPassthroughCopy('./src/assets', { filter: (path) => path.endsWith('-h1.png') == false });
 
 	//open new browser on run
 	eleventyConfig.setBrowserSyncConfig({
