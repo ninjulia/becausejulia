@@ -35,7 +35,7 @@ featurettes:
     {
       headline: Working with constraints.,
       subhead: 'Stretching the boundaries of existing templates.',
-      description: 'Unfortunately, ConnectWise had only one template created for landing pages, and our deadline was too tight to code bespoke layouts. After discussing with the team, there were a select number of existing web components I could leverage to carry the summer camp theme through from the emails to the landing pages. I crafted themed banners, background images, and imagery to elevate these standard pages into a unique experience',
+      description: 'Due to our tight deadline, the team repurposed existing web components to create landing pages. I designed themed banners, background images, and unique imagery to carry the summer camp theme from the emails through the landing pages.',
       imageAlt: landing pages,
     },
   ]
@@ -43,4 +43,4 @@ featurettes:
 
 This e-learning course aimed to increase top-of-funnel engagement for the international IT SaaS company, ConnectWise, Inc. Its goals included promoting a new business model for IT Managed Service Providers (MSPs) while establishing ConnectWise as a trusted resource to help MSPs make the transition via a new software offering.
 
-To be effective, the campaign needed to stand out in the crowded IT Managed Service Provider space and convey how easy it was to transition to the new Cloud Services Provider business model. I developed a summer camp design that was a departure from the standard creative typically used by the company but still adhered to brand guidelines. This design was used throughout the learning materials, including backdrops for the video produced in-house.
+To be effective, the campaign needed to stand out in the crowded MSP space and convey how easy it was to transition to the new Cloud Services Provider business model. I developed a summer camp design that was a departure from the standard creative typically used by the company but still adhered to brand guidelines. This design was used throughout the learning materials, including backdrops for the video produced in-house.

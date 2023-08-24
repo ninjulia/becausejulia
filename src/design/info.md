@@ -5,7 +5,7 @@ order: 4
 
 quickFacts:
   {
-    Audience: 'B2B, IT Managed Service Providers (MSP)',
+    Audience: 'B2B',
     Industry: 'IT SaaS',
     Company: 'RapidFire Tools, Inc.',
     Role: 'Lead Designer',
@@ -26,7 +26,7 @@ highlight:
 featurettes: [
     {
       headline: GDPR At-A-Glance Today,
-      subhead: "Calling out the 'what', 'why', & 'how'.",
+      subhead: 'Calling out the what, why, & how.',
       description: "As the title for this infographic included 'At-A-Glance' I knew I needed to establish a visual hierarchy of data to emphasize two key points: compliance with GDPR is not optional, and there are four steps to take. I leveraged elements from the EU flag to lead the eye through the information. Bold, all-caps headlines in a larger font size established a visual hierarchy throughout. Although a secondary point, the possibility of fines was a key reason for businesses to comply with GDPR. I drew attention to the numbers through graphical elements and warm colors.
       ",
       alt: infographic image,
@@ -40,4 +40,4 @@ featurettes: [
   ]
 ---
 
-This set of two infographics was commissioned by the IT SaaS company, RapidFire Tools, Inc. to help their customers (known as Managed Service Providers or MSPs) educate their clients on the importance of data safety and regulatory compliance. The infographics needed to be brand-neutral as the materials were intended to position the MSPs as thought leaders, rather than promote RapidFire Tools directly.
+This set of two infographics was commissioned by the IT SaaS company, RapidFire Tools, Inc. to help their customers (IT Managed Service Providers or MSPs) educate their clients on the importance of data safety and regulatory compliance. The infographics needed to be brand-neutral as the materials were intended to position the MSPs as thought leaders, rather than promote RapidFire Tools directly.

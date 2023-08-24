@@ -29,13 +29,13 @@ featurettes:
     {
       headline: Interactive Tools.,
       subhead: Demystifying the buying process.,
-      description: 'As one of the first post-launch feature enhancements of the website, I initiated, designed, and coded an interactive tool allowing users to quickly see their options by selecting services or sorting by monthly cost. Users could customize their options by adding or removing services before committing to the checkout process.',
+      description: 'As one of the first post-launch feature enhancements of the website, I designed and coded an interactive tool that allows users to quickly see their options by selecting services or sorting by monthly cost. Users could customize their options by adding or removing services before committing to the checkout process.',
       alt: Pick your bundle screenshot,
     },
     {
       headline: Ongoing Web Strategy.,
       subhead: 'Expansions, maintenance, and reporting.',
-      description: 'Once the website launched, the work was just getting started. Daily maintenance and analytics reporting fell on my shoulders as I continued managing web initiatives - including implementing email and digital campaigns. Special projects included building a subsection promoting a new over-the-top cable device with a video player, FAQs, and other product specific resources.',
+      description: "After launching the website, I managed daily maintenance and analytics reporting. Additionally, I implemented email and digital campaigns and oversaw building a subsection with a video player, FAQs, and other product-specific resources for Shentel's new whole-home cable device.",
       alt: Landing page,
     },
   ]
