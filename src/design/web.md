@@ -8,7 +8,7 @@ quickFacts:
     Audience: 'B2C and B2B',
     Industry: Telecommunications,
     Company: Shentel,
-    Role: 'Web Content Specialist, Information Architect, Digital Designer',
+    Role: 'Web Content Specialist, Information Architect, Digital Designer, Front End Web Developer',
     Tools: 'Adobe Creative Cloud, Eloqua, Sitecore',
     KPIs: '900+ web orders within the first months of launch',
   }
@@ -35,7 +35,7 @@ featurettes:
     {
       headline: Ongoing Web Strategy.,
       subhead: 'Expansions, maintenance, and reporting.',
-      description: "After launching the website, I managed daily maintenance and analytics reporting. Additionally, I implemented email and digital campaigns and oversaw building a subsection with a video player, FAQs, and other product-specific resources for Shentel's new whole-home cable device.",
+      description: "After launching the website, I handled daily maintenance and analytics reporting. Additionally, I shepherded all digital marketing campaigns including email and digital advertising. Special projects included building a subsection with a video player, FAQs, and other product-specific resources for Shentel's new whole-home cable device.",
       alt: Landing page,
     },
   ]
