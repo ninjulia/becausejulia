@@ -70,6 +70,8 @@ I am standing on the shoulders of giants
 
 - Moving to Notion and GitHub Issues/Projects to manage backlog going forward.
 - Re-evaluating next steps
+- Moving to Notion and GitHub Issues/Projects to manage backlog going forward.
+- Re-evaluating next steps
 
 ## Acknowledgments
 
