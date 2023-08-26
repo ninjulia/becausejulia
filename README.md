@@ -64,10 +64,12 @@ I am standing on the shoulders of giants
 - Added Infographic portfolio piece
 - Display thumbnails on index in specified order
 - Added [eleventy-img](https://www.11ty.dev/docs/plugins/image/) to manage image sizing on new design Highlights images
-- Blocking ChatGPT bot in Robots.txt
+- Blocking ChatGPT bot in Robots.txt method via [Robb Knight](https://rknight.me/block-chatgpt-with-robotstxt/) _Blocking ChatGPT-User not listed on [OpenAI's Docs](https://platform.openai.com/docs/gptbot)_
 
 ### Future improvements
 
+- Moving to Notion and GitHub Issues/Projects to manage backlog going forward.
+- Re-evaluating next steps
 - Moving to Notion and GitHub Issues/Projects to manage backlog going forward.
 - Re-evaluating next steps
 
