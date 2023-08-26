@@ -2,6 +2,36 @@
 title: samples
 layout: base.njk
 ---
+{# <section class="portfolio-header">
+    <div class="container m-0 p-0">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="display-2 text-center text-white">{{ headline }}</h1>
+                <p class="pb-0 mb-0 text-center text-white">{{ title }}</p>
+            </div>
+        </div>
+    </div>
+    {% image "./src/assets/img/design/display-hero.webp", "alt text", "(min-width: 30em) 50vw, 100vw", "hero-image" %}
+</section> #}
+
+<section>
+    <div class="container p-8">
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-12">
+                        {# <img src="../../assets/img/design/{{ page.fileSlug }}-h1.webp"
+                            alt="{{ highlight[loop.index0].alt }}" width="992" height="" class="img-fluid mb-8" /> #}
+                        {% set foobar = "./src/assets/img/design/display-h1.png" %}
+                        {% image foobar, "alt text", "img-fluid mb-8" %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <section>
     <div class="container-xxl mt-5">
@@ -96,6 +126,8 @@ layout: base.njk
                     <p class="text-bg-light-green">.text-bg-light-green</p>
                     <p class="text-bg-lime">.text-bg-lime</p>
                     <p class="text-bg-pop">.text-bg-pop</p>
+                    <hr>
+                    <p class="bg-grey">.text-bg-grey</p>
                 </div>
 
                 <div class="mt-5 mb-5">

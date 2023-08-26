@@ -26,7 +26,7 @@ layout: base.njk
 		<a class="anchor" name="design" id="design"></a>
 		<div class="row justify-content-center">
 
-			{% for design in collections.design %}
+			{% for design in collections.design | sort(false, false, 'data.order') %}
 			{% include "./_includes/_components/thumbnails.njk"%}
 			{% endfor %}
 
@@ -37,7 +37,7 @@ layout: base.njk
 
 	<div class="intro-sploosh row p-0 m-0">
 		<div class="col-12 p-0">
-			<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1440 320" role="presentation">
+			<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1440 320">
 				<path fill="#191a23" fill-opacity="1"
 					d="M0,32L40,42.7C80,53,160,75,240,90.7C320,107,400,117,480,133.3C560,149,640,171,720,202.7C800,235,880,277,960,250.7C1040,224,1120,128,1200,80C1280,32,1360,32,1400,32L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
 				</path>

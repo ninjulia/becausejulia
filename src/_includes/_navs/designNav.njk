@@ -3,7 +3,7 @@
         Design
     </a>
     <ul class="dropdown-menu">
-        {% for design in collections.design %}
+        {% for design in collections.design | sort(false, false, 'data.headline') %}
         <li>
             <a class="dropdown-item" {% if page.url===design.url %}aria-current="page" {% endif %}
                 href="{{design.url}}">
