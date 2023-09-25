@@ -35,7 +35,7 @@
 		"bootstrap": "^5.2.3",
 		"clean-css": "^5.3.1",
 		"cross-env": "^7.0.3",
-		"cssnano": "^5.0.15",
+		"cssnano": "^6.0.1",
 		"fast-glob": "^3.2.12",
 		"html-minifier": "^4.0.0",
 		"markdown-it": "^12.3.2",
