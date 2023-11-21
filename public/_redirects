@@ -1,8 +1,9 @@
 # set redirects for netlify
 /instagram            https://emporium.becausejulia.com  301
-/banners.html         /design/display  301
-/ebook.html           /design/ebook    301
-/elearning.html       /design/elearn   301
-/recipe.html          /design/recipe   301
-/web-management.html  /design/web      301
-/*                    /404/index.html  404
+/design               /#design                           301
+/banners.html         /design/display                    301
+/ebook.html           /design/ebook                      301
+/elearning.html       /design/elearn                     301
+/recipe.html          /design/recipe                     301
+/web-management.html  /design/web                        301
+/*                    /404/index.html                    404
