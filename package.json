@@ -33,7 +33,7 @@
 		"@fullhuman/postcss-purgecss": "^5.0.0",
 		"autoprefixer": "^10.4.16",
 		"bootstrap": "^5.2.3",
-		"clean-css": "^5.3.1",
+		"clean-css": "^5.3.3",
 		"cross-env": "^7.0.3",
 		"cssnano": "^6.0.1",
 		"fast-glob": "^3.2.12",
