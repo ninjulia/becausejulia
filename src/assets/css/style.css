@@ -11804,6 +11804,11 @@ footer .icon-link .bi {
     margin-block-end: 0;
   }
 }
+.contact-icons a:first-of-type {
+  margin-inline-start: 1.25rem;
+  margin-inline-end: 2rem;
+}
+
 .code-samples {
   width: 140px;
   height: 140px;
