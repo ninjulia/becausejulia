@@ -11692,13 +11692,30 @@ footer .icon-link .bi {
 
 .tjse {
   --flamingo: #ff3399;
+  --lavender: #cc66ff;
+  --lemon: #ffff33;
   --magenta: #cc0066;
   --plum: #330033;
   --purple: #660066;
-  background-color: var(--plum);
-  background-image: linear-gradient(45deg, var(--plum) 15%, var(--purple) 40%, var(--magenta) 65%, var(--flamingo) 100%);
+  --tangerine: #ff9933;
+  --sherbert: linear-gradient(-45deg, var(--lavender) 25%, var(--tangerine) 75%, var(--lemon) 100%);
+  --dusk: linear-gradient(45deg, var(--plum) 15%, var(--purple) 40%, var(--magenta) 65%, var(--flamingo) 100%);
 }
 
+@media (prefers-color-scheme: dark) {
+  /*svg filled with light gradient on dark bg */
+  .tjse {
+    background-color: var(--plum);
+    background-image: var(--dusk);
+  }
+}
+@media (prefers-color-scheme: light) {
+  /*svg filled with dark gradient on light bg */
+  .tjse {
+    background-color: var(--magenta);
+    background-image: var(--sherbert);
+  }
+}
 .hvr-bounce-in, .code-samples i:before,
 .hvr-sink {
   -webkit-transition-duration: 1s;
@@ -11774,6 +11791,9 @@ footer .icon-link .bi {
   width: 100%;
   max-width: 100%;
   height: auto;
+  margin-block-end: -1px;
+}
+.intro-sploosh svg {
   margin-block-end: -1px;
 }
 
