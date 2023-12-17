@@ -11691,20 +11691,21 @@ footer .icon-link .bi {
 }
 
 .tjse {
-  --darkest: oklch(18.53% 0.017 328.36341792345144);
-  --light: oklch(96.91% 0 109.62279760389258);
+  --tjse-darkest: oklch(18.53% 0.017 328.36341792345144);
+  --tjse-light: oklch(96.91% 0 109.62279760389258);
+  color: transparent !important;
 }
 
 @media (prefers-color-scheme: dark) {
   /*svg filled with light gradient on dark bg */
   .tjse {
-    background-color: var(--darkest);
+    background-color: var(--tjse-darkest);
   }
 }
 @media (prefers-color-scheme: light) {
   /*svg filled with dark gradient on light bg */
   .tjse {
-    background-color: var(--light);
+    background-color: var(--tjse-light);
   }
 }
 .hvr-bounce-in, .code-samples i:before,
