@@ -11691,14 +11691,22 @@ footer .icon-link .bi {
 }
 
 .tjse {
-  --flamingo: #ff3399;
-  --magenta: #cc0066;
-  --plum: #330033;
-  --purple: #660066;
-  background-color: var(--plum);
-  background-image: linear-gradient(45deg, var(--plum) 15%, var(--purple) 40%, var(--magenta) 65%, var(--flamingo) 100%);
+  --darkest: oklch(18.53% 0.017 328.36341792345144);
+  --light: oklch(96.91% 0 109.62279760389258);
 }
 
+@media (prefers-color-scheme: dark) {
+  /*svg filled with light gradient on dark bg */
+  .tjse {
+    background-color: var(--darkest);
+  }
+}
+@media (prefers-color-scheme: light) {
+  /*svg filled with dark gradient on light bg */
+  .tjse {
+    background-color: var(--light);
+  }
+}
 .hvr-bounce-in, .code-samples i:before,
 .hvr-sink {
   -webkit-transition-duration: 1s;
@@ -11774,6 +11782,9 @@ footer .icon-link .bi {
   width: 100%;
   max-width: 100%;
   height: auto;
+  margin-block-end: -1px;
+}
+.intro-sploosh svg {
   margin-block-end: -1px;
 }
 
