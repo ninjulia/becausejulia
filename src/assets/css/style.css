@@ -11691,21 +11691,29 @@ footer .icon-link .bi {
 }
 
 .tjse {
-  --tjse-darkest: oklch(18.53% 0.017 328.36341792345144);
-  --tjse-light: oklch(96.91% 0 109.62279760389258);
-  color: transparent !important;
+  --flamingo: #ff3399;
+  --lavender: #cc66ff;
+  --lemon: #ffff33;
+  --magenta: #cc0066;
+  --plum: #330033;
+  --purple: #660066;
+  --tangerine: #ff9933;
+  --sherbert: linear-gradient(-45deg, var(--lavender) 25%, var(--tangerine) 75%, var(--lemon) 100%);
+  --dusk: linear-gradient(45deg, var(--plum) 15%, var(--purple) 40%, var(--magenta) 65%, var(--flamingo) 100%);
 }
 
 @media (prefers-color-scheme: dark) {
   /*svg filled with light gradient on dark bg */
   .tjse {
-    background-color: var(--tjse-darkest);
+    background-color: var(--plum);
+    background-image: var(--dusk);
   }
 }
 @media (prefers-color-scheme: light) {
   /*svg filled with dark gradient on light bg */
   .tjse {
-    background-color: var(--tjse-light);
+    background-color: var(--magenta);
+    background-image: var(--sherbert);
   }
 }
 .hvr-bounce-in, .code-samples i:before,
@@ -12303,3 +12311,4 @@ footer .icon-link .bi {
   overflow: hidden;
   min-height: 48px;
 }
+                                                                                                     
