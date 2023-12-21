@@ -1,11 +1,18 @@
+{% set imageCount = [loop.index0] | int %}
+
 <div class="col-md-5 col-lg-4 mb-9 hvr-bounce-in">
-    <a href="{{ design.url }}" name="{{design.data.headline}}" aria-label="{{design.data.headline}}">
+    <a href="{{ design.url }}" name="{{design.data.headline}}" title="{{design.data.headline}}">
         <figure class="position-relative">
             <img src="../assets/img/design/{{ design.data.page.fileSlug }}-thumb.webp"
-                class="img-fluid shadow rounded w-100 mb-0" width="500" height="500" alt="" loading="lazy" />
+                class="img-fluid shadow rounded w-100 mb-0" width="500" height="500" {# alt="" intentionally left blank,
+                would be redundant #} alt="" {# Avoid lazy loading images that are in the first visible viewport. Here,
+                beyond first 3#} {%if [loop.index0]> 3 %}
+            loading="lazy"
+            {% endif %}
+            />
             <figcaption
                 class="text-white bg-info-transparent position-absolute w-100 bottom-0 end-0 start-0 p-4 rounded-bottom">
-                <span class="h6 fw-bold text-white d-block p-0 m-0">{{ design.data.headline }}</span>
+                <span class="h6 fw-bold text-white d-block p-0 m-0">{{design.data.headline}}</span>
                 <span class="fig-detail text-white">{{ design.data.title }}</span>
             </figcaption>
         </figure>
