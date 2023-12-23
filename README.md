@@ -44,7 +44,6 @@ I am standing on the shoulders of giants
 
 - HTML, CSS (SCSS), JS, Njk
 - 11ty
-- Node.js
 
 ### Links
 
@@ -68,10 +67,7 @@ I am standing on the shoulders of giants
 
 ### Future improvements
 
-- Moving to Notion and GitHub Issues/Projects to manage backlog going forward.
-- Re-evaluating next steps
-- Moving to Notion and GitHub Issues/Projects to manage backlog going forward.
-- Re-evaluating next steps
+- [GitHub Project: BecauseJulia Updates and Fixes](https://github.com/users/ninjulia/projects/1)
 
 ## Acknowledgments
 

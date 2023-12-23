@@ -3,13 +3,25 @@
 <div class="col-md-5 col-lg-4 mb-9 hvr-bounce-in">
     <a href="{{ design.url }}" name="{{design.data.headline}}" title="{{design.data.headline}}">
         <figure class="position-relative">
-            <img src="../assets/img/design/{{ design.data.page.fileSlug }}-thumb.webp"
-                class="img-fluid shadow rounded w-100 mb-0" width="500" height="500" {# alt="" intentionally left blank,
-                would be redundant #} alt="" {# Avoid lazy loading images that are in the first visible viewport. Here,
-                beyond first 3#} {%if [loop.index0]> 3 %}
-            loading="lazy"
-            {% endif %}
-            />
+            <img srcset="
+                    ../../assets/img/design/{{ design.data.page.fileSlug }}Thumb-259.webp 259w,
+                    ../../assets/img/design/{{ design.data.page.fileSlug }}Thumb-283.webp 283w,
+                    ../../assets/img/design/{{ design.data.page.fileSlug }}Thumb-300.webp 300w,
+                    ../../assets/img/design/{{ design.data.page.fileSlug }}Thumb-343.webp 343w,
+                    ../../assets/img/design/{{ design.data.page.fileSlug }}Thumb-403.webp 403w,
+                    ../../assets/img/design/{{ design.data.page.fileSlug }}Thumb-476.webp 476w,
+                    ../../assets/img/design/{{ design.data.page.fileSlug }}Thumb-518.webp 518w,
+                    ../../assets/img/design/{{ design.data.page.fileSlug }}Thumb-566.webp 566w,
+                    ../../assets/img/design/{{ design.data.page.fileSlug }}Thumb-600.webp 600w,
+                    ../../assets/img/design/{{ design.data.page.fileSlug }}Thumb-806.webp 806w,
+                    ../../assets/img/design/{{ design.data.page.fileSlug }}Thumb-952.webp 952w, 
+                    ../../assets/img/design/{{ design.data.page.fileSlug }}Thumb-1036.webp 1036w,"
+                src="../../assets/img/design/{{ design.data.page.fileSlug }}Thumb-259.webp"
+                class="img-fluid shadow rounded w-100 mb-0"
+                sizes="(min-width: 1400px) 403px, (min-width: 1200px) 343px, (min-width: 992px) 283px, (min-width: 768px) 259px, (min-width: 576px) 476px, calc(100vw - 40px)"
+                width="518" height="518" alt="" {%if [loop.index]> 3 %} loading="lazy" decoding="async" {% endif
+            %}/>
+
             <figcaption
                 class="text-white bg-info-transparent position-absolute w-100 bottom-0 end-0 start-0 p-4 rounded-bottom">
                 <span class="h6 fw-bold text-white d-block p-0 m-0">{{design.data.headline}}</span>
