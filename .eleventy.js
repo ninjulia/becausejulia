@@ -3,7 +3,6 @@ require('dotenv').config();
 const htmlmin = require('html-minifier');
 const fg = require('fast-glob');
 const markdownIt = require('markdown-it');
-const Image = require('@11ty/eleventy-img');
 
 //Run search for showcase images
 const showcaseImages = fg.sync(['.editorconfig', '**/assets/img/design/*-s*'], {
@@ -11,42 +10,6 @@ const showcaseImages = fg.sync(['.editorconfig', '**/assets/img/design/*-s*'], {
 });
 
 module.exports = function (eleventyConfig) {
-	//11ty native image plugin
-	eleventyConfig.addShortcode('image', async function (src, alt, sizes, classes) {
-		if (alt === undefined) {
-			// You bet we throw an error on missing alt (alt="" works okay)
-			throw new Error(`Missing \`alt\` on responsive image from: ${src}`);
-		}
-
-		let metadata = await Image(src, {
-			widths: [656, 829, 992, 1178, 1312, 1418, 1658],
-			formats: ['webp'],
-			urlPath: '../../assets/img/design/',
-			outputDir: 'public/assets/img/design/',
-			sharpWebpOptions: { lossless: true, effort: 6 },
-		});
-
-		let lowsrc = metadata.webp[0];
-		let highsrc = metadata.webp[metadata.webp.length - 1];
-		// let highsrc = metadata.webp[2];
-
-		return `<picture>
-			${Object.values(metadata)
-				.map((imageFormat) => {
-					return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat
-						.map((entry) => entry.srcset)
-						.join(', ')}" sizes="${sizes}">`;
-				})
-				.join('\n')}
-				<img
-					class="${classes}"
-					src="${lowsrc.url}"
-					width="${highsrc.width}"
-					height="${highsrc.height}"
-					alt="${alt}">
-			</picture>`;
-	});
-
 	//compile scss
 	eleventyConfig.addWatchTarget('./scss/');
 
