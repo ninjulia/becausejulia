@@ -29,7 +29,6 @@
 	"homepage": "https://github.com/ninjulia/becausejulia#readme",
 	"devDependencies": {
 		"@11ty/eleventy": "^2.0.0",
-		"@11ty/eleventy-img": "^3.1.0",
 		"@fullhuman/postcss-purgecss": "^5.0.0",
 		"autoprefixer": "^10.4.16",
 		"bootstrap": "^5.2.3",

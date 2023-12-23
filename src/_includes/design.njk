@@ -68,16 +68,26 @@
                     <div class="col-lg-8">
                         <div class="row">
                             <div class="col-12">
-                                {% image
-                                highlight[loop.index0].img,
-                                highlight[loop.index0].alt,
-                                '(min-width:1400px) 829px,
-                                (min-width:1200px) 709px,
-                                (min-width:1000px) 589px,
-                                (min-width:780px) 656px,
-                                (min-width:580px) 476px,
-                                calc(100vw - 64px)',
-                                "img-fluid mb-8" %}
+                                <img srcset="
+                                    ../../assets/img/design/{{ page.fileSlug }}H1-240.webp 240w,
+                                    ../../assets/img/design/{{ page.fileSlug }}H1-480.webp 480w,
+                                    ../../assets/img/design/{{ page.fileSlug }}H1-500.webp 500w,
+                                    ../../assets/img/design/{{ page.fileSlug }}H1-535.webp 535w,
+                                    ../../assets/img/design/{{ page.fileSlug }}H1-613.webp 613w,
+                                    ../../assets/img/design/{{ page.fileSlug }}H1-680.webp 680w,
+                                    ../../assets/img/design/{{ page.fileSlug }}H1-733.webp 733w,
+                                    ../../assets/img/design/{{ page.fileSlug }}H1-853.webp 853w,
+                                    ../../assets/img/design/{{ page.fileSlug }}H1-960.webp 960w,
+                                    ../../assets/img/design/{{ page.fileSlug }}H1-1000.webp 1000w,
+                                    ../../assets/img/design/{{ page.fileSlug }}H1-1070.webp 1070w,
+                                    ../../assets/img/design/{{ page.fileSlug }}H1-1226.webp 1226w,
+                                    ../../assets/img/design/{{ page.fileSlug }}H1-1360.webp 1360w,
+                                    ../../assets/img/design/{{ page.fileSlug }}H1-1466.webp 1466w,
+                                    ../../assets/img/design/{{ page.fileSlug }}H1-1706.webp 1706w"
+                                    src="../../assets/img/design/{{ page.fileSlug }}H1-240.webp" class="img-fluid mb-8"
+                                    sizes="(min-width:1400px) 853px, (min-width:1200px) 733px, (min-width:992px) 613px, (min-width:768px) 680px, (min-width:576px) 500px, calc(100vw - 40px)"
+                                    width="853" height="853" alt="{{ highlight[loop.index0].alt }}" loading="lazy"
+                                    decoding="async" />
                             </div>
                             <div class="col-12">
                                 <h3>{{ highlight[loop.index0].headline }}<br /><span class="text-muted fs-4">{{

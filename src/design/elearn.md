@@ -20,7 +20,6 @@ highlight:
       subhead: 'Five emails, one day at a time.',
       description: 'A drip email campaign was created and sent out over a week, starting from when the learner enrolled in the course. While the emails contained useful information on their own, the ultimate goal was to drive clicks through to the landing pages. Learners who did not interact with the entire email series received an alternative version of the final email.',
       alt: Email collection,
-      img: './src/assets/img/design/elearn-h1.png',
     },
   ]
 

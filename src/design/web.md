@@ -20,7 +20,6 @@ highlight:
       subhead: From a brochure website to a sales tool.,
       description: 'In addition to shepherding the data migration, I developed all banner imagery and adapted print materials for use on the web. A year after launch, the company underwent an extensive rebranding. It fell on me to update the website theming and develop new graphics to emphasize the company’s goal of being a trusted and valued partner in the communities they served.',
       alt: Sample screenshots,
-      img: './src/assets/img/design/web-h1.png',
     },
   ]
 
