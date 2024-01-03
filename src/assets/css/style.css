@@ -38,45 +38,23 @@
 
 @font-face {
   font-family: "Playfair Display";
-  src: url("../fonts/playfair-display-v29-latin/playfair-display-v29-latin-regular.woff2") format("woff2"), url("../fonts/playfair-display-v29-latin/playfair-display-v29-latin-regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: fallback;
-}
-@font-face {
-  font-family: "Playfair Display";
-  src: url("../fonts/playfair-display-v29-latin/playfair-display-v29-latin-700.woff2") format("woff2"), url("../fonts/playfair-display-v29-latin/playfair-display-v29-latin-700.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: fallback;
+  src: url("../fonts/PlayfairDisplay.woff2") format("woff2-variations");
+  font-weight: 400 900;
+  font-display: swap;
 }
 @font-face {
   font-family: Montserrat;
-  src: url("../fonts/montserrat-v24-latin/montserrat-v24-latin-regular.woff2") format("woff2"), url("../fonts/montserrat-v24-latin/montserrat-v24-latin-regular.woff") format("woff");
-  font-weight: normal;
+  src: url("../fonts/Montserrat.woff2") format("woff2-variations");
+  font-weight: 100 900;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: Montserrat;
-  src: url("../fonts/montserrat-v24-latin/montserrat-v24-latin-italic.woff2") format("woff2"), url("../fonts/montserrat-v24-latin/montserrat-v24-latin-italic.woff") format("woff");
-  font-weight: normal;
+  src: url("../fonts/Montserrat-Italic.woff2") format("woff2-variations");
+  font-weight: 100 900;
   font-style: italic;
-  font-display: fallback;
-}
-@font-face {
-  font-family: Montserrat;
-  src: url("../fonts/montserrat-v24-latin/montserrat-v24-latin-700.woff2") format("woff2"), url("../fonts/montserrat-v24-latin/montserrat-v24-latin-700.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: fallback;
-}
-@font-face {
-  font-family: Montserrat;
-  src: url("../fonts/montserrat-v24-latin/montserrat-v24-latin-700italic.woff2") format("woff2"), url("../fonts/montserrat-v24-latin/montserrat-v24-latin-700italic.woff") format("woff");
-  font-weight: bold;
-  font-style: italic;
-  font-display: fallback;
+  font-display: swap;
 }
 :root,
 [data-bs-theme=light] {
