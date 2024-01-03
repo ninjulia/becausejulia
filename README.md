@@ -77,5 +77,6 @@ I am standing on the shoulders of giants
 - 11ty setup tutorial from [Kevin Powell's YouTube](https://www.youtube.com/watch?v=4wD00RT6d-g&ab_channel=KevinPowell).
 - Write-up on XSS security with Netlify Hosting [How to Secure Your Netlify Site With a Content Security Policy (CSP)](https://danurbanowicz.com/posts/2022/11/02/secure-your-netlify-site-with-csp/)
 - Cool animated SVG hamburger icon from [Basic, Intermediate & Pro animated hamburger icons](https://youtu.be/R00QiudbD4Y) by Kevin Powell.
+- [Getting started with Variable fonts on the web](https://www.youtube.com/watch?v=0fVymQ7SZw0) by Kevin Powell.
 
 Becausejulia.com designed and coded by Julia Czarnecki leveraging dependencies above. All logos, fonts, and imagery used remain property of their respective copyright owners.
