@@ -2,7 +2,7 @@
 // Portfolio Page Styles
 //
 .portfolio-header {
-	height: 300px;
+	//height: 300px;
 
 	display: grid;
 	background: $info-transparent;
@@ -17,7 +17,7 @@
 
 	.hero-image {
 		height: auto;
-		aspect-ratio: 16/5;
+		aspect-ratio: 4/3;
 		object-fit: cover;
 		position: relative;
 		z-index: -1;
@@ -31,11 +31,8 @@
 
 //set height on header for large screens
 @include media-breakpoint-up(lg) {
-	.portfolio-header {
-		height: 600px;
-		&:before {
-			height: 600px;
-		}
+	.portfolio-header .hero-image {
+		aspect-ratio: 16/5;
 	}
 }
 
@@ -67,7 +64,15 @@
 	}
 
 	dd {
+		//font-size: ($font-size-root * 0.8);
 		text-align: start;
+
+		-ms-word-break: break-all;
+		word-break: break-all;
+		word-break: break-word;
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		hyphens: auto;
 	}
 }
 

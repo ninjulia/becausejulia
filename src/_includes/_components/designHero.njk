@@ -1,11 +1,33 @@
 <section class="portfolio-header">
-    <div class="container m-0 p-0">
+    <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="display-2 text-center text-white">{{ headline }}</h1>
+                <h1 class="{{ page.fileSlug }}-2 text-center text-white">{{ headline }}</h1>
                 <p class="pb-0 mb-0 text-center text-white">{{ title }}</p>
             </div>
         </div>
     </div>
-    <img class="hero-image" src="../../assets/img/design/{{ page.fileSlug }}-hero.webp" alt="" />
+    {# <img class="hero-image" src="../../assets/img/design/{{ page.fileSlug }}-hero.webp" alt="" width="1920"
+        height="600" /> #}
+
+    <picture>
+        <!-- 16:5 -->
+        <source media="(min-width: 881px)" sizes="(min-width: 2160px) 2048px, calc(95vw + 15px)" srcset="
+                ../../assets/img/design/{{ page.fileSlug }}Hero-920.webp 920w,
+                ../../assets/img/design/{{ page.fileSlug }}Hero-1000.webp 1000w,
+                ../../assets/img/design/{{ page.fileSlug }}Hero-1280.webp 1280w,
+                ../../assets/img/design/{{ page.fileSlug }}Hero-1510.webp 1510w,
+                ../../assets/img/design/{{ page.fileSlug }}Hero-1710.webp 1710w,
+                ../../assets/img/design/{{ page.fileSlug }}Hero-1890.webp 1890w,
+                ../../assets/img/design/{{ page.fileSlug }}Hero-2048.webp 2048w">
+        <!-- 4:3 -->
+        <img media="(max-width: 880px)" sizes="100vw" srcset="
+                ../../assets/img/design/{{ page.fileSlug }}Hero-300.webp 300w,
+                ../../assets/img/design/{{ page.fileSlug }}Hero-560.webp 560w,
+                ../../assets/img/design/{{ page.fileSlug }}Hero-600.webp 600w,
+                ../../assets/img/design/{{ page.fileSlug }}Hero-880.webp 880w,
+                ../../assets/img/design/{{ page.fileSlug }}Hero-1760.webp 1760w"
+            src="../../assets/img/design/{{ page.fileSlug }}Hero-280.webp" alt="" class="hero-image img-fluid"
+            width="2048" height="640" />
+    </picture>
 </section>

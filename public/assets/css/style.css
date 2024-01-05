@@ -12132,7 +12132,6 @@ footer .icon-link .bi {
   }
 }
 .portfolio-header {
-  height: 300px;
   display: grid;
   background: rgba(25, 26, 35, 0.8);
   grid-template: "container";
@@ -12145,7 +12144,7 @@ footer .icon-link .bi {
 }
 .portfolio-header .hero-image {
   height: auto;
-  aspect-ratio: 16/5;
+  aspect-ratio: 4/3;
   object-fit: cover;
   position: relative;
   z-index: -1;
@@ -12156,11 +12155,8 @@ footer .icon-link .bi {
 }
 
 @media (min-width: 992px) {
-  .portfolio-header {
-    height: 600px;
-  }
-  .portfolio-header:before {
-    height: 600px;
+  .portfolio-header .hero-image {
+    aspect-ratio: 16/5;
   }
 }
 .quick-facts {
@@ -12183,6 +12179,12 @@ footer .icon-link .bi {
 }
 .quick-facts dd {
   text-align: start;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
 
 @media (max-width: 320px) {
