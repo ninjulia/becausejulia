@@ -13,6 +13,10 @@ module.exports = function (eleventyConfig) {
 	//compile scss
 	eleventyConfig.addWatchTarget('./scss/');
 
+	//get current year && set years of experience from https://11ty.rocks/eleventyjs/dates/#year-shortcode
+	eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
+	eleventyConfig.addShortcode('myExp', () => `${new Date().getFullYear() - 2014}`);
+
 	//exclude components.njk from PROD
 	if (process.env.ELEVENTY_ENV === 'prod') {
 		eleventyConfig.ignores.add('**/src/components.njk');
