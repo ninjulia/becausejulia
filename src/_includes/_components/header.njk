@@ -1,5 +1,7 @@
 {% set writingCheck = r/writing*/%}
 <header class="w-100 fixed-top bg-darkest">
+
+    <!-- add option to skip navigation -->
     <div id="skipNav" class="container d-flex align-items-center">
         <div class="row">
             <div class="col-12 bg-darkest">
@@ -10,9 +12,10 @@
         </div>
     </div>
 
-
+    <!-- main nav -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-darkest d-lg-flex justify-content-baseline" role="navigation">
         <div class="container">
+            <!-- logo -->
             <a class="navbar-brand d-flex align-items-center text-white" {% if writingCheck.test(page.url)%}
                 href="/writing/" {% else %} href="/" {% endif %} target="_self" tabindex="0">
                 <svg class="bi bi-code-slash" width="32" height="32" fill="currentColor" role="img" aria-label="code"
@@ -23,6 +26,7 @@
                 </svg>
                 &nbsp;&nbsp;&nbsp;Julia Czarnecki
             </a>
+
             <!-- Fancy Button -->
             <button class="btn-nav-fancy navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -37,10 +41,9 @@
             </button>
             <!-- /Fancy Button -->
 
+            <!-- links -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto">
-
-
                     {% if writingCheck.test(page.url)%}
                     {% include "../_navs/writingNav.njk" %}
                     {% else %}
