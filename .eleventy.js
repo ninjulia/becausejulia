@@ -81,8 +81,10 @@ module.exports = function (eleventyConfig) {
 		return content;
 	});
 
-	//copy assets folder, filter out /design/ PNGs
-	eleventyConfig.addPassthroughCopy('./src/assets', { filter: (path) => path.endsWith('-h1.png') == false });
+	//copy assets folder, copy favicon and .toml file stuff to ./public/
+	// eleventyConfig.addPassthroughCopy('./src/assets', { filter: (path) => path.endsWith('-h1.png') == false });
+	eleventyConfig.addPassthroughCopy('./src/assets');
+	eleventyConfig.addPassthroughCopy({ './accouterments': './' });
 
 	//open new browser on run
 	eleventyConfig.setBrowserSyncConfig({

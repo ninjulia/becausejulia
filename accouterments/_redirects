@@ -1,0 +1,15 @@
+# set redirects for becausejulia.com
+/instagram            https://emporium.becausejulia.com  301
+/design               /#design                           301
+/banners.html         /design/display                    301
+/ebook.html           /design/ebook                      301
+/elearning.html       /design/elearn                     301
+/recipe.html          /design/recipe                     301
+/web-management.html  /design/web                        301
+/*                    /404/index.html                    404
+
+# set redirect for forwarded url juliaczarnecki.com
+http://juliaczarnecki.com/*  https://www.becausejulia.com/:splat 301!
+https://juliaczarnecki.com/*  https://www.becausejulia.com/:splat 301!
+http://www.juliaczarnecki.com/*  https://www.becausejulia.com/:splat 301!
+https://www.juliaczarnecki.com/*  https://www.becausejulia.com/:splat 301!
