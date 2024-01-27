@@ -85,6 +85,7 @@ module.exports = function (eleventyConfig) {
 	// eleventyConfig.addPassthroughCopy('./src/assets', { filter: (path) => path.endsWith('-h1.png') == false });
 	eleventyConfig.addPassthroughCopy('./src/assets');
 	eleventyConfig.addPassthroughCopy({ './accouterments': './' });
+	eleventyConfig.addPassthroughCopy({ './accouterments/previews': './previews' });
 
 	//open new browser on run
 	eleventyConfig.setBrowserSyncConfig({

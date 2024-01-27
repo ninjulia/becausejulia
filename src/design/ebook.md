@@ -32,6 +32,10 @@ featurettes:
       alt: Select additional commissioned ebooks,
     },
   ]
+
+desc: "Learn how I designed an ebook that cemented a startup IT SaaS company's brand identity and received over 1,000 downloads in the first month."
+image: 'ebook-OG.jpg'
+alt: 'ebook displayed on a tablet'
 ---
 
 More than just a one-off eBook, this marketing deliverable established a brand look and feel for the start-up IT SaaS company, RapidFire Tools, Inc. The company was fast growing into an international presence and needed marketing materials to look the part.

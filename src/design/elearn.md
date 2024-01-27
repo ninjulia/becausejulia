@@ -38,6 +38,10 @@ featurettes:
       imageAlt: landing pages,
     },
   ]
+
+desc: 'Case study of the design process for a five-day email drip campaign. Deliverables included email, design elements, and landing pages for an IT SaaS company.'
+image: 'elearn-OG.jpg'
+alt: 'email displayed on a tablet'
 ---
 
 This e-learning course aimed to increase top-of-funnel engagement for the international IT SaaS company, ConnectWise, Inc. Its goals included promoting a new business model for IT Managed Service Providers (MSPs) while establishing ConnectWise as a trusted resource to help MSPs make the transition via a new software offering.
