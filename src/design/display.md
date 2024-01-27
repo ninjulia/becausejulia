@@ -38,6 +38,9 @@ featurettes:
       alt: Sample Facebook Ad,
     },
   ]
+desc: 'See the design process behind crafting digital ads for use on social media and display advertising.'
+image: 'display-OG.jpg'
+alt: 'native and paid Facebook advertising displayed on a monitor'
 ---
 
 This digital marketing set comprises seven banners for use with Google display ads and Meta social media marketing. Developed for the fictional band VHS Actually, to promote their Press Any Key to Continue Summer Tour 2021 based on their latest album of the same name.

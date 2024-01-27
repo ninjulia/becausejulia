@@ -37,6 +37,11 @@ featurettes: [
       alt: infographic image,
     },
   ]
+
+desc: 'A case study on creating infographics to help a startup IT SaaS company 
+educate others on data safety and regulatory compliance.'
+image: 'info-OG.jpg'
+alt: 'two infographic posters on a marble background'
 ---
 
 This set of two infographics was commissioned by the IT SaaS company, RapidFire Tools, Inc. to help their customers (IT Managed Service Providers or MSPs) educate their clients on the importance of data safety and regulatory compliance. The infographics needed to be brand-neutral as the materials were intended to position the MSPs as thought leaders, rather than promote RapidFire Tools directly.

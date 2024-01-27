@@ -38,6 +38,10 @@ featurettes:
       alt: Landing page,
     },
   ]
+
+desc: 'Discover how I spearheaded a website redesign project and crafted UX/UI features for a regional telecommunications company.'
+image: 'web-OG.jpg'
+alt: 'screenshot of redesigned website on tablet and desktop devices'
 ---
 
 My employment with Shenandoah Telecommunications Company (Shentel) began with a ground-up redesign to unite their four legacy web properties into one unified website. Goals for launch included implementing the Sitecore CMS, launching an online ordering system, and integrating support chat. My work ranged from initial content strategies to coordinating with external vendors and internal departments to make sure the right content was migrated and vendor deliverables passed muster.
