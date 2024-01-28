@@ -13,21 +13,10 @@ Code repository for my design portfolio website, [becausejulia.com](https://www.
   - [Links](#links)
 - [Project Roadmap](#project-roadmap)
   - [Current Screenshot](#current-screenshot)
-  - [Current Release](#current-release)
   - [Future Improvements](#future-improvements)
 - [Acknowledgments](#acknowledgments)
 
 ## Project Dependencies
-
-I am standing on the shoulders of giants
-
-- [Eleventy v1.0.2](https://www.11ty.dev/)
-- [Bootstrap v5.2.3](https://getbootstrap.com/)
-- [Purgecss v5.0.0](https://purgecss.com/)
-- [fast-glob v3.2.12](https://www.npmjs.com/package/fast-glob/)
-- [html-minifier v4.0.0](https://www.npmjs.com/package/html-minifier/)
-- [PostCSS v8.4.19](https://postcss.org/)
-- [Dart Sass v1.56.1](https://www.npmjs.com/package/sass/)
 
 ### Design Resources
 
@@ -38,7 +27,7 @@ I am standing on the shoulders of giants
 ### Code Resources
 
 - [Hover.css](https://ianlunn.github.io/Hover/)
-- [Jribbble: A JavaScript library for the Dribbble API](https://github.com/tylergaw/jribbble)
+- [Dribbble API](https://developer.dribbble.com/v2/)
 
 ### Tech and Tooling
 
@@ -56,15 +45,6 @@ I am standing on the shoulders of giants
 
 ![Current Screenshot](screenshot.png?raw=true)
 
-### Current Release
-
-#### "Design" Improvements completed 08/23
-
-- Added Infographic portfolio piece
-- Display thumbnails on index in specified order
-- Added [eleventy-img](https://www.11ty.dev/docs/plugins/image/) to manage image sizing on new design Highlights images
-- Blocking ChatGPT bot in Robots.txt method via [Robb Knight](https://rknight.me/block-chatgpt-with-robotstxt/) _Blocking ChatGPT-User not listed on [OpenAI's Docs](https://platform.openai.com/docs/gptbot)_
-
 ### Future improvements
 
 - [GitHub Project: BecauseJulia Updates and Fixes](https://github.com/users/ninjulia/projects/1)
@@ -78,5 +58,6 @@ I am standing on the shoulders of giants
 - Write-up on XSS security with Netlify Hosting [How to Secure Your Netlify Site With a Content Security Policy (CSP)](https://danurbanowicz.com/posts/2022/11/02/secure-your-netlify-site-with-csp/)
 - Cool animated SVG hamburger icon from [Basic, Intermediate & Pro animated hamburger icons](https://youtu.be/R00QiudbD4Y) by Kevin Powell.
 - [Getting started with Variable fonts on the web](https://www.youtube.com/watch?v=0fVymQ7SZw0) by Kevin Powell.
+- Pointers for [Creating an 11ty collection from a JSON API](https://www.mikestreety.co.uk/blog/creating-an-11ty-collection-from-json-api/)
 
 Becausejulia.com designed and coded by Julia Czarnecki leveraging dependencies above. All logos, fonts, and imagery used remain property of their respective copyright owners.

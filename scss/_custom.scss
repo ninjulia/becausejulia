@@ -70,8 +70,5 @@ $theme-colors: map-remove($theme-colors, 'blue', 'indigo', 'pink', 'red', 'orang
 @import 'design';
 @import 'writing';
 
-//jribbble loading styles
-@import 'jribbble';
-
 //testing only
 //@import "testing";
