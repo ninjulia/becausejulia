@@ -12,45 +12,15 @@
         <!-- /headline -->
 
         <!-- content -->
-        <div id="latest-grid" class="grid text-bg-info m-0 p-0 w-100">
-                <div class='grid-item rounded-1'>
-                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
+        <div id="latest-grid" class="grid text-bg-info m-0 p-0 w-100 ">
+                {% for shot in dribbble %}
+                <div class='grid-item rounded-1 overflow-hidden'>
+                        <a href="{{ shot.url }}">
+                                <img class="grid-img img-fluid" width="400" height="300" loading="lazy"
+                                        src="{{ shot.images.normal }}" alt="{{ shot.title }}" />
+                        </a>
                 </div>
-                <div class='grid-item rounded-1'>
-                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
-                </div>
-                <div class='grid-item rounded-1'>
-                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
-                </div>
-                <div class='grid-item rounded-1'>
-                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
-                </div>
-
-                <div class='grid-item rounded-1'>
-                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
-                </div>
-                <div class='grid-item rounded-1'>
-                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
-                </div>
-                <div class='grid-item rounded-1'>
-                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
-                </div>
-                <div class='grid-item rounded-1'>
-                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
-                </div>
-
-                <div class='grid-item rounded-1'>
-                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
-                </div>
-                <div class='grid-item rounded-1'>
-                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
-                </div>
-                <div class='grid-item rounded-1'>
-                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
-                </div>
-                <div class='grid-item rounded-1'>
-                        <img class="grid-img img-fluid" width="400" height="300" loading="lazy" />
-                </div>
+                {% endfor %}
         </div>
         <!-- /content -->
 
@@ -58,15 +28,20 @@
         <div class="view-link">
                 <div class="container p-8">
                         <div class="row">
-                                <p id="viewMore" class="text-white mb-0 pb-0">
-                                        <!-- show loading text or view more link via jribbble.js -->
-                                        Loading images from Dribbble<span id="loadingDots"></span>
+                                <p id="viewMore" class="text-white mb-0 pb-0 d-inline overflow-hidden">
+                                        {%if dribbble | length === 0%}
+                                        An error occurred. <a href='https://dribbble.com/becausejulia'
+                                                name='latest_work' rel='noreferrer' title='dribbble'
+                                                class="text-white">View the latest images</a> by BecauseJulia on
+                                        Dribbble.
+                                        {% else %}
+                                        More from <a href='https://dribbble.com/becausejulia' name='latest_work'
+                                                rel='noreferrer' title='dribbble' class="text-white">BecauseJulia on
+                                                Dribbble.</a>
+                                        {% endif %}
                                 </p>
                         </div>
                 </div>
         </div>
         <!-- /view more link -->
 </section>
-
-<!-- display loading sequence while waiting for deferred js -->
-<script src="../../assets/js/loading.js" type="text/javascript"></script>
