@@ -30,7 +30,7 @@
 	"devDependencies": {
 		"@11ty/eleventy": "^2.0.0",
 		"@fullhuman/postcss-purgecss": "^5.0.0",
-		"autoprefixer": "^10.4.16",
+		"autoprefixer": "^10.4.17",
 		"bootstrap": "^5.2.3",
 		"clean-css": "^5.3.3",
 		"cross-env": "^7.0.3",
