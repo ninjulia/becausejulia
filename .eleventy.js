@@ -1,104 +1,80 @@
-//Helper packages
-require('dotenv').config();
-const htmlmin = require('html-minifier');
-const fg = require('fast-glob');
-const markdownIt = require('markdown-it');
-
-//Run search for showcase images
-const showcaseImages = fg.sync(['.editorconfig', '**/assets/img/design/*-s*'], {
-	ignore: ['**/src/**'],
-});
+//* Helper packages
+require("dotenv").config();
+const htmlmin = require("html-minifier");
+const markdownIt = require("markdown-it");
 
 module.exports = function (eleventyConfig) {
-	//compile scss
-	eleventyConfig.addWatchTarget('./scss/');
+  //* DX Settings
+  eleventyConfig.setQuietMode(true);
+  eleventyConfig.watchIgnores.add("README.md");
+  eleventyConfig.setServerOptions({
+    watch: ["./accouterments/"],
+  });
 
-	//get current year && set years of experience from https://11ty.rocks/eleventyjs/dates/#year-shortcode
-	eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
-	eleventyConfig.addShortcode('myExp', () => `${new Date().getFullYear() - 2014}`);
+  //* compile scss
+  eleventyConfig.addWatchTarget("./scss/");
 
-	//exclude components.njk from PROD
-	if (process.env.ELEVENTY_ENV === 'prod') {
-		eleventyConfig.ignores.add('**/src/components.njk');
-	}
+  //* get current year && set years of experience
+  //* from https://11ty.rocks/eleventyjs/dates/#year-shortcode
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+  eleventyConfig.addShortcode(
+    "myExp",
+    () => `${new Date().getFullYear() - 2014}`
+  );
 
-	//shuffle arrays via CSS-tricks.com
-	function myShuffle(o) {
-		const returnArray = [];
-		for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-		//shuffle sometimes returns duplicates, this re-sorts
-		for (a = 0; a < o.length; a++) {
-			if (a === 0 || o[a] !== o[a - 1]) {
-				returnArray.push(o[a]);
-			} else {
-				returnArray.unshift(o[a]);
-			}
-		}
-		return returnArray;
-	}
+  //* exclude components.njk from PROD
+  if (process.env.ELEVENTY_ENV === "prod") {
+    eleventyConfig.ignores.add("**/src/components.njk");
+  }
 
-	//filter showcase collection based on page url
-	eleventyConfig.addFilter('filterImg', (showcase, currentUrl) => {
-		let pageName = [];
+  //* Filter Showcase Images by Page
+  eleventyConfig.addFilter("filterImg", (showcase, currentUrl) => {
+    let pageName = currentUrl.replace("/design/", "").replace("/", "");
+    let imgList = showcase.filter((item) => item.match(`${pageName}-s`));
 
-		//first remove /design and trailing /
-		pageName.push(currentUrl.replace('/design/', '').replace('/', ''));
+    //* grid is designed for 12 items, double and shuffle again if less
+    if (imgList.length < 12) {
+      imgList = imgList.concat(imgList).sort(() => {
+        return 0.5 - Math.random();
+      });
+    }
 
-		//filter images to match page name
-		const imgList = showcase.filter((item) => item.match(`${pageName}-s`));
+    return imgList;
+  });
 
-		//randomize and return (double if under 12)
-		let showcaseShuffle = imgList.concat(imgList);
-		return myShuffle(showcaseShuffle);
-	});
+  //* markdown settings
+  let markdownLibrary = markdownIt({
+    html: true,
+  });
+  eleventyConfig.setLibrary("md", markdownLibrary);
 
-	//create showcase collection
-	eleventyConfig.addCollection('showcase', function (collection) {
-		let showcaseImagesUrl = [];
-		for (i = 0; i < showcaseImages.length; i++) {
-			showcaseImagesUrl.push(showcaseImages[i].replace('public', '../..'));
-		}
-		return showcaseImagesUrl;
-	});
+  //* minify HTML Output - from 11ty docs/config/#transforms
+  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+    if (this.outputPath && this.outputPath.endsWith(".html")) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+      });
+      return minified;
+    }
 
-	// markdown settings
-	let markdownLibrary = markdownIt({
-		html: true,
-	});
-	eleventyConfig.setLibrary('md', markdownLibrary);
+    return content;
+  });
 
-	//minify HTML Output - from 11ty docs/config/#transforms
-	eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
-		if (this.outputPath && this.outputPath.endsWith('.html')) {
-			let minified = htmlmin.minify(content, {
-				useShortDoctype: true,
-				removeComments: true,
-				collapseWhitespace: true,
-			});
-			return minified;
-		}
+  //* copy assets folder, copy favicon and .toml file stuff to ./public/
+  //TODO: filter out high-rez images once 11ty Image is running -- eleventyConfig.addPassthroughCopy('./src/assets', { filter: (path) => path.endsWith('-h1.png') == false });
+  eleventyConfig.addPassthroughCopy("./src/assets");
+  eleventyConfig.addPassthroughCopy({ "./accouterments": "./" });
+  eleventyConfig.addPassthroughCopy({
+    "./accouterments/previews": "./previews",
+  });
 
-		return content;
-	});
-
-	//copy assets folder, copy favicon and .toml file stuff to ./public/
-	// eleventyConfig.addPassthroughCopy('./src/assets', { filter: (path) => path.endsWith('-h1.png') == false });
-	eleventyConfig.addPassthroughCopy('./src/assets');
-	eleventyConfig.addPassthroughCopy({ './accouterments': './' });
-	eleventyConfig.addPassthroughCopy({ './accouterments/previews': './previews' });
-
-	//open new browser on run
-	eleventyConfig.setBrowserSyncConfig({
-		open: true,
-		//set to false to disable
-		//snippet: true,
-	});
-
-	//output to public folder
-	return {
-		dir: {
-			input: 'src',
-			output: 'public',
-		},
-	};
+  //* output to public folder
+  return {
+    dir: {
+      input: "src",
+      output: "public",
+    },
+  };
 };
