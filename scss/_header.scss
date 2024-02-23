@@ -4,100 +4,115 @@
 
 //set header height and main margin the same
 header {
-	height: ($spacer * 4);
-	position: relative;
+  height: ($spacer * 4);
+  position: relative;
+}
+
+@include color-mode(dark) {
+  header,
+  .navbar {
+    color: var(--bs-primary-text-emphasis);
+    background-color: var(--bs-primary-bg-subtle);
+  }
 }
 
 main,
 .portfolio-header {
-	margin-top: ($spacer * 4);
+  margin-top: ($spacer * 4);
 }
 
 //Skip Link Styling
 #skipNav {
-	height: 2.625rem;
-	margin-top: -2.625rem;
-	transition: margin-top 325ms ease-in;
+  height: 2.625rem;
+  margin-top: -2.625rem;
+  transition: margin-top 325ms ease-in;
 }
 
 #skipNav:focus-within {
-	margin-top: 0rem;
+  margin-top: 0rem;
 }
 
 .navbar-brand {
-	padding: 4px;
+  padding: 4px;
 }
 
 //Navigation items
 .nav-item {
-	padding: 0 ($spacer * 2);
+  padding: 0 ($spacer * 2);
 }
 
 //Over-ride BootStrap 3.0 nav :focus-visible styling changes
 header a {
-	border-radius: 4px;
+  border-radius: 4px;
 }
 
 #skipNav a:focus-visible,
 .navbar-brand:focus-visible,
 .nav-link:focus-visible {
-	outline: 0px;
-	box-shadow: 0 0 0.25rem rgba(255, 255, 255, 0.5);
+  outline: 0px;
+  box-shadow: 0 0 0.25rem rgba(255, 255, 255, 0.5);
 }
 
 .dropdown-item:focus-visible {
-	outline: 0px;
-	box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.75);
+  outline: 0px;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.75);
 }
 
-a[aria-current='page'] {
-	//@extend .text-muted;
-	--bs-text-opacity: 1;
-	color: var(--bs-gray-600) !important;
+a[aria-current="page"] {
+  //@extend .text-muted;
+  --bs-text-opacity: 1;
+  color: var(--bs-gray-600) !important;
 }
 
-a[aria-current='page']:hover,
-a[aria-current='page']:focus {
-	--bs-text-opacity: 1;
-	color: var(--bs-body-color) !important;
+a[aria-current="page"]:hover,
+a[aria-current="page"]:focus {
+  --bs-text-opacity: 1;
+  color: var(--bs-body-color) !important;
 }
 
 // allows for header nav on jump links
 .anchor {
-	text-decoration: none;
-	&:before {
-		content: '';
-		display: block;
-		position: relative;
-		height: ($spacer * 4);
-		margin-top: -($spacer * 3.5);
-	}
+  text-decoration: none;
+  &:before {
+    content: "";
+    display: block;
+    position: relative;
+    height: ($spacer * 4);
+    margin-top: -($spacer * 3.5);
+  }
 }
 
 /* Fancy Navigation button */
 .btn-nav-fancy {
-	overflow: hidden;
+  overflow: hidden;
 
-	.hamburger {
-		--button-color: var(--bs-navbar-color);
-		stroke: var(--button-color);
-		transition: translate 1s, rotate 1s;
-		background: none;
-	}
+  .hamburger {
+    --button-color: var(--bs-navbar-color);
+    stroke: var(--button-color);
+    transition: translate 1s, rotate 1s;
+    background: none;
+  }
 
-	.line {
-		transition: 1s;
-		stroke-dasharray: 60 31 60 300;
-	}
+  .line {
+    transition: 1s;
+    stroke-dasharray: 60 31 60 300;
+  }
 
-	&[aria-expanded='true'] {
-		.hamburger {
-			translate: 2px -3px;
-			rotate: 0.125turn;
-		}
-		.line {
-			stroke-dasharray: 60 105 60 300;
-			stroke-dashoffset: -90;
-		}
-	}
+  &[aria-expanded="true"] {
+    .hamburger {
+      translate: 2px -3px;
+      rotate: 0.125turn;
+    }
+    .line {
+      stroke-dasharray: 60 105 60 300;
+      stroke-dashoffset: -90;
+    }
+  }
+}
+
+// Change Dropdown Colors
+@include color-mode(dark) {
+  .bg-darkest .dropdown-menu {
+    background-color: var(--bs-primary-bg-subtle);
+  }
 }
