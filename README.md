@@ -59,5 +59,6 @@ Code repository for my design portfolio website, [becausejulia.com](https://www.
 - Cool animated SVG hamburger icon from [Basic, Intermediate & Pro animated hamburger icons](https://youtu.be/R00QiudbD4Y) by Kevin Powell.
 - [Getting started with Variable fonts on the web](https://www.youtube.com/watch?v=0fVymQ7SZw0) by Kevin Powell.
 - Pointers for [Creating an 11ty collection from a JSON API](https://www.mikestreety.co.uk/blog/creating-an-11ty-collection-from-json-api/)
+- AI Robots Block list from [ai-robots-txt](https://github.com/ai-robots-txt/ai.robots.txt)
 
 Becausejulia.com designed and coded by Julia Czarnecki leveraging dependencies above. All logos, fonts, and imagery used remain property of their respective copyright owners.
