@@ -147,3 +147,14 @@ $navbar-dark-toggler-border-color: rgba($white, 0.5);
 .bg-black {
   color: $gray-400;
 }
+
+//adjust links and subtext in darkmode
+[data-bs-theme="dark"] {
+  .featurette.text-bg-light .text-muted {
+    color: var(--bs-dark-bg-subtle) !important;
+  }
+
+  .breadcrumb a:is(:link, :visited) {
+    color: var(--bs-body-color) !important;
+  }
+}

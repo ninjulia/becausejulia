@@ -32,6 +32,13 @@
   color: #c9cad8;
 }
 
+[data-bs-theme=dark] .featurette.text-bg-light .text-muted {
+  color: var(--bs-dark-bg-subtle) !important;
+}
+[data-bs-theme=dark] .breadcrumb a:is(:link, :visited) {
+  color: var(--bs-body-color) !important;
+}
+
 @font-face {
   font-family: "Playfair Display";
   src: url("../fonts/PlayfairDisplay.woff2") format("woff2-variations");
@@ -12307,9 +12314,6 @@ footer .icon-link .bi {
   .quick-facts .group {
     grid-template-columns: 5.3125em auto;
   }
-}
-.featurette .text-muted {
-  color: var(--bs-gray-600) !important;
 }
 .writing-showcase {
   display: grid;
