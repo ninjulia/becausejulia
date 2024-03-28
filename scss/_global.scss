@@ -2,7 +2,7 @@
 // style text as links
 //
 .link-effect {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 //
@@ -11,37 +11,70 @@
 p:last-of-type,
 .list-ul li:last-of-type,
 input[type="submit"] {
-	padding-bottom: ($spacer * 2);
+  padding-bottom: ($spacer * 2);
 }
 
 // style svgicons
 .bi {
-	display: inline-block;
-	font-size: ($font-size-root * 2);
-	width: ($font-size-root * 2);
-	height: ($font-size-root * 2);
+  display: inline-block;
+  font-size: ($font-size-root * 2);
+  width: ($font-size-root * 2);
+  height: ($font-size-root * 2);
 }
 
 //
 // Style Unordered Lists with on Brand bullets
 //
 .list-ul {
-	padding: 0;
-	list-style: none;
-	margin-left: ($spacer * 1.25);
+  padding: 0;
+  list-style: none;
+  margin-left: ($spacer * 1.25);
 
-	li:before {
-		content: "\2022";
-		color: $primary;
-		font-weight: bold;
-		display: inline-block;
-		width: 0.75rem;
-		height: 0.01rem;
-		margin-left: -0.75rem;
-		@extend .fs-6;
-	}
+  li:before {
+    content: "\2022";
+    color: $primary;
+    font-weight: bold;
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.01rem;
+    margin-left: -0.75rem;
+    @extend .fs-6;
+  }
 }
 
 .text-bg-primary .list-ul li:before {
-	color: $white !important;
+  color: $white !important;
+}
+
+.text-accent {
+  color: $primary;
+}
+
+@include color-mode(dark) {
+  .list-ul li:before,
+  .text-accent {
+    color: lighten($secondary, 25%);
+  }
+}
+
+@include color-mode(dark) {
+  .breadcrumb {
+    color: var(--bs-secondary-text-emphasis);
+    a:link,
+    a:visited {
+      color: var(--bs-secondary);
+    }
+    a:hover {
+      filter: opacity(75%);
+    }
+    a:active {
+      filter: saturate(110%);
+    }
+  }
+}
+
+@include color-mode(dark) {
+  .text-bg-light {
+    --bs-bg-opacity: 0.75;
+  }
 }

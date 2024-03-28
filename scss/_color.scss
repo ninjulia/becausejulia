@@ -7,123 +7,154 @@ $primary: #482475;
 $secondary: #bc9ee1;
 $lightest: #f9f9f9;
 $darkest: #191a23;
+$success: #42be71;
+$info: #4756b2;
+$warning: #f7d91b; //#FCBA04
+$danger: #f44336; //#CC2936
+$purple: $primary;
+
+// Custom Light/Dark values
 $white: $lightest;
 $black: $darkest;
-$success: #42be71;
-$info: #191a23;
-$warning: #f7d91b;
-$danger: #f44336;
 
-$gray-100: lighten($secondary, 90%);
-$gray-200: lighten($secondary, 80%);
-$gray-300: lighten($secondary, 70%);
-$gray-400: lighten($secondary, 60%);
-$gray-500: darken($white, 50%);
-$gray-600: lighten($black, 40%);
-$gray-700: lighten($black, 30%);
-$gray-800: lighten($black, 20%);
-$gray-900: lighten($black, 10%);
+// $gray-100: lighten($secondary, 90%);
+// $gray-200: lighten($secondary, 80%);
+// $gray-300: lighten($secondary, 70%);
+// $gray-400: lighten($secondary, 60%);
+// $gray-500: darken($white, 50%);
+// $gray-600: lighten($black, 40%);
+// $gray-700: lighten($black, 30%);
+// $gray-800: lighten($black, 20%);
+// $gray-900: lighten($black, 10%);
 
-$grays: (
-	100: $gray-100,
-	200: $gray-200,
-	300: $gray-300,
-	400: $gray-400,
-	500: $gray-500,
-	600: $gray-600,
-	700: $gray-700,
-	800: $gray-800,
-	900: $gray-900,
-);
+// $gray-100: lighten($black, 90%);
+// $gray-200: lighten($black, 80%);
+// $gray-300: lighten($black, 70%);
+// $gray-400: lighten($black, 60%);
+// $gray-500: lighten($black, 50%);
+// $gray-600: lighten($black, 40%);
+// $gray-700: lighten($black, 30%);
+// $gray-800: lighten($black, 20%);
+// $gray-900: lighten($black, 10%);
 
+// Grey Pallet from Figma
+$gray-100: #f5f6f8;
+$gray-200: #e7e7ee;
+$gray-300: #d8d9e3;
+$gray-400: #c9cad8;
+$gray-500: #abadc3;
+$gray-600: #8d91ae;
+$gray-700: #707499;
+$gray-800: #595c7c;
+$gray-900: #44465f;
+
+// Dark Pallet from Figma
+// $gray-100: #f8f8f8;
+// $gray-200: #f4f4f5;
+// $gray-300: #f0f0f0;
+// $gray-400: #ededed;
+// $gray-500: #e8e8e9;
+// $gray-600: #b8b8bb;
+// $gray-700: #95969a;
+// $gray-800: #65666c;
+// $gray-900: #47484f;
+
+$light: $gray-100;
+
+// Custom Colors
 $custom-colors: (
-	'purple': $primary,
-	'light': $gray-300,
-	'deep-purple': #440154,
-	'deep-blue': #414487,
-	'mid-blue': #355f8d,
-	'cerulean': #2a788e,
-	'teal': #2dc8c2,
-	'green': #22a884,
-	'light-green': #42be71,
-	'lime': #7ad151,
-	'deeper-purple': darken(#440154, 12%),
-	'pop': lighten($primary, 45%),
+  "black": $black,
+  "gray": $gray-400,
+  "deep-purple": #440154,
+  "deep-blue": #414487,
+  "mid-blue": #355f8d,
+  "cerulean": #2a788e,
+  "teal": #2dc8c2,
+  "green": #22a884,
+  "light-green": #42be71,
+  "lime": #7ad151,
+  "deeper-purple": darken(#440154, 12%),
+  "pop": lighten($primary, 45%),
 );
 
 //set main gradient
 $brand-gradient: linear-gradient(
-	to bottom right,
-	#440154,
-	#482475,
-	#414487,
-	#355f8d,
-	#2a788e,
-	#21908d,
-	#22a884,
-	#42be71,
-	#7ad151
+  to bottom right,
+  #440154,
+  #482475,
+  #414487,
+  #355f8d,
+  #2a788e,
+  #21908d,
+  #22a884,
+  #42be71,
+  #7ad151
 );
 $brand-gradient-inverted: linear-gradient(
-	to top left,
-	#440154,
-	#482475,
-	#414487,
-	#355f8d,
-	#2a788e,
-	#21908d,
-	#22a884,
-	#42be71,
-	#7ad151
+  to top left,
+  #440154,
+  #482475,
+  #414487,
+  #355f8d,
+  #2a788e,
+  #21908d,
+  #22a884,
+  #42be71,
+  #7ad151
 );
 
 .bg-brand-gradient {
-	background: #482475;
-	background-image: $brand-gradient;
+  background: #482475;
+  background-image: $brand-gradient;
 }
 
-.bg-grey {
-	background-color: lighten($gray-600, 40%);
-}
+//semi-transparent $black background
+$black-transparent: rgba($black, 0.8);
 
-//semi-transparent $info background
-$info-transparent: rgba($info, 0.8);
-
-.bg-info-transparent {
-	background-color: $info-transparent;
+.bg-black-transparent {
+  background-color: $black-transparent;
 }
 
 //for use on header / footer bars
 $navbar-dark-color: rgba($white, 1);
 $navbar-dark-hover-color: rgba($white, 1);
-
 $navbar-dark-disabled-color: rgba($white, 0.5);
-
 $navbar-dark-toggler-border-color: rgba($white, 0.5);
 
 .bg-darkest {
-	background-color: $gray-900;
+  background-color: $gray-900;
 
-	.dropdown-menu {
-		background-color: $gray-800;
-	}
+  .dropdown-menu {
+    background-color: $gray-800;
+  }
 
-	.dropdown-item {
-		color: $navbar-dark-color;
-	}
+  .dropdown-item {
+    color: $navbar-dark-color;
+  }
 
-	.dropdown-item:focus,
-	.dropdown-item:hover {
-		background-color: $gray-600;
-		color: $navbar-dark-color;
-	}
+  .dropdown-item:focus,
+  .dropdown-item:hover {
+    background-color: $gray-600;
+    color: $navbar-dark-color;
+  }
 }
 
 .bg-dark,
 .bg-darkest {
-	color: $lightest !important;
+  color: $lightest !important;
 }
 
-.bg-info {
-	color: $gray-400;
+.bg-black {
+  color: $gray-400;
+}
+
+//adjust links and subtext in darkmode
+[data-bs-theme="dark"] {
+  .featurette.text-bg-light .text-muted {
+    color: var(--bs-dark-bg-subtle) !important;
+  }
+
+  .breadcrumb a:is(:link, :visited) {
+    color: var(--bs-body-color) !important;
+  }
 }

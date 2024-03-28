@@ -1,6 +1,6 @@
 {% set currentUrl = page.url %}
-<section class="latest-work bg-info">
-    <div class="grid text-bg-info">
+<section class="latest-work bg-black">
+    <div class="grid text-bg-black">
         {% for selected in showcase | filterImg(page.url) %}
         <div class="grid-item overflow-hidden">
             <img src="{{selected}}" class="img-fluid rounded-1" width="400" height="300" alt="" loading="lazy" />

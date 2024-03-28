@@ -2,128 +2,128 @@
 // Portfolio Page Styles
 //
 .portfolio-header {
-	//height: 300px;
+  //height: 300px;
 
-	display: grid;
-	background: $info-transparent;
-	grid-template: 'container';
-	place-items: center;
-	place-content: center;
-	overflow: hidden;
+  display: grid;
+  background: $black-transparent;
+  grid-template: "container";
+  place-items: center;
+  place-content: center;
+  overflow: hidden;
 
-	& > * {
-		grid-area: container;
-	}
+  & > * {
+    grid-area: container;
+  }
 
-	.hero-image {
-		height: auto;
-		aspect-ratio: 4/3;
-		object-fit: cover;
-		position: relative;
-		z-index: -1;
-	}
+  .hero-image {
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
+  }
 
-	h1,
-	p {
-		text-shadow: 0rem 0rem 2rem $info-transparent;
-	}
+  h1,
+  p {
+    text-shadow: 0rem 0rem 2rem $black-transparent;
+  }
 }
 
 //set height on header for large screens
 @include media-breakpoint-up(lg) {
-	.portfolio-header .hero-image {
-		aspect-ratio: 16/5;
-	}
+  .portfolio-header .hero-image {
+    aspect-ratio: 16/5;
+  }
 }
 
 //apply .lead styling to all p tags
 .portfolio_start p {
-	@extend .lead;
+  @extend .lead;
 }
 
 //Quick Facts styling
 .quick-facts {
-	columns: 1;
+  columns: 1;
 
-	.group {
-		display: grid;
-		grid-template-columns: minmax(85px, 1fr) 4fr;
-		grid-column-gap: 0.75em;
-	}
+  .group {
+    display: grid;
+    grid-template-columns: minmax(85px, 1fr) 4fr;
+    grid-column-gap: 0.75em;
+  }
 
-	dt,
-	dd {
-		display: inline;
-	}
+  dt,
+  dd {
+    display: inline;
+  }
 
-	dt {
-		text-align: end;
-	}
-	dt::after {
-		content: ':';
-	}
+  dt {
+    text-align: end;
+  }
+  dt::after {
+    content: ":";
+  }
 
-	dd {
-		//font-size: ($font-size-root * 0.8);
-		text-align: start;
+  dd {
+    //font-size: ($font-size-root * 0.8);
+    text-align: start;
 
-		-ms-word-break: break-all;
-		word-break: break-all;
-		word-break: break-word;
-		-webkit-hyphens: auto;
-		-moz-hyphens: auto;
-		hyphens: auto;
-	}
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+  }
 }
 
 @media (max-width: 320px) {
-	.quick-facts {
-		.group {
-			display: block;
-		}
+  .quick-facts {
+    .group {
+      display: block;
+    }
 
-		dt,
-		dd {
-			display: block;
-			text-align: left;
-		}
-	}
+    dt,
+    dd {
+      display: block;
+      text-align: left;
+    }
+  }
 }
 
 @include media-breakpoint-between(sm, lg) {
-	.quick-facts {
-		columns: 2;
-		column-fill: balance;
-		column-gap: 1em;
+  .quick-facts {
+    columns: 2;
+    column-fill: balance;
+    column-gap: 1em;
 
-		//sized to longest key
-		.group {
-			grid-template-columns: 5.3125em auto;
-		}
-	}
+    //sized to longest key
+    .group {
+      grid-template-columns: 5.3125em auto;
+    }
+  }
 }
 
 .featurette {
-	//add back text color from Bootstrap 5.3.1 removal
-	.text-muted {
-		color: var(--bs-gray-600) !important;
-	}
-	//swap order of text & image on every other featurette
-	&:nth-of-type(even) {
-		.col-text {
-			@extend .order-md-1;
-		}
-		.col-img {
-			@extend .order-md-2;
-		}
-	}
+  //add back text color from Bootstrap 5.3.1 removal
+  // .text-muted {
+  //   color: var(--bs-gray-600) !important;
+  // }
+  //swap order of text & image on every other featurette
+  &:nth-of-type(even) {
+    .col-text {
+      @extend .order-md-1;
+    }
+    .col-img {
+      @extend .order-md-2;
+    }
+  }
 
-	&:nth-of-type(odd) {
-		.col-text {
-			@extend .order-md-2;
-		}
-		.col-img {
-			@extend .order-md-1;
-		}
-	}
+  &:nth-of-type(odd) {
+    .col-text {
+      @extend .order-md-2;
+    }
+    .col-img {
+      @extend .order-md-1;
+    }
+  }
 }
