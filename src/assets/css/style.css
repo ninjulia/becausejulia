@@ -12008,6 +12008,35 @@ footer .icon-link .bi {
   text-align: center;
 }
 
+.code-thumb figure {
+  width: 100%;
+  aspect-ratio: 1;
+  height: auto;
+  overflow: hidden;
+  display: grid;
+  grid-template-areas: "stack";
+  justify-content: start;
+  align-items: end;
+}
+.code-thumb figure > * {
+  grid-area: stack;
+}
+.code-thumb figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 1;
+}
+.code-thumb figure figcaption {
+  z-index: 2;
+  max-width: calc(100% + 1em);
+  background-image: linear-gradient(to bottom, rgb(25, 26, 35), 75%, rgba(25, 26, 35, 0.8));
+}
+.code-thumb figure figcaption .fig-detail {
+  text-wrap: pretty;
+}
+
 .latest-work {
   display: grid;
   grid-template-columns: 1fr;
