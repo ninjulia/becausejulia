@@ -15,39 +15,42 @@ alt: "Collection of design portfolio items including emails, websites, ebooks an
 	<!-- intro -->
 	<div class="container intro p-8 text-white">
 		<div class="row">
-			<div class="col-12">
-				<h1 class="display-1 text-center">Design for Humans.</h1>
-				<p class="text-center lead mb-3 mx-auto">
-					{{ desc }}
-				</p>
+			{# <div class="col-md-10 offset-md-1"> #}
+				<div class="col-12">
+					<span class="fs-3">Julia Czarnecki</span>
+					<h1 class="display-1">A Designer who Codes.</h1>
+					<p class="lead mb-0 pb-0">Whether it appears on the screen or in print, I can deliver. Throughout my
+						experience in the IT software-as-a-service industry, I have developed distinctive branded
+						experiences for enterprise-level corporations that resonate with people on an emotional level.
+					</p>
+				</div>
 			</div>
 		</div>
-	</div>
-	<!-- /intro -->
+		<!-- /intro -->
 
-	<!-- designs-->
-	<div class="intro-designs container p-8">
-		<a class="anchor" name="design" id="design"></a>
-		<div class="row justify-content-center">
+		<!-- designs-->
+		<div class="intro-designs container p-8">
+			<a class="anchor" name="design" id="design"></a>
+			<div class="row justify-content-center">
 
-			{% for design in collections.design | sort(false, false, 'data.order') %}
-			{% include "./_includes/_components/thumbnails.njk"%}
-			{% endfor %}
+				{% for design in collections.design | sort(false, false, 'data.order') %}
+				{% include "./_includes/_components/thumbnails.njk"%}
+				{% endfor %}
 
+			</div>
 		</div>
-	</div>
-	<!-- /designs -->
+		<!-- /designs -->
 
 
-	<div class="intro-sploosh row p-0 m-0">
-		<div class="col-12 p-0">
-			<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1440 320">
-				<path fill="#191a23" fill-opacity="1"
-					d="M0,32L40,42.7C80,53,160,75,240,90.7C320,107,400,117,480,133.3C560,149,640,171,720,202.7C800,235,880,277,960,250.7C1040,224,1120,128,1200,80C1280,32,1360,32,1400,32L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
-				</path>
-			</svg>
+		<div class="intro-sploosh row p-0 m-0">
+			<div class="col-12 p-0">
+				<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1440 320">
+					<path fill="#191a23" fill-opacity="1"
+						d="M0,32L40,42.7C80,53,160,75,240,90.7C320,107,400,117,480,133.3C560,149,640,171,720,202.7C800,235,880,277,960,250.7C1040,224,1120,128,1200,80C1280,32,1360,32,1400,32L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+					</path>
+				</svg>
+			</div>
 		</div>
-	</div>
 </section>
 
 <!-- code section -->
