@@ -2,26 +2,31 @@
 // Intro and Design Display
 //
 .intro-section {
-	.intro {
-		p {
-			max-width: 65ch;
-		}
-	}
+  .intro {
+    p {
+      max-width: 70ch;
+      text-wrap: balance;
+      white-space: break-spaces;
+      @include media-breakpoint-up(md) {
+        text-wrap: pretty;
+      }
+    }
+  }
 }
 
 .intro-sploosh {
-	display: block;
-	width: 100%;
-	max-width: 100%;
-	height: auto;
-	margin-block-end: -1px;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-block-end: -1px;
 
-	svg {
-		margin-block-end: -1px;
-	}
+  svg {
+    margin-block-end: -1px;
+  }
 }
 
 .fig-detail,
 .code-secondary-text {
-	font-size: ($font-size-base * 0.8);
+  font-size: ($font-size-base * 0.8);
 }
