@@ -1,6 +1,8 @@
 //* Helper packages
 require("dotenv").config();
-const htmlmin = require("html-minifier");
+// TODO: replace html-minifier dep
+// Removed 6.1.24: kangax html-minifier REDoS vulnerability - https://github.com/advisories/GHSA-pfq8-rq6v-vf5m
+// const htmlmin = require("html-minifier");
 const markdownIt = require("markdown-it");
 
 module.exports = function (eleventyConfig) {
@@ -49,18 +51,18 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   //* minify HTML Output - from 11ty docs/config/#transforms
-  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
-    if (this.outputPath && this.outputPath.endsWith(".html")) {
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true,
-      });
-      return minified;
-    }
+  // eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+  //   if (this.outputPath && this.outputPath.endsWith(".html")) {
+  //     let minified = htmlmin.minify(content, {
+  //       useShortDoctype: true,
+  //       removeComments: true,
+  //       collapseWhitespace: true,
+  //     });
+  //     return minified;
+  //   }
 
-    return content;
-  });
+  //   return content;
+  // });
 
   //* copy assets folder, copy favicon and .toml file stuff to ./public/
   //TODO: filter out high-rez images once 11ty Image is running -- eleventyConfig.addPassthroughCopy('./src/assets', { filter: (path) => path.endsWith('-h1.png') == false });

@@ -11865,7 +11865,6 @@ footer .icon-link .bi {
 .intro-section .intro p {
   max-width: 70ch;
   text-wrap: balance;
-  white-space: break-spaces;
 }
 @media (min-width: 768px) {
   .intro-section .intro p {

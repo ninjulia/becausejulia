@@ -6,7 +6,8 @@
     p {
       max-width: 70ch;
       text-wrap: balance;
-      white-space: break-spaces;
+      // TODO: replace html-minifier dep & re-enable below
+      //white-space: break-spaces;
       @include media-breakpoint-up(md) {
         text-wrap: pretty;
       }
