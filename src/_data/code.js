@@ -5,8 +5,7 @@ module.exports = async function () {
       title: "Email Code",
       live: "https://ninjulia.github.io/email_html5video/",
       repo: "https://github.com/ninjulia/email_html5video/",
-      image:
-        "https://raw.githubusercontent.com/ninjulia/email_html5video/main/screenshot.png",
+      image: "./assets/img/code/videoEmail.webp",
       type: "Code",
       tags: "code",
     },
@@ -15,8 +14,7 @@ module.exports = async function () {
       title: "Front End Web | CMS",
       live: "https://ninjulia.github.io/bundleBuilder/",
       repo: "https://github.com/ninjulia/bundleBuilder/",
-      image:
-        "https://raw.githubusercontent.com/ninjulia/bundleBuilder/master/screenshot.png",
+      image: "./assets/img/code/bundler.webp",
       type: "Code",
       tags: "code",
     },
@@ -25,8 +23,7 @@ module.exports = async function () {
       title: "Front End Web | JQuery",
       live: "https://ninjulia.github.io/JavaScript_SpeedVisualizer/",
       repo: "https://github.com/ninjulia/JavaScript_SpeedVisualizer/",
-      image:
-        "https://raw.githubusercontent.com/ninjulia/JavaScript_SpeedVisualizer/main/screenshot.png",
+      image: "./assets/img/code/speed.webp",
       type: "Code",
       tags: "code",
     },
@@ -35,8 +32,7 @@ module.exports = async function () {
       title: "Front End Web | CMS",
       live: "https://astro-storyblock-portfolio-template.netlify.app/",
       repo: "https://github.com/ninjulia/astro-storyblok-portfolio",
-      image:
-        "https://raw.githubusercontent.com/ninjulia/astro-storyblok-portfolio/main/screenshot.png",
+      image: "./assets/img/code/template.webp",
       type: "Code",
       tags: "code",
     },
@@ -45,8 +41,7 @@ module.exports = async function () {
       title: "Email Code",
       live: "https://ninjulia.github.io/email_scratchoff/",
       repo: "https://github.com/ninjulia/email_scratchoff",
-      image:
-        "https://raw.githubusercontent.com/ninjulia/email_scratchoff/main/screenshot.PNG",
+      image: "./assets/img/code/scratchoff.webp",
       type: "Code",
       tags: "code",
     },
@@ -55,8 +50,7 @@ module.exports = async function () {
       title: "Email Code",
       live: "https://ninjulia.github.io/email_carousel/",
       repo: "https://github.com/ninjulia/email_carousel",
-      image:
-        "https://raw.githubusercontent.com/ninjulia/email_carousel/main/screenshot.png",
+      image: "./assets/img/code/carousel.webp",
       type: "Code",
       tags: "code",
     },
