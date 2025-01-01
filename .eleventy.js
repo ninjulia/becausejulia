@@ -4,6 +4,7 @@ require("dotenv").config();
 // Removed 6.1.24: kangax html-minifier REDoS vulnerability - https://github.com/advisories/GHSA-pfq8-rq6v-vf5m
 // const htmlmin = require("html-minifier");
 const markdownIt = require("markdown-it");
+const purgeCssPlugin = require("eleventy-plugin-purgecss");
 
 module.exports = function (eleventyConfig) {
   //* DX Settings
@@ -24,9 +25,12 @@ module.exports = function (eleventyConfig) {
     () => `${new Date().getFullYear() - 2014}`
   );
 
-  //* exclude components.njk from PROD
+  //* exclude components.njk and run purgecss from PROD
   if (process.env.ELEVENTY_ENV === "prod") {
     eleventyConfig.ignores.add("**/src/components.njk");
+    eleventyConfig.addPlugin(purgeCssPlugin, {
+      config: "./src/_data/purgecss.config.js",
+    });
   }
 
   //* Filter Showcase Images by Page
