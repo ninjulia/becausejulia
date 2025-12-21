@@ -54,8 +54,7 @@
     "Firefox ESR",
     "iOS >= 12",
     "Safari >= 12",
-    "not Explorer <= 11",
-    "not kaios <= 2.5 # fix floating label issues in Firefox"
+    "not Explorer <= 11"
   ],
   "dependencies": {
     "@11ty/eleventy-fetch": "^5.0.2",
