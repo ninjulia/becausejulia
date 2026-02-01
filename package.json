@@ -60,6 +60,6 @@
   "dependencies": {
     "@11ty/eleventy-fetch": "^5.0.2",
     "dotenv": "^17.2.3",
-    "eleventy-plugin-purgecss": "^0.5.0"
+    "eleventy-plugin-purgecss": "^0.6.0"
   }
 }
